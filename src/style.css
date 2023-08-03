@@ -3,10 +3,22 @@ a, a>span, a>p{
     cursor: pointer;
     text-align: left;
     margin: 0.5rem;
-    font: normal normal normal 22px/24px Arial;
+    /* font: normal normal normal 22px/24px Arial; */
     letter-spacing: -0.22px;
     color: #414042;
+    /* font-weight:normal; */
 }
+
+a>span {
+    font-family:Arial;
+    font-size: 22px;
+    font-weight: bold;
+}
+a>p {
+    font-family:Arial;
+    font-size: 22px;
+}
+
 .btn{
     width: 235px;
     height: 80px;
@@ -18,11 +30,15 @@ a, a>span, a>p{
     justify-content: center;
     border-radius: 50px;
     background-color: #fff;
+    box-shadow: 0px 2px 8px #9CAED659;
 }
 .list{
     display: grid;
     grid-template-columns: 95px 583px 282px;
     text-align: left;
+    /* background-color:#9CAED659; */
+    padding: 10px 22px;
+    margin: 0;
 }
 .list > .title, .list > .name{
     overflow: hidden;  		
@@ -32,6 +48,7 @@ a, a>span, a>p{
 }
 
 .title_container{
+    width: 980px;
     display: grid;
     grid-template-columns: 95px 583px 282px;
     text-align: left;
@@ -39,9 +56,29 @@ a, a>span, a>p{
     letter-spacing: -0.28px;
     color: #0086FE;
     margin-top: 46px;
+    padding-left: 20px;
     padding-bottom: 16px;
     border-bottom: 3px solid #0086FE;
 }
+
+#search{
+    width: 980px;
+    height: 120px;
+    border-radius: 50px;
+    margin: 30px 0;
+    padding: 40px;
+    font-size: 30px;
+}
+
+#search:focus{
+    outline: none;
+}
+
+.zoom {
+    position: absolute;
+    transform: translate(520%,62%);
+}
+
 
 #page_1{
     padding: 0 50px;

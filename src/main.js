@@ -14,7 +14,12 @@ function pushTitle(){
     nameList.map((name, i)=>{
         const titleList = document.createElement("a")
         titleList.className = "list";
-        titleList.innerHTML = `<span class="number">PO-${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
+        if(i<10){
+            titleList.innerHTML = `<span class="number">PO-0${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
+        }else{
+            titleList.innerHTML = `<span class="number">PO-${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
+        }
+       
         listContainer.appendChild(titleList)
     })
 }
@@ -28,11 +33,10 @@ function divideList(list){
         allList.forEach((a, i) => {
         const innerHTML = a.innerText;
         const titleSplit = innerHTML.split(" ")
-        const titleShift = titleSplit.shift()
+        titleSplit.shift()
         const titleJoin = titleSplit.join(' ');
         a.style.display = titleSet.has(titleJoin) ? "" : "none";
 })}
-
 
 
 /**search 기능 */
@@ -127,8 +131,31 @@ function searching(searchList) {
     addEventListeners(resultList); // 검색 결과에 이벤트 추가
 }
 
+
+
 window.onload = () => {
     pushTitle();
     addEventListeners(nameList); // 각 박스에 이벤트 추가하면서 nameList 전달
     sliceList(nameList)(0, 20); // 페이지 로드시 첫번째 슬라이스 호출
+    const listItems = document.querySelectorAll(".list");
+
+listItems.forEach((item, index) => {
+  if (index % 2 === 0) {
+    item.style.backgroundColor = "#EAEDF3"; 
+  } else {
+    item.style.backgroundColor = "#fff";
+  }
+});
 };
+
+const links = document.querySelectorAll(".list");
+
+listContainer.addEventListener("click",(e)=>{
+    console.log(e.target.parentNode.innerText)
+})
+
+links.forEach((link)=>{
+    link.addEventListener("click",()=>{
+        console.log(link)
+    })
+})
