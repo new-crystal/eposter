@@ -146,16 +146,30 @@ listItems.forEach((item, index) => {
     item.style.backgroundColor = "#fff";
   }
 });
+
+listItems.forEach((list)=>{
+    list.addEventListener("mouseover",(e)=>{
+        if(e.target.className === "list"){
+            e.target.style.color = "#0086FE";
+        }else if(e.target.className === "number"){
+            e.target.parentNode.style.color = "#0086FE";
+        }else if(e.target.className === "title"){
+            e.target.parentNode.style.color = "#0086FE";
+        }else if(e.target.className === "name"){
+            e.target.parentNode.style.color = "#0086FE";
+        }
+    })
+    list.addEventListener("mouseout",(e)=>{
+        if(e.target.className === "list"){
+            e.target.style.color = "#414042";
+        }else{
+            e.target.parentNode.style.color = "#414042";
+        }
+    })
+})
 };
 
-const links = document.querySelectorAll(".list");
-
 listContainer.addEventListener("click",(e)=>{
-    console.log(e.target.parentNode.innerText)
-})
-
-links.forEach((link)=>{
-    link.addEventListener("click",()=>{
-        console.log(link)
-    })
+    const number = e.target.parentNode.innerText.split("\n")[0]
+     window.location.href = `/detail.html?number=${number}`
 })

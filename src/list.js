@@ -6,9 +6,7 @@ export const nameList =
         title:"title1Feasibility and Usefulness of Out-of Office Cuffless Blood…",
         name:"naame1",
         img:[{
-            url1:"./assets/bg.png"
-        },{
-            url2:"./assets/bg.png"
+            url1:"../assets/header.svg"
         }]
     },
     {
@@ -24,19 +22,22 @@ export const nameList =
         title:"title3",
         name:"naame3",
         img:[{
-            url1:"./assets/bg.png"
+      url1:"https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d745132d3.jpeg"
         },{
-            url2:"./assets/bg.png"
-        }]
+            url2:"http://photos1.blogger.com/blogger/2921/1916/1600/photoshop_apples.jpg"
+        },{url3:"https://img.freepik.com/premium-psd/flat-design-korean-restaurant-poster-template_23-2150015831.jpg"}
+    ]
     },
     {
         title:"title4",
         name:"naame4",
         img:[{
-            url1:"./assets/bg.png"
-        },{
-            url2:"./assets/bg.png"
-        }]
+            url1:"https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d745132d3.jpeg"
+              },{
+                  url2:"http://photos1.blogger.com/blogger/2921/1916/1600/photoshop_apples.jpg"
+              },
+{url3:"https://img.freepik.com/premium-psd/flat-design-korean-restaurant-poster-template_23-2150015831.jpg"}
+          ]
     },
     {
         title:"title5",
