@@ -184,7 +184,7 @@ export const nameList =
     },
     {
         title:"title21",
-        name:"naame21",
+        name:"naaame21",
         img:[{
             url1:"./assets/bg.png"
         },{
@@ -193,7 +193,7 @@ export const nameList =
     },
     {
         title:"title22",
-        name:"name22",
+        name:"naame22",
         img:[{
             url1:"./assets/bg.png"
         },{
@@ -202,7 +202,7 @@ export const nameList =
     },
     {
         title:"title23",
-        name:"name23",
+        name:"naame23",
         img:[{
             url1:"./assets/bg.png"
         },{
