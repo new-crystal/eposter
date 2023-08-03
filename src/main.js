@@ -1,5 +1,5 @@
 "user strict"
-
+import {nameList} from "./list.js"
 
 const listContainer = document.querySelector("#listContainer")
 const search = document.querySelector("#search")
@@ -8,745 +8,26 @@ const secondBox = document.querySelector("#second_box")
 const thirdBox = document.querySelector("#third_box")
 const fourthBox = document.querySelector("#fourth_box")
 
-const nameList = 
-    [
-        {
-            title:"title1",
-            name:"name1",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title2",
-            name:"name2",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title3",
-            name:"name3",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title4",
-            name:"name4",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title5",
-            name:"name5",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title6",
-            name:"name6",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title7",
-            name:"name7",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title8",
-            name:"name8",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title9",
-            name:"name9",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title10",
-            name:"name10",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title11",
-            name:"name11",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title12",
-            name:"name12",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title13",
-            name:"name13",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title14",
-            name:"name14",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title15",
-            name:"name15",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title16",
-            name:"name16",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title17",
-            name:"name17",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title18",
-            name:"name18",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title19",
-            name:"name19",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title20",
-            name:"name20",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title21",
-            name:"name21",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title22",
-            name:"name22",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title23",
-            name:"name23",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title24",
-            name:"name24",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title25",
-            name:"name25",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title26",
-            name:"name26",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title27",
-            name:"name27",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title28",
-            name:"name28",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title29",
-            name:"name29",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title30",
-            name:"name30",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title31",
-            name:"name31",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title32",
-            name:"name32",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title33",
-            name:"name33",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title34",
-            name:"name34",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title35",
-            name:"name35",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title36",
-            name:"name36",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title37",
-            name:"name37",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title38",
-            name:"name38",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title39",
-            name:"name39",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title40",
-            name:"name40",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title41",
-            name:"name41",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title42",
-            name:"name42",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title43",
-            name:"name43",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title44",
-            name:"name44",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title45",
-            name:"name45",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title46",
-            name:"name46",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title47",
-            name:"name47",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title48",
-            name:"name48",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title49",
-            name:"name49",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title50",
-            name:"name50",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title51",
-            name:"name51",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title52",
-            name:"name52",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title53",
-            name:"name53",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title54",
-            name:"name54",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title55",
-            name:"name55",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title56",
-            name:"name56",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title57",
-            name:"name57",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title58",
-            name:"name58",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title59",
-            name:"name59",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title60",
-            name:"name60",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },   {
-            title:"title61",
-            name:"name61",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title62",
-            name:"name62",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title63",
-            name:"name63",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title64",
-            name:"name64",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title65",
-            name:"name65",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title66",
-            name:"name66",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title67",
-            name:"name67",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title68",
-            name:"name68",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title69",
-            name:"name69",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title70",
-            name:"name70",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title71",
-            name:"name71",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title72",
-            name:"name72",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title73",
-            name:"name73",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title74",
-            name:"name74",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title75",
-            name:"name75",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title76",
-            name:"name76",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title77",
-            name:"name77",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title78",
-            name:"name78",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title79",
-            name:"name79",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-        {
-            title:"title80",
-            name:"name80",
-            img:[{
-                url1:"./assets/bg.png"
-            },{
-                url2:"./assets/bg.png"
-            }]
-        },
-]
 
 /**list에서 a태그로 집어넣기 */
 function pushTitle(){
     nameList.map((name, i)=>{
         const titleList = document.createElement("a")
         titleList.className = "list";
-        titleList.innerText = `${i+1} ${name.title} / ${name.name}`;
+        titleList.innerHTML = `<span class="number">PO-${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
         listContainer.appendChild(titleList)
     })
 }
 
 /**리스트 쪼개기 */
 function divideList(list){
-    const titleSet = new Set(list.map((li) => li.title));
+    const titleSet = new Set(list.map((li) => `${li.title} ${li.name}`));
     const allList = document.querySelectorAll(".list")
-        allList.forEach((a) => {
-            const title = a.innerText.split(" ")[1];
+        allList.forEach((a, i) => {
+             // 요소 내용 가져오기
+        const innerHTML = a.innerText;
+        // 타이틀 추출
+        const title = innerHTML.split(`-${i+1} `)[1];
             a.style.display = titleSet.has(title) ? "" : "none";
 })}
 
@@ -764,89 +45,76 @@ search.addEventListener("input",(e)=>{
     })
     searching(searchList)
     if(inputText === ""){
-        firstSlice()
+        addEventListeners(nameList)
+        sliceList(nameList)(0, 20);
     }
 })
-
-
 
 function searching(searchList){
     const list = document.querySelectorAll(".list")
     list.forEach((li)=>{
         li.style.display = "none";
     })
+    const resultList = []
     
     searchList.map((search)=>{
         list.forEach((li)=>{
             if(li.innerText === search){
                 li.style.display = "";
+                resultList.push(li)
             }
         })
     })
+    addEventListeners(resultList)
+
 }
 
-firstBox.addEventListener("click", ()=>firstSlice())
-secondBox.addEventListener("click", ()=>secondSlice())
-thirdBox.addEventListener("click", ()=>thirdSlice())
-fourthBox.addEventListener("click", ()=>fourthSlice())
-
-function firstSlice(){
-    firstBox.classList.remove("bg-amber-400")
-    firstBox.classList.remove("bg-amber-600")
-    secondBox.classList.remove("bg-amber-600")
-    thirdBox.classList.remove("bg-amber-600")
-    fourthBox.classList.remove("bg-amber-600")
-    secondBox.classList.add("bg-amber-400")
-    thirdBox.classList.add("bg-amber-400")
-    fourthBox.classList.add("bg-amber-400")
-    firstBox.classList.add("bg-amber-600")
-   const first = nameList.slice(0,20);
-   divideList(first)
+function sliceList(list) {
+    return (startIndex, endIndex) => { 
+        const sliced = list.slice(startIndex, endIndex);
+        divideList(sliced);
+    };
 }
 
-function secondSlice(){
-    secondBox.classList.remove("bg-amber-400")
-    firstBox.classList.remove("bg-amber-600")
-    secondBox.classList.remove("bg-amber-600")
-    thirdBox.classList.remove("bg-amber-600")
-    fourthBox.classList.remove("bg-amber-600")
-    firstBox.classList.add("bg-amber-400")
-    thirdBox.classList.add("bg-amber-400")
-    fourthBox.classList.add("bg-amber-400")
-    secondBox.classList.add("bg-amber-600")
-    const second = nameList.slice(20,40)
-    divideList(second)
+function addEventListeners(list) {
+    const sliceListCallback = sliceList(list);
+    sliceListCallback(0,20);
+    updateActiveBox(firstBox);
+
+    firstBox.addEventListener("click", () => {
+        sliceListCallback(0, 20);
+        updateActiveBox(firstBox);
+    });
+
+    secondBox.addEventListener("click", () => {
+        console.log("second")
+        sliceListCallback(20, 40);
+        updateActiveBox(secondBox);
+    });
+
+    thirdBox.addEventListener("click", () => {
+        sliceListCallback(40, 60);
+        updateActiveBox(thirdBox);
+    });
+
+    fourthBox.addEventListener("click", () => {
+        sliceListCallback(60, 80);
+        updateActiveBox(fourthBox);
+    });
 }
 
-function thirdSlice(){
-    thirdBox.classList.remove("bg-amber-400")
-    firstBox.classList.remove("bg-amber-600")
-    secondBox.classList.remove("bg-amber-600")
-    thirdBox.classList.remove("bg-amber-600")
-    fourthBox.classList.remove("bg-amber-600")
-    firstBox.classList.add("bg-amber-400")
-    secondBox.classList.add("bg-amber-400")
-    fourthBox.classList.add("bg-amber-400")
-    thirdBox.classList.add("bg-amber-600")
-    const third = nameList.slice(40,60)
-    divideList(third)
+function updateActiveBox(activeBox) {
+    [firstBox, secondBox, thirdBox, fourthBox].forEach((box) => {
+        box.style.backgroundColor = "#fff"
+        box.style.color = "#000"
+    });
+
+    activeBox.style.backgroundColor = "#0086FE"
+    activeBox.style.color = "#FFF"
 }
 
-function fourthSlice(){
-    fourthBox.classList.remove("bg-amber-400")
-    firstBox.classList.remove("bg-amber-600")
-    secondBox.classList.remove("bg-amber-600")
-    thirdBox.classList.remove("bg-amber-600")
-    fourthBox.classList.remove("bg-amber-600")
-    firstBox.classList.add("bg-amber-400")
-    secondBox.classList.add("bg-amber-400")
-    thirdBox.classList.add("bg-amber-400")
-    fourthBox.classList.add("bg-amber-600")
-    const fourth = nameList.slice(60,80)
-    divideList(fourth)
-}
-
-window.onload = ()=>{
+window.onload = () => {
     pushTitle();
-    firstSlice();}
-
+    addEventListeners(nameList); // 각 박스에 이벤트 추가하면서 nameList 전달
+    sliceList(nameList)(0, 20); // 페이지 로드시 첫번째 슬라이스 호출
+};

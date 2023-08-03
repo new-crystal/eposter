@@ -5,37 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./src/main.js" defer></script>
+    <script type="module" src="./src/main.js" defer></script>
+    <link rel="stylesheet" href="./src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR&display=swap" rel="stylesheet">
 </head>
-<style>
-    body {
-        font-family: 'Noto Sans KR', sans-serif;
-        font-family: 'Noto Serif KR', serif;
-    }
-    a{
-        cursor: pointer;
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0.5rem;
-    }
-</style>
-<body style="width: 1080px;height: 1920px;" class="flex flex-col mx-auto">
+
+<body style="width: 1080px;height: 1920px; background: #EAEDF3 0% 0% no-repeat padding-box;" class="flex flex-col mx-auto">
     <div>
         <div id="header">
-            <img src="./assets/bg.png" alt="header"/>
+            <img src="./assets/header.svg" alt="header" width="1080"/>
         </div>
         <div id="page_1">
-        <div class="flex justify-between">
-            <div id="first_box" class="text-4xl cursor-pointer border bg-amber-400 p-3 hover:bg-amber-600">Poster 1-20</div>
-            <div id="second_box" class="text-4xl cursor-pointer border bg-amber-400 p-3 hover:bg-amber-600">Poster 21-40</div>
-            <div id="third_box" class="text-4xl cursor-pointer border bg-amber-400 p-3 hover:bg-amber-600">Poster 41-60</div>
-            <div id="fourth_box" class="text-4xl cursor-pointer border bg-amber-400 p-3 hover:bg-amber-600">Poster 61-80</div>
+        <div class="flex justify-between mt-[40px]">
+            <div id="first_box" class="btn cursor-pointer">Poster 1-20</div>
+            <div id="second_box" class="btn cursor-pointer">Poster 21-40</div>
+            <div id="third_box" class="btn cursor-pointer">Poster 41-60</div>
+            <div id="fourth_box" class="btn cursor-pointer">Poster 61-80</div>
             <!-- <marquee> test 001 </marquee> -->
         </div>
-        <div id="listContainer" class="flex flex-col"></div>
+        <div class="title_container">
+          <span>No.</span> <p>Title</p><p>Name</p>
+        </div>
+        <div id="listContainer" class="flex flex-col">
+        </div>
         <div class="flex itmes-center justify-center">
             <input id="search" class="border px-3 py-2 m-3"/>
             <img src="./assets/zoom.svg" width="30px"/>
@@ -43,7 +37,7 @@
     </div>
      <div id="page_2">
         <div>
-            
+
         </div>
      </div>
     </div>
