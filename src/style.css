@@ -1,9 +1,11 @@
 
-a{
+a, a>span, a>p{
     cursor: pointer;
-    font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     margin: 0.5rem;
+    font: normal normal normal 22px/24px Arial;
+    letter-spacing: -0.22px;
+    color: #414042;
 }
 .btn{
     width: 235px;

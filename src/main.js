@@ -21,23 +21,19 @@ function pushTitle(){
 
 /**리스트 쪼개기 */
 function divideList(list){
-    console.log(list)
-    const titleSet = new Set(list.map((li) => li.title !== ""? `${li.title} ${li.name}` : forList(list) ));
+
+    const titleSet = new Set(list.map((li) => li.title !== ""? `${li.title} ${li.name}` : li.innerText.split(" ").splice(1).join(" ")));
     const allList = document.querySelectorAll(".list")
+
         allList.forEach((a, i) => {
-             // 요소 내용 가져오기
         const innerHTML = a.innerText;
-        // 타이틀 추출
-        const title = innerHTML.split(`-${i+1} `)[1];
-            a.style.display = titleSet.has(title) ? "" : "none";
+        const titleSplit = innerHTML.split(" ")
+        const titleShift = titleSplit.shift()
+        const titleJoin = titleSplit.join(' ');
+        a.style.display = titleSet.has(titleJoin) ? "" : "none";
 })}
 
-function forList(list){
-    for(let i = 0; i >= list.length; i++){
-        console.log(list[i].innerText.split(`-${i+1} `)[0].split("\n")[2])
-        return list[i].innerText.split(`-${i+1} `)[0].split("\n")[2];
-    }
-}
+
 
 /**search 기능 */
 search.addEventListener("input",(e)=>{
@@ -68,6 +64,7 @@ search.addEventListener("input",(e)=>{
 
 
 function sliceList(list) {
+
     return (startIndex, endIndex) => {
         const sliced = list.slice(startIndex, endIndex);
         divideList(sliced);
@@ -75,6 +72,7 @@ function sliceList(list) {
 }
 
 function addEventListeners(list) {
+
     const sliceListCallback = sliceList(list);
 
     sliceListCallback(0, 20);
@@ -121,7 +119,7 @@ function searching(searchList) {
     searchList.map((search) => {
         list.forEach((li) => {
             if (li.innerText === search) {
-                li.style.display = "";
+                // li.style.display = "";
                 resultList.push(li);
             }
         });
