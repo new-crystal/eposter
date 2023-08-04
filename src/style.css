@@ -175,3 +175,17 @@ transform: translate(670px, -168px);
     transform: translate(780px, -171px);
     z-index: 9999;
 }
+
+/* Add slide animation class */
+.slide-container {
+    overflow: hidden; /* Hide the overflowing content */
+    position: relative; /* Required for absolutely positioning the image */
+  }
+  
+  .slide-container img {
+    width: 100%; /* Make sure the image fills the container */
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease; /* Slide animation */
+  }

@@ -22,6 +22,7 @@ goListBtn.addEventListener("click",()=>{
 })
 
 function getNumber(){
+    
     if(currentNumber === 1){
         numberText.innerText = `PO-0${currentNumber}`;
         nextNumber.innerText = `PO-0${currentNumber + 1}`;
@@ -60,22 +61,25 @@ function getImage(){
     })
 }
 
-function setImage(name){
-    if(name.img.length === 1){
-        const image = document.createElement("img");
-         image.setAttribute("src",name.img[0].url1)
-         imgBox.appendChild(image)
-    }else{
-        name.img.map((img)=>{
-            imgList.push(img)
-        })
-        const posterImage = document.createElement("img");
-        posterImage.setAttribute("src", Object.values(imgList[now])[0]);
-        imgBox.appendChild(posterImage)
-        console.log(posterImage)
-        setImgBtn(posterImage)
+function setImage(name) {
+    if (name.img.length === 1) {
+      const image = document.createElement("img");
+      image.setAttribute("src", name.img[0].url1);
+      image.classList.add("slide-animation"); // Add slide-animation class to the image
+      imgBox.appendChild(image);
+    } else {
+      name.img.forEach((img) => {
+        imgList.push(img);
+      });
+      const posterImage = document.createElement("img");
+      posterImage.setAttribute("src", Object.values(imgList[now])[0]);
+      posterImage.classList.add("slide-animation"); // Add slide-animation class to the image
+      imgBox.appendChild(posterImage);
+      console.log(posterImage);
+      setImgBtn(posterImage);
     }
-}
+  }
+  
 function setImgBtn(image) {
     // 기존 버튼들의 이벤트 리스너를 모두 제거
     const prevBtn = document.querySelector(".img_pre_btn");
@@ -116,15 +120,23 @@ function setImgBtn(image) {
     }
 }
 function onPrevBtnClick(image) {
-    now = now - 1;
+  now = now - 1;
+  image.style.transform = "translateX(-100%)"; // Slide animation to the left
+  setTimeout(() => {
     image.setAttribute("src", Object.values(imgList[now])[0]);
+    image.style.transform = "translateX(0)"; // Reset the transform after the image has changed
     setImgBtn(image);
+  }, 300); // Wait for the transition to finish before changing the image
 }
 
 function onNextBtnClick(image) {
-    now = now + 1;
+  now = now + 1;
+  image.style.transform = "translateX(100%)"; // Slide animation to the right
+  setTimeout(() => {
     image.setAttribute("src", Object.values(imgList[now])[0]);
+    image.style.transform = "translateX(0)"; // Reset the transform after the image has changed
     setImgBtn(image);
+  }, 300); // Wait for the transition to finish before changing the image
 }
 
 function addEventImgPreBtn(image) {
