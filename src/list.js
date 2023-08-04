@@ -24,8 +24,8 @@ export const nameList =
         img:[{
       url1:"https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d745132d3.jpeg"
         },{
-            url2:"http://photos1.blogger.com/blogger/2921/1916/1600/photoshop_apples.jpg"
-        },{url3:"https://img.freepik.com/premium-psd/flat-design-korean-restaurant-poster-template_23-2150015831.jpg"}
+            url2:"https://img.freepik.com/premium-psd/falling-slice-ripe-red-apple-for-your-design_34168-1790.jpg?w=740"
+        },{url3:"https://img.freepik.com/premium-psd/fresh-peach-with-leaves-isolated_328278-245.jpg?w=740"}
     ]
     },
     {
