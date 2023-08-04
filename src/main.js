@@ -14,7 +14,7 @@ function pushTitle(){
     nameList.map((name, i)=>{
         const titleList = document.createElement("a")
         titleList.className = "list";
-        if(i<10){
+        if(i < 9){
             titleList.innerHTML = `<span class="number">PO-0${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
         }else{
             titleList.innerHTML = `<span class="number">PO-${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
@@ -41,7 +41,7 @@ function divideList(list){
 
 /**search 기능 */
 search.addEventListener("input",(e)=>{
-    const inputText = e.target.value;
+    const inputText = e.target.value.toLowerCase();
     const titles = document.querySelectorAll(".list")
     const list = [];
     titles.forEach((title)=>{
@@ -128,6 +128,13 @@ function searching(searchList) {
             }
         });
     });
+    resultList.forEach((item, index) => {
+        if (index % 2 === 0) {
+          item.style.backgroundColor = "#EAEDF3"; 
+        } else {
+          item.style.backgroundColor = "#fff";
+        }
+      });
     addEventListeners(resultList); // 검색 결과에 이벤트 추가
 }
 

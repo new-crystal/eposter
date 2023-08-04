@@ -22,21 +22,21 @@ goListBtn.addEventListener("click",()=>{
 })
 
 function getNumber(){
-    
     if(currentNumber === 1){
         numberText.innerText = `PO-0${currentNumber}`;
         nextNumber.innerText = `PO-0${currentNumber + 1}`;
         preImg.style.display = "none"
     }
-    else if(1<currentNumber < 10){
+    else if(1 < currentNumber && currentNumber < 10){
         numberText.innerText = `PO-0${currentNumber}`;
         preNumber.innerText = `PO-0${currentNumber - 1}`;
         nextNumber.innerText = `PO-0${currentNumber + 1}`;
         preImg.style.display = ""
         nextImg.style.display = ""
     }else if(currentNumber === 80){
-        numberText.innerText = `PO-0${currentNumber}`;
-        preNumber.innerText = `PO-0${currentNumber - 1}`;
+        console.log("80")
+        numberText.innerText = `PO-${currentNumber}`;
+        preNumber.innerText = `PO-${currentNumber - 1}`;
         nextImg.style.display = "none"
     }else{
         numberText.innerText = `PO-${currentNumber}`;
@@ -65,7 +65,7 @@ function setImage(name) {
     if (name.img.length === 1) {
       const image = document.createElement("img");
       image.setAttribute("src", name.img[0].url1);
-      image.classList.add("slide-animation"); // Add slide-animation class to the image
+      image.classList.add("slide-animation"); 
       imgBox.appendChild(image);
     } else {
       name.img.forEach((img) => {
@@ -73,7 +73,7 @@ function setImage(name) {
       });
       const posterImage = document.createElement("img");
       posterImage.setAttribute("src", Object.values(imgList[now])[0]);
-      posterImage.classList.add("slide-animation"); // Add slide-animation class to the image
+      posterImage.classList.add("slide-animation"); 
       imgBox.appendChild(posterImage);
       console.log(posterImage);
       setImgBtn(posterImage);
@@ -121,22 +121,22 @@ function setImgBtn(image) {
 }
 function onPrevBtnClick(image) {
   now = now - 1;
-  image.style.transform = "translateX(-100%)"; // Slide animation to the left
+  image.style.transform = "translateX(-100%)"; 
   setTimeout(() => {
     image.setAttribute("src", Object.values(imgList[now])[0]);
-    image.style.transform = "translateX(0)"; // Reset the transform after the image has changed
+    image.style.transform = "translateX(0)"; 
     setImgBtn(image);
-  }, 300); // Wait for the transition to finish before changing the image
+  }, 300);
 }
 
 function onNextBtnClick(image) {
   now = now + 1;
-  image.style.transform = "translateX(100%)"; // Slide animation to the right
+  image.style.transform = "translateX(100%)"; 
   setTimeout(() => {
     image.setAttribute("src", Object.values(imgList[now])[0]);
-    image.style.transform = "translateX(0)"; // Reset the transform after the image has changed
+    image.style.transform = "translateX(0)"; 
     setImgBtn(image);
-  }, 300); // Wait for the transition to finish before changing the image
+  }, 300); 
 }
 
 function addEventImgPreBtn(image) {
@@ -158,7 +158,7 @@ nextButton.addEventListener("click", ()=>{
 })
 
 window.onload = () =>{
-    currentNumber =  window.location.search.split("=")[1].split("-")[1] * 1
+    currentNumber = ( window.location.search.split("=")[1].split("-")[1] )* 1
     getNumber()
     getImage()
 }
