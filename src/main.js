@@ -26,37 +26,25 @@ function pushTitle(){
 
 /**리스트 쪼개기 */
 function divideList(list){
-    console.log(list)
     const titleSet = new Set(list.map((li) => 
     {   if(li.id !== undefined && li.innerText === undefined){
-        console.log(1)
            return `PO-${li.id}`;
          }else if(li.innerText !== undefined){
-            console.log(2)
             return li.innerText.split(" ")[0];
          }else{
-            console.log(3)
             if(li.includes("\n")){
-                li.replace(/\n\n/g, " ")
-                return li.split(" ")[0];
+               const newLi = li.replace(/\n\n/g, " ")
+                return newLi.split(" ")[0];
             }else{
                 return li.split(" ")[0];
             }
          }
     }))
     
-console.log(titleSet)
     const allList = document.querySelectorAll(".list")
         allList.forEach((a) => {
         const innerHTML = a.innerText;
         let titleSplit = innerHTML.split(" ")[0]
-        // console.log(titleSplit)
-        // console.log(titleSet)
-        // if(titleSplit[0].includes("\n")){
-        //     titleSplit = titleSplit[0].replace(/\n\n/g, " ").split(" ")[0];
-        // }else{
-        //     titleSplit = titleSplit[0]
-        // }
         a.style.display = titleSet.has(titleSplit) ? "" : "none";
 })}
 
