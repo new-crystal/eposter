@@ -62,10 +62,14 @@ function getImage(){
 }
 
 function setImage(name) {
+    while (imgBox.firstChild) {
+      imgBox.removeChild(imgBox.firstChild);
+    }
+  
     if (name.img.length === 1) {
       const image = document.createElement("img");
       image.setAttribute("src", name.img[0].url1);
-      image.classList.add("slide-animation"); 
+      image.classList.add("slide-animation"); // slide-animation 클래스 추가
       imgBox.appendChild(image);
     } else {
       name.img.forEach((img) => {
@@ -73,11 +77,21 @@ function setImage(name) {
       });
       const posterImage = document.createElement("img");
       posterImage.setAttribute("src", Object.values(imgList[now])[0]);
-      posterImage.classList.add("slide-animation"); 
+      posterImage.classList.add("slide-animation"); // slide-animation 클래스 추가
       imgBox.appendChild(posterImage);
       console.log(posterImage);
       setImgBtn(posterImage);
     }
+  }
+  
+  
+  function loadImage(url) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = url;
+    });
   }
   
 function setImgBtn(image) {
@@ -119,25 +133,30 @@ function setImgBtn(image) {
         addEventImgPreBtn(image);
     }
 }
-function onPrevBtnClick(image) {
-  now = now - 1;
-  image.style.transform = "translateX(-100%)"; 
-  setTimeout(() => {
+async function onPrevBtnClick(image) {
+    now = now - 1;
+    image.style.transform = "translateX(-100%)";
+    await loadImage(Object.values(imgList[now])[0]); // 이미지 로드 기다림
     image.setAttribute("src", Object.values(imgList[now])[0]);
-    image.style.transform = "translateX(0)"; 
+    image.style.transform = "translateX(100%)"; // 이동 방향 반대로 설정
+    setTimeout(() => {
+      image.style.transform = "translateX(0)"; // 이미지가 왼쪽에서 오른쪽으로 이동되면서 나타나도록 설정
+    }, 0); // setTimeout을 0으로 설정하여 현재 이벤트 루프가 끝난 후에 애니메이션이 시작되도록 함
     setImgBtn(image);
-  }, 300);
-}
-
-function onNextBtnClick(image) {
-  now = now + 1;
-  image.style.transform = "translateX(100%)"; 
-  setTimeout(() => {
+  }
+  
+  async function onNextBtnClick(image) {
+    now = now + 1;
+    image.style.transform = "translateX(100%)";
+    await loadImage(Object.values(imgList[now])[0]); // 이미지 로드 기다림
     image.setAttribute("src", Object.values(imgList[now])[0]);
-    image.style.transform = "translateX(0)"; 
+    image.style.transform = "translateX(-100%)"; // 이동 방향 반대로 설정
+    setTimeout(() => {
+      image.style.transform = "translateX(0)"; // 이미지가 오른쪽에서 왼쪽으로 이동되면서 나타나도록 설정
+    },0); // setTimeout을 0으로 설정하여 현재 이벤트 루프가 끝난 후에 애니메이션이 시작되도록 함
     setImgBtn(image);
-  }, 300); 
-}
+  }
+  
 
 function addEventImgPreBtn(image) {
     const preBtn = document.querySelector(".img_pre_btn");

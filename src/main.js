@@ -26,22 +26,47 @@ function pushTitle(){
 
 /**리스트 쪼개기 */
 function divideList(list){
-
-    const titleSet = new Set(list.map((li) => li.title !== ""? `${li.title} ${li.name}` : li.innerText.split(" ").splice(1).join(" ")));
+    console.log(list)
+    const titleSet = new Set(list.map((li) => 
+    {   if(li.id !== undefined && li.innerText === undefined){
+        console.log(1)
+           return `PO-${li.id}`;
+         }else if(li.innerText !== undefined){
+            console.log(2)
+            return li.innerText.split(" ")[0];
+         }else{
+            console.log(3)
+            if(li.includes("\n")){
+                li.replace(/\n\n/g, " ")
+                return li.split(" ")[0];
+            }else{
+                return li.split(" ")[0];
+            }
+         }
+    }))
+    
+console.log(titleSet)
     const allList = document.querySelectorAll(".list")
-
-        allList.forEach((a, i) => {
+        allList.forEach((a) => {
         const innerHTML = a.innerText;
-        const titleSplit = innerHTML.split(" ")
-        titleSplit.shift()
-        const titleJoin = titleSplit.join(' ');
-        a.style.display = titleSet.has(titleJoin) ? "" : "none";
+        let titleSplit = innerHTML.split(" ")[0]
+        // console.log(titleSplit)
+        // console.log(titleSet)
+        // if(titleSplit[0].includes("\n")){
+        //     titleSplit = titleSplit[0].replace(/\n\n/g, " ").split(" ")[0];
+        // }else{
+        //     titleSplit = titleSplit[0]
+        // }
+        a.style.display = titleSet.has(titleSplit) ? "" : "none";
 })}
 
 
 /**search 기능 */
 search.addEventListener("input",(e)=>{
-    const inputText = e.target.value.toLowerCase();
+    let inputText = e.target.value.toLowerCase();
+    if(inputText === ""){
+        inputText = "-"
+    }
     const titles = document.querySelectorAll(".list")
     const list = [];
     titles.forEach((title)=>{
@@ -50,25 +75,21 @@ search.addEventListener("input",(e)=>{
     const searchList = [];
     list.filter((l)=>{
         if(l.includes("\n\n") && l.includes(inputText)){
-            searchList.push(l.replace(/\n\n/g, " "))   
-        }else{
-            l.includes(inputText) && searchList.push(l)  
+            searchList.push(l.replace(/\n\n/g, " ").toLowerCase())   
+        }else if(!l.includes("\n\n") &&l.includes(inputText)){
+            l.includes(inputText) && searchList.push(l.toLowerCase())  
         }
     })
-    searchList.map((search)=>{
-        search.replace(/\n/g, " ")
-    })
-    searching(searchList)
 
-    if(inputText === ""){
-        addEventListeners(nameList)
-        sliceList(nameList)(0, 20);
-    }
-})
+    if(searchList.length === 0){
+        searching(list)
+    }else{
+        searching(searchList)
+     
+}})
 
 
 function sliceList(list) {
-
     return (startIndex, endIndex) => {
         const sliced = list.slice(startIndex, endIndex);
         divideList(sliced);
@@ -76,7 +97,7 @@ function sliceList(list) {
 }
 
 function addEventListeners(list) {
-
+    
     const sliceListCallback = sliceList(list);
 
     sliceListCallback(0, 20);
@@ -114,16 +135,16 @@ function updateActiveBox(activeBox) {
 }
 
 function searching(searchList) {
+
     const list = document.querySelectorAll(".list");
     list.forEach((li) => {
         li.style.display = "none";
     });
-    const resultList = [];
+    let resultList = [];
 
     searchList.map((search) => {
         list.forEach((li) => {
-            if (li.innerText === search) {
-                // li.style.display = "";
+            if (li.innerText.toLowerCase() === search) {
                 resultList.push(li);
             }
         });
@@ -135,7 +156,12 @@ function searching(searchList) {
           item.style.backgroundColor = "#fff";
         }
       });
-    addEventListeners(resultList); // 검색 결과에 이벤트 추가
+      if(resultList.length === 0){
+          addEventListeners(searchList); // 검색 결과에 이벤트 추가
+      }else{
+        addEventListeners(resultList); // 검색 결과에 이벤트 추가
+
+      }
 }
 
 
