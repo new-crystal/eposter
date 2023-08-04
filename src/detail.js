@@ -6,6 +6,13 @@ const numberText = document.querySelector("#number");
 const imgBox = document.querySelector("#image");
 const query =  window.location.search.split("=")[1].split("-")[1];
 const goListBtn = document.querySelector(".view_list")
+const preNumber = document.querySelector("#preNumber")
+const nextNumber = document.querySelector("#nextNumber")
+const preButton = document.querySelector(".preBtn")
+const nextButton = document.querySelector(".nextBtn")
+const nextImg = document.querySelector(".next")
+const preImg = document.querySelector(".prev")
+let currentNumber =  0;
 
 let now = 0;
 const imgList = []
@@ -15,7 +22,28 @@ goListBtn.addEventListener("click",()=>{
 })
 
 function getNumber(){
-    numberText.innerText = window.location.search.split("=")[1]
+    if(currentNumber === 1){
+        numberText.innerText = `PO-0${currentNumber}`;
+        nextNumber.innerText = `PO-0${currentNumber + 1}`;
+        preImg.style.display = "none"
+    }
+    else if(1<currentNumber < 10){
+        numberText.innerText = `PO-0${currentNumber}`;
+        preNumber.innerText = `PO-0${currentNumber - 1}`;
+        nextNumber.innerText = `PO-0${currentNumber + 1}`;
+        preImg.style.display = ""
+        nextImg.style.display = ""
+    }else if(currentNumber === 80){
+        numberText.innerText = `PO-0${currentNumber}`;
+        preNumber.innerText = `PO-0${currentNumber - 1}`;
+        nextImg.style.display = "none"
+    }else{
+        numberText.innerText = `PO-${currentNumber}`;
+        preNumber.innerText = `PO-${currentNumber - 1}`;
+        nextNumber.innerText = `PO-${currentNumber + 1}`;
+        preImg.style.display = ""
+        nextImg.style.display = ""
+    }
 }
 
 function getImage(){
@@ -109,8 +137,16 @@ function addEventImgNextBtn(image) {
     nextBtn.addEventListener("click", () => onNextBtnClick(image));
 }
 
+preButton.addEventListener("click", ()=>{
+    window.location.href= `/detail.html?number=PO-0${currentNumber/1 - 1}`
+})
+
+nextButton.addEventListener("click", ()=>{
+    window.location.href= `/detail.html?number=PO-0${currentNumber/1 + 1}`
+})
 
 window.onload = () =>{
+    currentNumber =  window.location.search.split("=")[1].split("-")[1] * 1
     getNumber()
     getImage()
 }

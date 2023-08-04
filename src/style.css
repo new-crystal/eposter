@@ -126,7 +126,7 @@ transform: translate(670px, -168px);
 }
 
 .view_list{
-    background-color: orange;
+    background-color: transparent;
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -157,4 +157,21 @@ transform: translate(670px, -168px);
 
 #imgBox{
     display: flex;
+}
+
+.move_number{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#preNumber{
+    transform: translate(180px, 132px);
+    z-index: 9999;
+}
+
+#nextNumber{
+    transform: translate(780px, -171px);
+    z-index: 9999;
 }
