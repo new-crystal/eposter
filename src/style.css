@@ -207,3 +207,11 @@ transform: translate(670px, -168px);
     transition: left 0.3s ease-out;
   }
 
+  /* #img_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+ */

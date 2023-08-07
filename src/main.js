@@ -14,6 +14,7 @@ function pushTitle(){
     nameList.map((name, i)=>{
         const titleList = document.createElement("a")
         titleList.className = "list";
+        titleList.id = name.id
         if(i < 9){
             titleList.innerHTML = `<span class="number">PO-0${i+1}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
         }else{
@@ -25,26 +26,26 @@ function pushTitle(){
 }
 
 /**리스트 쪼개기 */
-function divideList(list){
+async function divideList(list){
+
     const titleSet = new Set(list.map((li) => 
     {   if(li.id !== undefined && li.innerText === undefined){
            return `PO-${li.id}`;
-         }else if(li.innerText !== undefined){
+         }else if(li.id !== undefined && li.innerText !== undefined){
             return li.innerText.split(" ")[0];
-         }else{
-            if(li.includes("\n")){
-               const newLi = li.replace(/\n\n/g, " ")
-                return newLi.split(" ")[0];
-            }else{
-                return li.split(" ")[0];
-            }
+         }else if(li.id === undefined && li.innerText === undefined){
+             if(li.includes("\n")){
+                const newLi = li.replace(/\n\n/g, " ")
+                 return newLi.split(" ")[0];
+             }else{
+                 return li.split(" ")[0];
+             }
          }
     }))
-    
+
     const allList = document.querySelectorAll(".list")
         allList.forEach((a) => {
-        const innerHTML = a.innerText;
-        let titleSplit = innerHTML.split(" ")[0]
+        const titleSplit = `PO-${a.id}`
         a.style.display = titleSet.has(titleSplit) ? "" : "none";
 })}
 
@@ -80,7 +81,9 @@ search.addEventListener("input",(e)=>{
 function sliceList(list) {
     return (startIndex, endIndex) => {
         const sliced = list.slice(startIndex, endIndex);
-        divideList(sliced);
+        if(sliced.length !== 0){
+            divideList(sliced);
+        }
     };
 }
 
@@ -160,6 +163,10 @@ window.onload = () => {
     sliceList(nameList)(0, 20); // 페이지 로드시 첫번째 슬라이스 호출
     const listItems = document.querySelectorAll(".list");
 
+
+
+
+
 listItems.forEach((item, index) => {
   if (index % 2 === 0) {
     item.style.backgroundColor = "#EAEDF3"; 
@@ -191,6 +198,12 @@ listItems.forEach((list)=>{
 };
 
 listContainer.addEventListener("click",(e)=>{
-    const number = e.target.parentNode.innerText.split("\n")[0]
-     window.location.href = `/detail.html?number=${number}`
+    const number = e.target.parentNode.id
+    const innerNum = e.target.id;
+
+    if(number !== "listContainer" && innerNum === ""){
+         window.location.href = `/detail.html?number=PO-${number}`
+    }else if(number === "listContainer" && innerNum !== ""){
+        window.location.href = `/detail.html?number=PO-${innerNum}`
+    }
 })
