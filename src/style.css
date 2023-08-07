@@ -176,11 +176,6 @@ transform: translate(670px, -168px);
     z-index: 9999;
 }
 
-#image{
-    margin-top: 25px;
-    margin-bottom: 25px;
-    overflow: hidden;
-}
 
 /* Add slide animation class */
 .slide-container {
@@ -189,29 +184,26 @@ transform: translate(670px, -168px);
     width: 100%;
     height: 100%;
   }
-  
-  .slide-container img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: left 0.3s ease-out;
-  }
-  .slide-animation {
-    position: absolute;
-    top: 310px;
-    left: 0;
-    width: 100%;
-    height: 74%;
-    object-fit: cover;
-    transition: left 0.3s ease-out;
-  }
 
-  /* #img_wrap{
-    position: absolute;
-    top: 0;
-    left: 0;
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+}
+
+.image {
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease; /* transform 속성에 대한 0.3초의 부드러운 애니메이션 효과 추가 */
+}
+
+.zoom{
+    font-size: 100px;
+    transform: translateY(-50px);
+}
+
+  #img_wrap{
+transform: translateY(65px);
   }
- */
+
