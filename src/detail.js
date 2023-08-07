@@ -77,7 +77,6 @@ function setImage(name) {
       posterImage.setAttribute("src", Object.values(imgList[now])[0]);
       posterImage.classList.add("slide-animation"); // slide-animation 클래스 추가
       imgBox.appendChild(posterImage);
-      console.log(posterImage);
       setImgBtn(posterImage);
     }
   }
@@ -133,6 +132,7 @@ function setImgBtn(image) {
 }
 async function onPrevBtnClick(image) {
     now = now - 1;
+    zoom = false;
     image.style.transform = "translateX(-100%)";
     await loadImage(Object.values(imgList[now])[0]); // 이미지 로드 기다림
     image.setAttribute("src", Object.values(imgList[now])[0]);
@@ -145,6 +145,7 @@ async function onPrevBtnClick(image) {
   
   async function onNextBtnClick(image) {
     now = now + 1;
+    zoom = false;
     image.style.transform = "translateX(100%)";
     await loadImage(Object.values(imgList[now])[0]); // 이미지 로드 기다림
     image.setAttribute("src", Object.values(imgList[now])[0]);
@@ -189,10 +190,6 @@ imgBox.addEventListener("mouseover",()=>{
     }
 })
 
-// imgBox.addEventListener("mouseout",()=>{
-//     posterImage.style.transform = "scale(1)"
-// })
-
 imgBox.addEventListener("mousemove", function (event) {
     if (zoom) {
         // 이미지 요소의 크기와 위치 정보 가져오기
@@ -205,60 +202,17 @@ imgBox.addEventListener("mousemove", function (event) {
         const mouseY = event.clientY - imageRect.top;
 
         // 마우스 커서의 위치를 기반으로 이미지 위치 계산
-        const translateX = ((1-mouseX / imageWidth) - 0.5) *50;
-        const translateY = ((1-mouseY / imageHeight) - 0.5) *50;
+        let translateX = ((1 - mouseX / imageWidth) - 0.5) * 50;
+        let translateY = ((1 - mouseY / imageHeight) - 0.5) * 50;
+
+        // 이미지가 끝선을 넘어가지 않도록 제한
+        translateX = Math.max(-50, Math.min(50, translateX));
+        translateY = Math.max(-50, Math.min(50, translateY));
 
         // 이미지의 위치 조정
         posterImage.style.transform = `scale(2) translate(${translateX}%, ${translateY}%)`;
     }
 });
-
-
-// function updateTransform(event) {
-//     if(zoom){
-//         // 이미지 요소의 크기와 위치 정보 가져오기
-//         const imageRect = posterImage.getBoundingClientRect();
-//         const imageWidth = imageRect.width;
-//         const imageHeight = imageRect.height;
-    
-//         // 이미지 요소 내에서의 마우스 커서의 상대적인 위치 계산
-//         const mouseX = event.clientX - imageRect.left;
-//         const mouseY = event.clientY - imageRect.top;
-    
-//         // 마우스 커서의 위치를 기반으로 이미지 위치 계산
-//         const translateX = ((mouseX / imageWidth) - 0.5) * 100;
-//         const translateY = ((mouseY / imageHeight) - 0.5) * 100;
-    
-//         // 이미지의 위치 조정
-//         posterImage.style.transform = `scale(2) translate(${translateX}%, ${translateY}%)`;
-//     }
-// }
-
-// function debounce(func, delay) {
-//     let timeoutId;
-//     return function(...args) {
-//         clearTimeout(timeoutId);
-//         timeoutId = setTimeout(() => {
-//             func(...args);
-//         }, delay);
-//     };
-// }
-
-// const debouncedHandler = debounce(updateTransform, 300); // 마지막 이벤트 후 300ms 대기 후 실행
-// imgBox.addEventListener("mousemove", debouncedHandler);
-
-// imgBox.addEventListener("mousemove", function(event){
-//     const targetRect = posterImage.getBoundingClientRect();
-//     const targetHalfWidth = targetRect.width / 2;
-//     const targetHalfHeight = targetRect.height / 2;
-//     const x = event.clientX;
-//     const y = event.clientY;
-
-//     posterImage.style.transformOrigin
-//      = `(${x - targetHalfWidth}% ${
-//         y - targetHalfHeight
-//       }%)`;
-// })
 
 
 window.onload = () =>{

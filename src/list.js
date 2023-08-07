@@ -24,7 +24,7 @@ export const nameList =
         title:"title3",
         name:"naame3",
         img:[{
-      url1:"https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d745132d3.jpeg"
+      url1:"https://img.freepik.com/free-vector/retro-healthy-food-menu-template_23-2148494593.jpg"
         },{
             url2:"https://img.freepik.com/premium-psd/falling-slice-ripe-red-apple-for-your-design_34168-1790.jpg?w=740"
         },{url3:"https://img.freepik.com/premium-psd/fresh-peach-with-leaves-isolated_328278-245.jpg?w=740"}
