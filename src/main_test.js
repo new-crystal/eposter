@@ -47,7 +47,7 @@ async function divideList(list) {
         slice.style.display = "";
     });
 
-    // restList.map((rest) => (rest.style.display = "none"));
+    restList.map((rest) => (rest.style.display = "none"));
 }
 
 /**search 기능 */

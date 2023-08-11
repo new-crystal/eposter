@@ -1,6 +1,5 @@
 "use strict"
-
-import {nameList} from "./list.js"
+import { nameList } from "./list.js";
 
 const numberText = document.querySelector("#number");
 const imgBox = document.querySelector("#image");
@@ -13,7 +12,13 @@ const nextButton = document.querySelector(".nextBtn")
 const nextImg = document.querySelector(".next")
 const preImg = document.querySelector(".prev")
 const posterImage = document.querySelector(".slide-animation")
-const zoomBtn = document.querySelector(".zoom")
+const zoomBtn = document.querySelector(".zoom_button")
+const header = document.querySelector("#header")
+
+header.addEventListener("click",()=>{
+    window.location.reload()
+})
+
 let currentNumber =  0;
 let zoom = false;
 let now = 0;
@@ -36,7 +41,6 @@ function getNumber(){
         preImg.style.display = ""
         nextImg.style.display = ""
     }else if(currentNumber === 80){
-        console.log("80")
         numberText.innerText = `PO-${currentNumber}`;
         preNumber.innerText = `PO-${currentNumber - 1}`;
         nextImg.style.display = "none"

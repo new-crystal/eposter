@@ -13,16 +13,16 @@
 </head>
 
 <body style="width: 1080px;height: 1920px; background: #9CAED659 0% 0% no-repeat padding-box; overflow-x: hidden;" class="flex flex-col mx-auto">
-    <div style="overflow: hidden;">
+    <div style="overflow: hidden;position: relative;">
         <div id="header">
             <img src="./assets/header.svg" alt="header"/>
         </div>
         <div id="page_1">
         <div class="flex justify-between">
-            <div id="first_box" class="btn cursor-pointer">Poster 1-20</div>
-            <div id="second_box" class="btn cursor-pointer">Poster 21-40</div>
-            <div id="third_box" class="btn cursor-pointer">Poster 41-60</div>
-            <div id="fourth_box" class="btn cursor-pointer">Poster 61-80</div>
+            <button id="first_box" class="btn cursor-pointer">Poster 1-20</button>
+            <button id="second_box" class="btn cursor-pointer">Poster 21-40</button>
+            <button id="third_box" class="btn cursor-pointer">Poster 41-60</button>
+            <button id="fourth_box" class="btn cursor-pointer">Poster 61-80</button>
             <!-- <marquee> test 001 </marquee> -->
         </div>
         <div class="title_container">
@@ -30,7 +30,7 @@
         </div>
         <div id="listContainer" class="flex flex-col">
         </div>
-        <div class="flex itmes-center justify-center">
+        <div id="search_box" class="flex itmes-center justify-center">
             <input id="search" class="border px-3 py-2 m-3" placeholder="Please enter your search term"/>
             <img class="zoom" src="./assets/zoom.svg" width="80px"/>
         </div>
