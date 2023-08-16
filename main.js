@@ -897,6 +897,7 @@ const header = document.querySelector("#header")
 let restElement;
 let restLength;
 
+/**헤더 새로고침 버튼 */
 header.addEventListener("click",()=>{
     window.location.reload()
 })
@@ -912,10 +913,8 @@ function pushTitle(){
     })
 }
 
-/** 리스트 쪼개기 */
+/** 쪼개진 리스트 보여주기 */
 async function divideList(list) {
-    // console.log(list)
-
     const blockList = [];
     list.map((li) => {
         if (li.id === undefined) {
@@ -992,14 +991,15 @@ search.addEventListener("input",(e)=>{
 }})
 
 
+/**리스트 쪼개기 */
 function sliceList(list) {
-
     return (startIndex, endIndex) => {
         const sliced = list.slice(startIndex, endIndex);
         divideList(sliced);
     };
 }
 
+/**탭 스타일 바꾸기 */
 function updateBoxStyles(list, activeBox) {
 
     [firstBox, secondBox, thirdBox, fourthBox].forEach((box, i) => {
@@ -1049,6 +1049,7 @@ function updateBoxStyles(list, activeBox) {
     }
 }
 
+/**탭 이벤트 리스너 */
 function addEventListeners(list) {
     const sliceListCallback = sliceList(list);
 
@@ -1076,6 +1077,10 @@ function addEventListeners(list) {
     });
 }
 
+/**검색한 리스트 a 태그 리스트로  변환하기
+ * searchList = 검색한 줄글 리스트
+ * resultList = 검색 결과로 a 태그 리스트
+*/
 function searching(searchList) {
 
     const list = document.querySelectorAll(".list");
@@ -1095,7 +1100,12 @@ function searching(searchList) {
 }
 
 
-
+/**윈도우 로드시 
+ * 1. 80개 목록 만들기 pushTitle()
+ * 2. 자르기 -> sliceList()
+ * 3. 뒷 배경 주기 -> backgroundColor()
+ * 4. hover event
+ */
 window.onload = function loadWindow() {
     pushTitle();
     addEventListeners(nameList);
@@ -1126,6 +1136,7 @@ listItems.forEach((list)=>{
 })
 };
 
+/**클릭 시 상세페이지로 이동 */
 listContainer.addEventListener("click",(e)=>{
     const number = e.target.parentNode.id
     const innerNum = e.target.id;
@@ -1137,6 +1148,10 @@ listContainer.addEventListener("click",(e)=>{
     }
 })
 
+/**배경색 주기
+ * 짝수 -> "#EAEDF3"
+ * 홀수 -> "#FFFFFF"
+ */
 function backgroundColor(listItems){
     listItems.forEach((item, index) => {
         if (index % 2 === 0) {
