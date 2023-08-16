@@ -910,10 +910,12 @@ let zoom = false;
 let now = 0;
 const imgList = []
 
+/**리스트 버튼 -> index 페이지로 이동 */
 goListBtn.addEventListener("click",()=>{
     window.location.href = "index.html"
 })
 
+/**푸터 이동 버튼 눌렀을 경우*/
 function getNumber(){
     if(currentNumber === 1){
         numberText.innerText = `PO-0${currentNumber}`;
@@ -939,6 +941,7 @@ function getNumber(){
     }
 }
 
+/**전체 리스트에서 이미지 가져오기 */
 function getImage(){
     nameList.map((name, i)=>{
         if(i < 10){
@@ -953,6 +956,7 @@ function getImage(){
     })
 }
 
+/**이미지의 src에 img 경로 넣어주기 */
 function setImage(name) {
     while (imgBox.firstChild) {
       imgBox.removeChild(imgBox.firstChild);
@@ -971,7 +975,8 @@ function setImage(name) {
     }
   }
   
-  
+
+  /**이미지 로드-> promise */
   function loadImage(url) {
     return new Promise((resolve, reject) => {
       const img = new Image();
@@ -981,6 +986,7 @@ function setImage(name) {
     });
   }
   
+  /**이미지 양옆 이동 버튼 이벤트 */
 function setImgBtn(image) {
     // 기존 버튼들의 이벤트 리스너를 모두 제거
     const prevBtn = document.querySelector(".img_pre_btn");
@@ -1020,6 +1026,8 @@ function setImgBtn(image) {
         addEventImgPreBtn(image);
     }
 }
+
+/**이미지 왼쪽 버튼 클릭 이벤트 */
 async function onPrevBtnClick(image) {
     now = now - 1;
     zoom = false;
@@ -1028,6 +1036,7 @@ async function onPrevBtnClick(image) {
     setImgBtn(image);
   }
   
+  /**이미지 오른쪽 버튼 클릭 이벤트 */
   async function onNextBtnClick(image) {
     now = now + 1;
     zoom = false;
@@ -1036,6 +1045,7 @@ async function onPrevBtnClick(image) {
     setImgBtn(image);
   }
   
+
 function addEventImgPreBtn(image) {
     const preBtn = document.querySelector(".img_pre_btn");
     preBtn.addEventListener("click", () => onPrevBtnClick(image)); 
@@ -1054,6 +1064,7 @@ nextButton.addEventListener("click", ()=>{
     window.location.href= `detail.html?number=PO-0${currentNumber/1 + 1}`
 })
 
+/**확대버튼 클릭이벤트 */
 zoomBtn.addEventListener("click",()=>{
     zoom = !zoom;
     if(zoom === false){
