@@ -893,6 +893,16 @@ const firstBox = document.querySelector("#first_box")
 const secondBox = document.querySelector("#second_box")
 const thirdBox = document.querySelector("#third_box")
 const fourthBox = document.querySelector("#fourth_box")
+const five_box = document.querySelector("#five_box")
+const six_box = document.querySelector("#six_box")
+const seven_box = document.querySelector("#seven_box")
+const eight_box = document.querySelector("#eight_box")
+const nine_box = document.querySelector("#nine_box")
+const ten_box = document.querySelector("#ten_box")
+const go_first_box = document.querySelector("#go_first_box")
+const pre_box = document.querySelector("#pre_box")
+const next_box = document.querySelector("#next_box")
+const go_last_box = document.querySelector("#go_last_box")
 const header = document.querySelector("#header")
 let restElement;
 let restLength;
@@ -908,13 +918,15 @@ function pushTitle(){
         const titleList = document.createElement("a")
         titleList.className = "list";
         titleList.id = name.id
-        titleList.innerHTML = `<span class="number">PO-${name.id}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
+        titleList.innerHTML = `<div class="wrap"><span class="number">PO-${name.id}</span><div class="text_box
+        "><p class="title">${name.title}</p> <p class="name">${name.name}</p></div></div>`;
         listContainer.appendChild(titleList)
     })
 }
 
 /** 쪼개진 리스트 보여주기 */
 async function divideList(list) {
+    console.log(list)
     const blockList = [];
     list.map((li) => {
         if (li.id === undefined) {
@@ -929,14 +941,27 @@ async function divideList(list) {
         const titleSplit = `PO-${a.id}`
         a.style.display = blockList.includes(titleSplit) ? "" : "none";
     })
-    if (list.length < 20 && list.length !== 0) {
-        restLength = 20 - list.length;
 
-        for (let i = 0; i < restLength; i++) {
+    if(list.length === 14){
+        if (restElement) {
+            const rests = document.querySelectorAll(".restElement");
+            rests.forEach((rest) => {
+                // rest.style.display = "none";
+                if (rest.parentNode === listContainer) {
+                    listContainer.removeChild(rest);
+                }
+            });
+        }
+    }
+
+    if (list.length < 14 || list.length === 0) {
+        restLength = 14 - list.length;
+
+        for (let i = 0; i <= restLength; i++) {
             restElement = document.createElement("a");
             restElement.style.display = "block";
             restElement.style.width = "980px";
-            restElement.style.height = "70px";
+            restElement.style.height = "76px";
             restElement.style.margin = "0"
             restElement.className = "restElement"
             if ((list.length + i) % 2 === 0) {
@@ -953,11 +978,13 @@ async function divideList(list) {
 search.addEventListener("input",(e)=>{
     let inputText = e.target.value.toLowerCase();
 
-    if (restElement && restElement.parentNode === listContainer) {
+    if (restElement) {
         const rests = document.querySelectorAll(".restElement");
         rests.forEach((rest) => {
-            rest.style.display = "none";
-            listContainer.removeChild(rest);
+            // rest.style.display = "none";
+            if (rest.parentNode === listContainer) {
+                listContainer.removeChild(rest);
+            }
         });
     }
 
@@ -981,10 +1008,9 @@ search.addEventListener("input",(e)=>{
                 }
     })
 
-  
     if(inputText === ""){
         addEventListeners(nameList); 
-        sliceList(nameList)(0, 20);
+        sliceList(nameList)(0, 14);
     }else{
         searching(searchList)
      
@@ -1001,14 +1027,11 @@ function sliceList(list) {
 
 /**탭 스타일 바꾸기 */
 function updateBoxStyles(list, activeBox) {
+   
 
-    [firstBox, secondBox, thirdBox, fourthBox].forEach((box, i) => {
-        box.style.backgroundColor = "#fff";
-        box.style.color = "#000";
-        if(i === 0){firstBox.innerText = "Poster 1-20"}
-        if(i === 1){secondBox.innerText = "Poster 21-40"}
-        if(i === 2){thirdBox.innerText = "Poster 41-60"}
-        if(i === 3){fourthBox.innerText = "Poster 61-80"}
+    [firstBox, secondBox, thirdBox, fourthBox, five_box, six_box, seven_box, eight_box, nine_box,ten_box,go_first_box,pre_box,next_box,go_last_box].forEach((box, i) => {
+        box.style.backgroundColor = "transparent";
+        box.style.color = "#6a6a6a";
     });
 
     activeBox.style.backgroundColor = "#0086FE";
@@ -1021,26 +1044,14 @@ function updateBoxStyles(list, activeBox) {
         secondBox.style.backgroundColor = "#D3D3D3";
         thirdBox.style.backgroundColor = "#D3D3D3";
         fourthBox.style.backgroundColor = "#D3D3D3";
-        firstBox.innerText = "Page 1-20"
-        secondBox.innerText = ""
-        thirdBox.innerText = ""
-        fourthBox.innerText = ""
     } else if (list.length <= 40 && list.length > 21) {
         thirdBox.disabled = true;
         fourthBox.disabled = true;
         thirdBox.style.backgroundColor = "#D3D3D3";
         fourthBox.style.backgroundColor = "#D3D3D3";
-        firstBox.innerText = "Page 1-20"
-        secondBox.innerText = "Page 21-40"
-        thirdBox.innerText = ""
-        fourthBox.innerText = ""
     } else if (list.length <= 60 && list.length > 41) {
         fourthBox.disabled = true;
         fourthBox.style.backgroundColor = "#D3D3D3";
-        firstBox.innerText = "Page 1-20"
-        secondBox.innerText = "Page 21-40"
-        thirdBox.innerText = "Page 41-60"
-        fourthBox.innerText = ""
     }else if (list.length === 80){
         firstBox.disabled = false;
         secondBox.disabled = false;
@@ -1053,28 +1064,57 @@ function updateBoxStyles(list, activeBox) {
 function addEventListeners(list) {
     const sliceListCallback = sliceList(list);
 
-    sliceListCallback(0, 20);
+    sliceListCallback(0, 14);
     updateBoxStyles(list, firstBox);
 
     firstBox.addEventListener("click", () => {
-        sliceListCallback(0, 20);
+        sliceListCallback(0, 14);
         updateBoxStyles(list, firstBox);
     });
 
     secondBox.addEventListener("click", () => { 
-        sliceListCallback(20, 40);
+        sliceListCallback(14, 28);
         updateBoxStyles(list, secondBox);
     });
 
     thirdBox.addEventListener("click", () => {
-        sliceListCallback(40, 60);
+        sliceListCallback(28, 42);
         updateBoxStyles(list, thirdBox);
     });
-
     fourthBox.addEventListener("click", () => {
-        sliceListCallback(60, 80);
+        sliceListCallback(42, 56);
         updateBoxStyles(list, fourthBox);
     });
+
+    five_box.addEventListener("click", () => {
+        sliceListCallback(56, 70);
+        updateBoxStyles(list, five_box);
+    });
+    six_box.addEventListener("click", () => {
+        sliceListCallback(70, 84);
+        updateBoxStyles(list, six_box);
+    });
+
+    seven_box.addEventListener("click", () => { 
+        sliceListCallback(84, 98);
+        updateBoxStyles(list, seven_box);
+    });
+
+    eight_box.addEventListener("click", () => {
+        sliceListCallback(98, 112);
+        updateBoxStyles(list, eight_box);
+    });
+
+    nine_box.addEventListener("click", () => {
+        sliceListCallback(112, 126);
+        updateBoxStyles(list, nine_box);
+    });
+    ten_box.addEventListener("click", () => {
+        sliceListCallback(126, 140);
+        updateBoxStyles(list, ten_box);
+    });
+
+
 }
 
 /**검색한 리스트 a 태그 리스트로  변환하기
@@ -1109,7 +1149,7 @@ function searching(searchList) {
 window.onload = function loadWindow() {
     pushTitle();
     addEventListeners(nameList);
-    sliceList(nameList)(0, 20);
+    sliceList(nameList)(0, 14);
     const listItems = document.querySelectorAll(".list");
 
     backgroundColor(listItems)
