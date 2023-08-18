@@ -929,8 +929,8 @@ async function divideList(list) {
         const titleSplit = `PO-${a.id}`
         a.style.display = blockList.includes(titleSplit) ? "" : "none";
     })
-    if (list.length < 20 && list.length !== 0) {
-        restLength = 20 - list.length;
+    if (list.length < 14 && list.length !== 0) {
+        restLength = 14 - list.length;
 
         for (let i = 0; i < restLength; i++) {
             restElement = document.createElement("a");
@@ -1053,26 +1053,26 @@ function updateBoxStyles(list, activeBox) {
 function addEventListeners(list) {
     const sliceListCallback = sliceList(list);
 
-    sliceListCallback(0, 20);
+    sliceListCallback(0, 14);
     updateBoxStyles(list, firstBox);
 
     firstBox.addEventListener("click", () => {
-        sliceListCallback(0, 20);
+        sliceListCallback(0, 14);
         updateBoxStyles(list, firstBox);
     });
 
     secondBox.addEventListener("click", () => { 
-        sliceListCallback(20, 40);
+        sliceListCallback(14, 28);
         updateBoxStyles(list, secondBox);
     });
 
     thirdBox.addEventListener("click", () => {
-        sliceListCallback(40, 60);
+        sliceListCallback(28, 42);
         updateBoxStyles(list, thirdBox);
     });
 
     fourthBox.addEventListener("click", () => {
-        sliceListCallback(60, 80);
+        sliceListCallback(42, 56);
         updateBoxStyles(list, fourthBox);
     });
 }
@@ -1109,7 +1109,7 @@ function searching(searchList) {
 window.onload = function loadWindow() {
     pushTitle();
     addEventListeners(nameList);
-    sliceList(nameList)(0, 20);
+    sliceList(nameList)(0, 14);
     const listItems = document.querySelectorAll(".list");
 
     backgroundColor(listItems)
