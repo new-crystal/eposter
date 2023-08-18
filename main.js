@@ -908,7 +908,7 @@ function pushTitle(){
         const titleList = document.createElement("a")
         titleList.className = "list";
         titleList.id = name.id
-        titleList.innerHTML = `<span class="number">PO-${name.id}</span> <p class="title">${name.title}</p> <p class="name">${name.name}</p>`;
+        titleList.innerHTML = `<div class="wrap"><span class="number">PO-${name.id}</span><div class="text_box"><p class="title">${name.title}</p> <p class="name">${name.name}</p></div></div>`;
         listContainer.appendChild(titleList)
     })
 }
