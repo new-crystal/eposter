@@ -952,24 +952,73 @@ async function divideList(list) {
                 }
             });
         }
+    } 
+    if(list.length === 0){
+        if (restElement) {
+            const rests = document.querySelectorAll(".restElement");
+            rests.forEach((rest) => {
+                // rest.style.display = "none";
+                if (rest.parentNode === listContainer) {
+                        listContainer.removeChild(rest);      
+                }
+            });
+        }else{
+            for (let i = 0; i <= 14; i++) {
+                restElement = document.createElement("a");
+                restElement.style.display = "block";
+                restElement.style.width = "980px";
+                restElement.style.height = "76px";
+                restElement.style.margin = "0"
+                restElement.className = "restElement"
+                if ((list.length + i) % 2 === 0) {
+                    restElement.style.backgroundColor = "#EAEDF3";
+                } else {
+                    restElement.style.backgroundColor = "#fff";
+                }
+                listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
+            }
+        }
     }
 
-    if (list.length < 14 || list.length === 0) {
+    if (list.length < 14 ) {
         restLength = 14 - list.length;
-
-        for (let i = 0; i <= restLength; i++) {
-            restElement = document.createElement("a");
-            restElement.style.display = "block";
-            restElement.style.width = "980px";
-            restElement.style.height = "76px";
-            restElement.style.margin = "0"
-            restElement.className = "restElement"
-            if ((list.length + i) % 2 === 0) {
-                restElement.style.backgroundColor = "#EAEDF3";
-            } else {
-                restElement.style.backgroundColor = "#fff";
+        if (restElement) {
+            const rests = document.querySelectorAll(".restElement");
+            rests.forEach((rest) => {
+                // rest.style.display = "none";
+                if (rest.parentNode === listContainer) {
+                        listContainer.removeChild(rest);      
+                }
+            });
+            for (let i = 0; i <= restLength; i++) {
+                restElement = document.createElement("a");
+                restElement.style.display = "block";
+                restElement.style.width = "980px";
+                restElement.style.height = "76px";
+                restElement.style.margin = "0"
+                restElement.className = "restElement"
+                if ((list.length + i) % 2 === 0) {
+                    restElement.style.backgroundColor = "#EAEDF3";
+                } else {
+                    restElement.style.backgroundColor = "#fff";
+                }
+                listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
             }
-            listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
+        }else{
+            for (let i = 0; i <= restLength; i++) {
+                restElement = document.createElement("a");
+                restElement.style.display = "block";
+                restElement.style.width = "980px";
+                restElement.style.height = "76px";
+                restElement.style.margin = "0"
+                restElement.className = "restElement"
+                if ((list.length + i) % 2 === 0) {
+                    restElement.style.backgroundColor = "#EAEDF3";
+                } else {
+                    restElement.style.backgroundColor = "#fff";
+                }
+                listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
+            }
         }
     }
 }
@@ -1159,18 +1208,18 @@ listItems.forEach((list)=>{
         if(e.target.className === "list"){
             e.target.style.color = "#0086FE";
         }else if(e.target.className === "number"){
-            e.target.parentNode.style.color = "#0086FE";
+            e.target.parentNode.parentNode.style.color = "#0086FE";
         }else if(e.target.className === "title"){
-            e.target.parentNode.style.color = "#0086FE";
+            e.target.parentNode.parentNode.style.color = "#0086FE";
         }else if(e.target.className === "name"){
-            e.target.parentNode.style.color = "#0086FE";
+            e.target.parentNode.parentNode.style.color = "#0086FE";
         }
     })
     list.addEventListener("mouseout",(e)=>{
         if(e.target.className === "list"){
             e.target.style.color = "#414042";
         }else{
-            e.target.parentNode.style.color = "#414042";
+            e.target.parentNode.parentNode.style.color = "#414042";
         }
     })
 })
