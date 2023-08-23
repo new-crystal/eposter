@@ -75,6 +75,10 @@ a>p {
     border-bottom: 3px solid #0086FE;
 }
 
+.restElement{
+    padding: 10px 22px;
+}
+
 #search{
     width: 980px;
     height: 120px;
@@ -254,3 +258,6 @@ transform: translate(670px, -168px);
 transform: translateY(65px);
   }
 
+#the-canvas{
+    margin: 0 auto;
+}

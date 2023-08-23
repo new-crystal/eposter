@@ -1111,3 +1111,4 @@ window.onload = () =>{
     getNumber()
     getImage()
 }
+
