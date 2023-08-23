@@ -1,14 +1,11 @@
-"use strict"
 
-export const nameList = 
 [
     {
         id: "01",
-        title:"title1Feasibility and Usefulness of Out-of Office Cuffless Blood…",
-        name:"naame1",
-        body:"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
+        title:"제목",
+        name:"이름(소속)",
         img:[{
-            url1:"../assets/header.svg"
+            url1:"카테고리_01.png"
         }]
     },
     {   id: "02",
