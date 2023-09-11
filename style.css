@@ -26,6 +26,12 @@ a>p {
     overflow-y:scroll;
 }
 
+.go_home_btn{
+    width: 120px;
+    height: 120px;
+    transform: translate(-23px, 40px)
+}
+
 .btn{
     width: 70px;
     /* height: 80px; */
@@ -46,12 +52,13 @@ a>p {
     margin-top: 1.8rem;
 }
 
-.list, no-results{
+.list, .no-results, .restElement{
     /* display: grid;
     grid-template-columns: 95px 583px 282px; */
     text-align: left;
     /* background-color:#9CAED659; */
     padding: 10px 22px;
+    height: 97px;
     margin: 0;
 }
 .list > .title, .list > .name{
@@ -80,12 +87,13 @@ a>p {
 }
 
 #search{
-    width: 980px;
-    height: 120px;
+    width: 830px;
+    height: 92px;
     border-radius: 50px;
     margin: 30px 0;
     padding: 40px;
     font-size: 30px;
+    transform: translateY(25px);
 }
 
 #search:focus{
@@ -147,6 +155,14 @@ a>p {
 .name{
     color: #6a6a6a;
 }
+
+.page_title{
+    font-size: 50px;
+    font-weight: bold;
+    color: #0086FE;
+    margin-bottom: 20px;
+}
+
 /**page 2*/
 
 #number{
@@ -245,7 +261,7 @@ transform: translate(670px, -168px);
 }
 
 .zoom{
-    transform: translate(410px,50px);
+    transform: translate(380px,57px);
 }
 
 .zoom_button{
@@ -260,4 +276,52 @@ transform: translateY(65px);
 
 #the-canvas{
     margin: 0 auto;
+}
+
+
+/**homepage*/
+
+.home_background{
+    width: 1080px;
+    height: 1920px;
+    background-image: url("./assets/home/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.home_header{
+    width: 894px;
+    margin: 0 30px;
+}
+
+.menu_wrap{
+    width: 900px;
+    height: 790px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu_box{
+    width: 900px;
+    height: 126px;
+    font-size: 46px;
+    font-weight: bold;
+    color: #0087FF;
+    text-align: center;
+    box-shadow: 0px 5px 12px #454C6E4D;
+    border-radius: 63px;
+    background: transparent linear-gradient(179deg, #FFFFFF 0%, #F7F7FA 100%, #000000 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_box:hover{
+    background: #0285FE;
+    color: #fff;
 }
