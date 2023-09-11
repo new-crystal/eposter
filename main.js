@@ -899,13 +899,23 @@ const seven_box = document.querySelector("#seven_box")
 const eight_box = document.querySelector("#eight_box")
 const nine_box = document.querySelector("#nine_box")
 const ten_box = document.querySelector("#ten_box")
+const eleven_box = document.querySelector("#eleven_box")
+const twelven_box = document.querySelector("#twelven_box")
+const thirty_box = document.querySelector("#thirty_box")
 const go_first_box = document.querySelector("#go_first_box")
 const pre_box = document.querySelector("#pre_box")
 const next_box = document.querySelector("#next_box")
 const go_last_box = document.querySelector("#go_last_box")
 const header = document.querySelector("#header")
+const headerTitle = document.querySelector(".page_title")
+const goHomeBtn = document.querySelector(".go_home_btn")
 let restElement;
 let restLength;
+
+function getHeaderTitle(){
+ const title = window.location.search.split("?")[1]
+ headerTitle.innerText = title
+}
 
 /**헤더 새로고침 버튼 */
 header.addEventListener("click",()=>{
@@ -926,7 +936,7 @@ function pushTitle(){
 
 /** 쪼개진 리스트 보여주기 */
 async function divideList(list) {
-    console.log(list)
+
     const blockList = [];
     list.map((li) => {
         if (li.id === undefined) {
@@ -963,15 +973,15 @@ async function divideList(list) {
                 }
             });
         }else{
-            for (let i = 0; i <= 14; i++) {
+            for (let i = 0; i < 14; i++) {
                 restElement = document.createElement("a");
                 restElement.style.display = "block";
                 restElement.style.width = "980px";
-                restElement.style.height = "76px";
+                restElement.style.height = "97px";
                 restElement.style.margin = "0"
                 restElement.className = "restElement"
                 if ((list.length + i) % 2 === 0) {
-                    restElement.style.backgroundColor = "#EAEDF3";
+                    restElement.style.backgroundColor = "#F2F5F8";
                 } else {
                     restElement.style.backgroundColor = "#fff";
                 }
@@ -990,30 +1000,30 @@ async function divideList(list) {
                         listContainer.removeChild(rest);      
                 }
             });
-            for (let i = 0; i <= restLength; i++) {
+            for (let i = 0; i < restLength; i++) {
                 restElement = document.createElement("a");
                 restElement.style.display = "block";
                 restElement.style.width = "980px";
-                restElement.style.height = "76px";
+                restElement.style.height = "97px";
                 restElement.style.margin = "0"
                 restElement.className = "restElement"
                 if ((list.length + i) % 2 === 0) {
-                    restElement.style.backgroundColor = "#EAEDF3";
+                    restElement.style.backgroundColor = "#F2F5F8";
                 } else {
                     restElement.style.backgroundColor = "#fff";
                 }
                 listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
             }
         }else{
-            for (let i = 0; i <= restLength; i++) {
+            for (let i = 0; i < restLength; i++) {
                 restElement = document.createElement("a");
                 restElement.style.display = "block";
                 restElement.style.width = "980px";
-                restElement.style.height = "76px";
+                restElement.style.height = "97px";
                 restElement.style.margin = "0"
                 restElement.className = "restElement"
                 if ((list.length + i) % 2 === 0) {
-                    restElement.style.backgroundColor = "#EAEDF3";
+                    restElement.style.backgroundColor = "#F2F5F8";
                 } else {
                     restElement.style.backgroundColor = "#fff";
                 }
@@ -1073,15 +1083,21 @@ function sliceList(list) {
         divideList(sliced);
     };
 }
-
+let menuNumber;
 /**탭 스타일 바꾸기 */
 function updateBoxStyles(list, activeBox) {
-   
-
-    [firstBox, secondBox, thirdBox, fourthBox, five_box, six_box, seven_box, eight_box, nine_box,ten_box,go_first_box,pre_box,next_box,go_last_box].forEach((box, i) => {
-        box.style.backgroundColor = "transparent";
-        box.style.color = "#6a6a6a";
-    });
+    // console.log(list)
+    // [firstBox, secondBox, thirdBox, fourthBox, five_box, six_box, seven_box, eight_box, nine_box,ten_box,eleven_box,twelven_box,thirty_box,go_first_box,pre_box,next_box,go_last_box].forEach((box, i) => {
+    //     box.style.backgroundColor = "transparent";
+    //     box.style.color = "#6a6a6a";
+    // });
+    if(list.length % 14 === 0){
+        menuNumber = list.length / 14
+    }else{
+        menuNumber = Math.floor( list.length / 14) + 1
+    }
+    /**menu item 갯수 */
+    // console.log(menuNumber)
 
     activeBox.style.backgroundColor = "#0086FE";
     activeBox.style.color = "#FFF";
@@ -1112,6 +1128,8 @@ function updateBoxStyles(list, activeBox) {
 /**탭 이벤트 리스너 */
 function addEventListeners(list) {
     const sliceListCallback = sliceList(list);
+
+    // console.log(list)
 
     sliceListCallback(0, 14);
     updateBoxStyles(list, firstBox);
@@ -1200,25 +1218,50 @@ window.onload = function loadWindow() {
     addEventListeners(nameList);
     sliceList(nameList)(0, 14);
     const listItems = document.querySelectorAll(".list");
-
+    getHeaderTitle()
     backgroundColor(listItems)
 
 listItems.forEach((list)=>{
     list.addEventListener("mouseover",(e)=>{
+        // console.log(e.target.parentNode.parentNode)
+        // console.log(e.target.className)
         if(e.target.className === "list"){
             e.target.style.color = "#0086FE";
         }else if(e.target.className === "number"){
+            e.target.style.color = "#0086FE";
             e.target.parentNode.parentNode.style.color = "#0086FE";
         }else if(e.target.className === "title"){
-            e.target.parentNode.parentNode.style.color = "#0086FE";
+            e.target.style.color = "#0086FE";
+            e.target.nextElementSibling.style.color = "#0086FE";
+            e.target.parentNode.previousElementSibling.style.color = "#0086FE";
         }else if(e.target.className === "name"){
-            e.target.parentNode.parentNode.style.color = "#0086FE";
+            e.target.style.color = "#0086FE";
+            e.target.previousElementSibling.style.color = "#0086FE";
+            e.target.parentNode.previousElementSibling.style.color = "#0086FE";
+        }else if(e.target.className === "wrap"){
+            e.target.style.color = "#0086FE";
+            e.target.parentNode.style.color = "#0086FE";
         }
     })
     list.addEventListener("mouseout",(e)=>{
         if(e.target.className === "list"){
             e.target.style.color = "#414042";
-        }else{
+        }else if(e.target.className === "number"){
+            e.target.style.color = "#414042";
+            e.target.parentNode.parentNode.style.color = "#414042";
+        }else if(e.target.className === "title"){
+            e.target.style.color = "#414042";
+            e.target.nextElementSibling.style.color = "#414042";
+            e.target.parentNode.previousElementSibling.style.color = "#414042";
+        }else if(e.target.className === "name"){
+            e.target.style.color = "#414042";
+            e.target.previousElementSibling.style.color = "#414042";
+            e.target.parentNode.previousElementSibling.style.color = "#414042";
+        }else if(e.target.className === "wrap"){
+            e.target.style.color = "#414042";
+            e.target.parentNode.style.color = "#414042";
+        }
+        else{
             e.target.parentNode.parentNode.style.color = "#414042";
         }
     })
@@ -1244,7 +1287,7 @@ listContainer.addEventListener("click",(e)=>{
 function backgroundColor(listItems){
     listItems.forEach((item, index) => {
         if (index % 2 === 0) {
-          item.style.backgroundColor = "#EAEDF3"; 
+          item.style.backgroundColor = "#F2F5F8"; 
         } else {
           item.style.backgroundColor = "#fff";
         }
