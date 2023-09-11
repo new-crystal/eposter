@@ -889,10 +889,10 @@ const nameList =
 
 const listContainer = document.querySelector("#listContainer")
 const search = document.querySelector("#search")
-const firstBox = document.querySelector("#first_box")
-const secondBox = document.querySelector("#second_box")
-const thirdBox = document.querySelector("#third_box")
-const fourthBox = document.querySelector("#fourth_box")
+const first_box = document.querySelector("#first_box")
+const second_box = document.querySelector("#second_box")
+const third_box = document.querySelector("#third_box")
+const fourth_box = document.querySelector("#fourth_box")
 const five_box = document.querySelector("#five_box")
 const six_box = document.querySelector("#six_box")
 const seven_box = document.querySelector("#seven_box")
@@ -900,8 +900,8 @@ const eight_box = document.querySelector("#eight_box")
 const nine_box = document.querySelector("#nine_box")
 const ten_box = document.querySelector("#ten_box")
 const eleven_box = document.querySelector("#eleven_box")
-const twelven_box = document.querySelector("#twelven_box")
-const thirty_box = document.querySelector("#thirty_box")
+const twelve_box = document.querySelector("#twelve_box")
+const thirteen_box = document.querySelector("#thirteen_box")
 const go_first_box = document.querySelector("#go_first_box")
 const pre_box = document.querySelector("#pre_box")
 const next_box = document.querySelector("#next_box")
@@ -909,13 +909,40 @@ const go_last_box = document.querySelector("#go_last_box")
 const header = document.querySelector("#header")
 const headerTitle = document.querySelector(".page_title")
 const goHomeBtn = document.querySelector(".go_home_btn")
+const footerList = document.querySelectorAll(".footer_list")
+let showList = []
+
+const boxInfo = [
+    { id:0, element: first_box, start: 0, end: 14, boxId: "first_box" },
+    { id:1, element: second_box, start: 14, end: 28, boxId: "second_box" },
+    { id:2,  element: third_box, start: 28, end: 42, boxId: "third_box" },
+    { id:3,  element: fourth_box, start: 42, end: 56, boxId: "fourth_box" },
+    { id:4,  element: five_box, start: 56, end: 70, boxId: "five_box" },
+    { id:5,  element: six_box, start: 70, end: 84, boxId: "six_box" },
+    { id:6,  element: seven_box, start: 84, end: 98, boxId: "seven_box" },
+    { id:7,  element: eight_box, start: 98, end: 112, boxId: "eight_box" },
+    { id:8,  element: nine_box, start: 112, end: 126, boxId: "nine_box" },
+    { id:9,  element: ten_box, start: 126, end: 140, boxId: "ten_box" },
+    { id:10,  element: eleven_box, start: 140, end: 154, boxId: "eleven_box" },
+    { id:11,  element: twelve_box, start: 154, end: 168, boxId: "twelve_box" },
+    { id:12,  element: thirteen_box, start: 168, end: 182, boxId: "thirteen_box" },
+];
+
+
 let restElement;
 let restLength;
 
+pre_box.addEventListener("click",()=>{preBtnMove()})
+next_box.addEventListener("click", ()=>{nextBtnMove()})
+go_first_box.addEventListener("click", ()=>{firstPageMove()})
+go_last_box.addEventListener("click", ()=> {lastPageMove()})
+
+/**home button click event */
 goHomeBtn.addEventListener("click",()=>{
     window.location.href= "/"
 })
 
+/**list page header */
 function getHeaderTitle(){
  const title = window.location.search.split("=")[1]
  headerTitle.innerText = title
@@ -1044,18 +1071,12 @@ search.addEventListener("input",(e)=>{
     if (restElement) {
         const rests = document.querySelectorAll(".restElement");
         rests.forEach((rest) => {
-            // rest.style.display = "none";
             if (rest.parentNode === listContainer) {
                 listContainer.removeChild(rest);
             }
         });
     }
 
-    firstBox.disabled = false;
-    secondBox.disabled = false;
-    thirdBox.disabled = false;
-    fourthBox.disabled = false;
-    
     const list = [];
     nameList.map((obj)=>{
         list.push(Object.values(obj))
@@ -1076,7 +1097,7 @@ search.addEventListener("input",(e)=>{
         sliceList(nameList)(0, 14);
     }else{
         searching(searchList)
-     
+        showListNum(searchList)      
 }})
 
 
@@ -1088,105 +1109,35 @@ function sliceList(list) {
     };
 }
 let menuNumber;
+
 /**탭 스타일 바꾸기 */
-function updateBoxStyles(list, activeBox) {
-    // console.log(list)
-    // [firstBox, secondBox, thirdBox, fourthBox, five_box, six_box, seven_box, eight_box, nine_box,ten_box,eleven_box,twelven_box,thirty_box,go_first_box,pre_box,next_box,go_last_box].forEach((box, i) => {
-    //     box.style.backgroundColor = "transparent";
-    //     box.style.color = "#6a6a6a";
-    // });
-    if(list.length % 14 === 0){
-        menuNumber = list.length / 14
-    }else{
-        menuNumber = Math.floor( list.length / 14) + 1
-    }
-    /**menu item 갯수 */
-    // console.log(menuNumber)
-
-    activeBox.style.backgroundColor = "#0086FE";
-    activeBox.style.color = "#FFF";
-
-    if (list.length <= 20 && list.length >= 1) {
-        secondBox.disabled = true;
-        thirdBox.disabled = true;
-        fourthBox.disabled = true;
-        secondBox.style.backgroundColor = "#D3D3D3";
-        thirdBox.style.backgroundColor = "#D3D3D3";
-        fourthBox.style.backgroundColor = "#D3D3D3";
-    } else if (list.length <= 40 && list.length > 21) {
-        thirdBox.disabled = true;
-        fourthBox.disabled = true;
-        thirdBox.style.backgroundColor = "#D3D3D3";
-        fourthBox.style.backgroundColor = "#D3D3D3";
-    } else if (list.length <= 60 && list.length > 41) {
-        fourthBox.disabled = true;
-        fourthBox.style.backgroundColor = "#D3D3D3";
-    }else if (list.length === 80){
-        firstBox.disabled = false;
-        secondBox.disabled = false;
-        thirdBox.disabled = false;
-        fourthBox.disabled = false;
-    }
+function updateBoxStyles(activeBox) {
+    footerList.forEach((footer)=>{
+        if(footer.id === activeBox){
+            footer.classList.add("list_active")
+        }else{
+            footer.classList.remove("list_active")
+        }
+    })
 }
 
 /**탭 이벤트 리스너 */
 function addEventListeners(list) {
     const sliceListCallback = sliceList(list);
 
-    // console.log(list)
-
-    sliceListCallback(0, 14);
-    updateBoxStyles(list, firstBox);
-
-    firstBox.addEventListener("click", () => {
-        sliceListCallback(0, 14);
-        updateBoxStyles(list, firstBox);
-    });
-
-    secondBox.addEventListener("click", () => { 
-        sliceListCallback(14, 28);
-        updateBoxStyles(list, secondBox);
-    });
-
-    thirdBox.addEventListener("click", () => {
-        sliceListCallback(28, 42);
-        updateBoxStyles(list, thirdBox);
-    });
-    fourthBox.addEventListener("click", () => {
-        sliceListCallback(42, 56);
-        updateBoxStyles(list, fourthBox);
-    });
-
-    five_box.addEventListener("click", () => {
-        sliceListCallback(56, 70);
-        updateBoxStyles(list, five_box);
-    });
-    six_box.addEventListener("click", () => {
-        sliceListCallback(70, 84);
-        updateBoxStyles(list, six_box);
-    });
-
-    seven_box.addEventListener("click", () => { 
-        sliceListCallback(84, 98);
-        updateBoxStyles(list, seven_box);
-    });
-
-    eight_box.addEventListener("click", () => {
-        sliceListCallback(98, 112);
-        updateBoxStyles(list, eight_box);
-    });
-
-    nine_box.addEventListener("click", () => {
-        sliceListCallback(112, 126);
-        updateBoxStyles(list, nine_box);
-    });
-    ten_box.addEventListener("click", () => {
-        sliceListCallback(126, 140);
-        updateBoxStyles(list, ten_box);
-    });
+    function addClickListener(element, start, end, boxId) {
+        element.addEventListener("click", () => {
+            sliceListCallback(start, end);
+            updateBoxStyles(boxId);
+        });
+    }
 
 
+    boxInfo.forEach(({ element, start, end, boxId }) => {
+        addClickListener(element, start, end, boxId);
+    });
 }
+
 
 /**검색한 리스트 a 태그 리스트로  변환하기
  * searchList = 검색한 줄글 리스트
@@ -1206,6 +1157,7 @@ function searching(searchList) {
             }
         });
     });
+    showList = resultList;
     backgroundColor(resultList)
     addEventListeners(resultList);
 }
@@ -1224,11 +1176,13 @@ window.onload = function loadWindow() {
     const listItems = document.querySelectorAll(".list");
     getHeaderTitle()
     backgroundColor(listItems)
+    showListNum(nameList)
+    updateBoxStyles("first_box")
+    showList = nameList;
 
 listItems.forEach((list)=>{
     list.addEventListener("mouseover",(e)=>{
-        // console.log(e.target.parentNode.parentNode)
-        // console.log(e.target.className)
+
         if(e.target.className === "list"){
             e.target.style.color = "#0086FE";
         }else if(e.target.className === "number"){
@@ -1297,4 +1251,89 @@ function backgroundColor(listItems){
           item.style.backgroundColor = "#fff";
         }
       });
+}
+
+let listNumber = 0;
+/**하단 숫자 리스트 보여주는 함수 */
+function showListNum(list){
+   const listNum = list.length / 14;
+   const restNum = list.length % 14;
+
+   if(restNum === 0){
+    listNumber = listNum
+   }else{
+    listNumber = Math.floor(listNum) + 1
+   }
+   footerList.forEach((footer)=>{
+       if(footer.dataset.id <= listNumber){
+        footer.style.display = "";
+       }else{
+        footer.style.display = "none"
+       }
+   })
+}
+
+/**이전으로 버튼 */
+function preBtnMove(){
+  footerList.forEach((footer)=>{
+    if(footer.classList.value.includes("list_active") && footer.id !== "first_box"){
+        footer.previousElementSibling.classList.add("list_active")
+        footer.classList.remove("list_active")
+
+        boxInfo.map((box)=>{
+           if( box.boxId === footer.id ){
+            const preId = box.id - 1;
+             sliceList(showList)(boxInfo[preId].start, boxInfo[preId].end)
+           }
+        })
+    }
+  })
+}
+
+/**다음으로 버튼 */
+function nextBtnMove() {
+    const activeFooter = document.querySelector(".list_active"); 
+  
+    if (activeFooter) {
+      const nextFooter = activeFooter.nextElementSibling; 
+  
+      if (nextFooter) {
+        activeFooter.classList.remove("list_active");
+        nextFooter.classList.add("list_active");
+
+        const activeBoxInfo = boxInfo.find((box) => box.boxId === activeFooter.id);
+  
+        if (activeBoxInfo) {
+          const nextBoxInfo = boxInfo.find((box) => box.id === activeBoxInfo.id + 1);
+          if (nextBoxInfo) {
+            sliceList(showList)(nextBoxInfo.start, nextBoxInfo.end);
+          }
+        }
+      }
+    }
+  }
+
+  /** 처음으로 버튼 */
+  function firstPageMove(){
+    footerList.forEach((footer)=>{
+        first_box.classList.add("list_active")
+        if(footer.id !== "first_box"){
+            footer.classList.remove("list_active")
+            sliceList(showList)(0, 14)
+        }
+    })
+  }
+  
+/**마지막으로 버튼 */  
+function lastPageMove(){
+    console.log(listNumber)
+    footerList.forEach((footer)=>{
+        if(footer.dataset.id/1 === listNumber){
+            console.log(footer)
+            footer.classList.add("list_active")
+            sliceList(showList)(boxInfo[listNumber - 1].start, boxInfo[listNumber - 1].end);
+        }else{
+            footer.classList.remove("list_active")
+        }
+    })
 }
