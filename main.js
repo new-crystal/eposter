@@ -912,8 +912,12 @@ const goHomeBtn = document.querySelector(".go_home_btn")
 let restElement;
 let restLength;
 
+goHomeBtn.addEventListener("click",()=>{
+    window.location.href= "/"
+})
+
 function getHeaderTitle(){
- const title = window.location.search.split("?")[1]
+ const title = window.location.search.split("=")[1]
  headerTitle.innerText = title
 }
 
@@ -1270,13 +1274,14 @@ listItems.forEach((list)=>{
 
 /**클릭 시 상세페이지로 이동 */
 listContainer.addEventListener("click",(e)=>{
-    const number = e.target.parentNode.id
+    const number = e.target.parentNode.id;
     const innerNum = e.target.id;
+    const menu = window.location.search.split("?")[1]
 
     if(number !== "listContainer" && innerNum === ""){
-         window.location.href = `detail.html?number=PO-${number}`
+         window.location.href = `detail.html?${menu}&number=PO-${number}`
     }else if(number === "listContainer" && innerNum !== ""){
-        window.location.href = `detail.html?number=PO-${innerNum}`
+        window.location.href = `detail.html?${menu}&number=PO-${innerNum}`
     }
 })
 
