@@ -3,56 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./main.js" defer></script>
+    <title>Home</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR&display=swap" rel="stylesheet">
-
 </head>
-
-<body style="width: 1080px;height: 1920px; background: #EAEDF3; overflow-x: hidden;" class="flex flex-col mx-auto">
-    <div style="overflow: hidden;position: relative;">
-        <div id="header">
-            <img src="./assets/header.svg" alt="header"/>
+<body style="width: 1080px; height: 1920px;">
+    <div class="home_background">
+        <img class="home_header" src="./assets/home/header.png"/>
+        <div class="menu_wrap">
+            <div class="menu_box">Bone/Muscle</div>
+            <div class="menu_box">Pituitary/Adrenal/Gonad</div>
+            <div class="menu_box">Thyroid</div>
+            <div class="menu_box">Diabetes/Obesity/Lipid(basic)</div>
+            <div class="menu_box">Diabetes/Obesity/Lipid(clinical)</div>
         </div>
-        <div id="page_1">
-       
-        <div class="title_container">
-        <p class="page_title"></p>
-        </div>
-        <div id="listContainer" class="flex flex-col">
-        </div>
-        <div class="btn_box">
-            <button id="go_first_box" class="btn cursor-pointer"><<</button>
-            <button id="pre_box" class="btn cursor-pointer"><</button>
-            <button id="first_box" data-id="1" class="btn cursor-pointer">1</button>
-            <button id="second_box" data-id="2" class="btn cursor-pointer">2</button>
-            <button id="third_box"data-id="3" class="btn cursor-pointer">3</button>
-            <button id="fourth_box"data-id="4" class="btn cursor-pointer">4</button> 
-            <button id="five_box"data-id="5" class="btn cursor-pointer">5</button>
-            <button id="six_box"data-id="6" class="btn cursor-pointer">6</button>
-            <button id="seven_box"data-id="7" class="btn cursor-pointer">7</button>
-            <button id="eight_box"data-id="8" class="btn cursor-pointer">8</button>
-            <button id="nine_box"data-id="9" class="btn cursor-pointer">9</button>
-            <button id="ten_box"data-id="10" class="btn cursor-pointer">10</button>
-            <button id="eleven_box"data-id="11" class="btn cursor-pointer">11</button>
-            <button id="twelven_box"data-id="12" class="btn cursor-pointer">12</button>
-            <button id="thirty_box"data-id="13" class="btn cursor-pointer">13</button>
-            <button id="next_box" class="btn cursor-pointer">></button>
-            <button id="go_last_box" class="btn cursor-pointer">>></button>
-
-            <!-- <marquee> test 001 </marquee> -->
-        </div>
-        <div id="search_box" class="flex itmes-center justify-center">
-            <img class="go_home_btn" src="./assets/home/btn_home.png" width="120px" height="120px"/>
-            <input id="search" class="border px-3 py-2 m-3" placeholder="Please enter your search term"/>
-            <img class="zoom" src="./assets/zoom.svg" width="80px"/>
-        </div>
-    </div>
-    </div>
     </div>
 </body>
+<script>
+    const menuBox = document.querySelectorAll(".menu_box")
+    menuBox.forEach((menu)=>{
+        menu.addEventListener("click",(e)=>{
+            window.location.href = `/list.html?menu=${e.target.innerText}`
+        })
+    })
+</script>
 </html>

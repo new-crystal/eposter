@@ -912,7 +912,8 @@ const imgList = []
 
 /**리스트 버튼 -> index 페이지로 이동 */
 goListBtn.addEventListener("click",()=>{
-    window.location.href = "index.html"
+    const menu = window.location.search.split("&")[0].split("=")[1]
+    window.location.href = `list.html?menu=${menu}`
 })
 
 /**푸터 이동 버튼 눌렀을 경우*/
@@ -1052,16 +1053,19 @@ function addEventImgPreBtn(image) {
 }
 
 function addEventImgNextBtn(image) {
+
     const nextBtn = document.querySelector(".img_next_btn");
     nextBtn.addEventListener("click", () => onNextBtnClick(image));
 }
 
 preButton.addEventListener("click", ()=>{
-    window.location.href= `detail.html?number=PO-0${currentNumber/1 - 1}`
+    const menu = window.location.search.split("&")[0].split("=")[1]
+    window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 - 1}`
 })
 
 nextButton.addEventListener("click", ()=>{
-    window.location.href= `detail.html?number=PO-0${currentNumber/1 + 1}`
+    const menu = window.location.search.split("&")[0].split("=")[1]
+    window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 + 1}`
 })
 
 /**확대버튼 클릭이벤트 */
@@ -1107,7 +1111,7 @@ imgBox.addEventListener("mousemove", function (event) {
 
 
 window.onload = () =>{
-    currentNumber = ( window.location.search.split("=")[1].split("-")[1] )* 1
+    currentNumber = ( window.location.search.split("=")[2].split("-")[1] )* 1
     getNumber()
     getImage()
 }
