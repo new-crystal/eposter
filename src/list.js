@@ -1,22 +1,33 @@
-
+"use strict"
+const nameList = 
 [
     {
         id: "01",
-        title:"제목",
-        name:"이름(소속)",
-        img:[{
-            url1:"카테고리_01.png"
-        }]
+        title:"title1Feasibility and Usefulness of Out-of Office Cuffless Blood…",
+        name:"naame1",
+        body:"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
+        img:[
+            {
+            url1:"../assets/bone/1.png"
+            },
+            {
+            url1:"../assets/bone/2.png"
+            },
+            {
+            url1:"../assets/bone/3.png"
+            },
+            {
+            url1:"../assets/bone/4.png"
+            },
+    ]
     },
     {   id: "02",
         title:"title2",
         name:"naame2",
         body:"Adorable, Beautiful, Creative, Dazzling, Enchanting, Friendly, Graceful, Hopeful, Inspiring, Joyful, Kindhearted, Lively, Magical, Noble, Optimistic, Playful, Radiant, Serene, Tranquil, Vibrant",
-        img:[{
-            url1:"../assets/zoom.svg"
-        },{
-            url2:"../assets/zoom.svg"
-        }]
+        img:[ {
+            url1:"../assets/bone/1.png"
+            },]
     },
     {
         id: "03",
@@ -883,3 +894,5 @@
         }]
     },
 ]
+
+export default nameList;
