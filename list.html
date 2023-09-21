@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <script type="module" src="./src/main.js" defer></script> -->
     <script src="./src/main.js" defer></script>
+    <script src="./src/data.json" type="text/javascript"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,17 +15,17 @@
 
 </head>
 
-<body style="width: 1080px;height: 1920px; background: #EAEDF3; overflow-x: hidden;" class="flex flex-col mx-auto">
+<body style="width: 1080px;height: 1920px; background: #EAEDF3; overflow-x: hidden;" class="list_body">
     <div style="overflow: hidden;position: relative;">
         <div id="header">
-            <img src="./assets/header.svg" alt="header"/>
+            <img src="./assets/header.png" alt="header" style="width: 1125px;"/>
         </div>
         <div id="page_1">
        
         <div class="title_container">
         <p class="page_title"></p>
         </div>
-        <div id="listContainer" class="flex flex-col">
+        <div id="listContainer">
         </div>
         <div class="btn_box">
             <button id="go_first_box" class="btn cursor-pointer"><<</button>
@@ -47,9 +48,9 @@
 
             <!-- <marquee> test 001 </marquee> -->
         </div>
-        <div id="search_box" class="flex itmes-center justify-center">
+        <div id="search_box">
             <img class="go_home_btn" src="./assets/home/btn_home.png" width="120px" height="120px"/>
-            <input id="search" class="border px-3 py-2 m-3" placeholder="Please enter your search term"/>
+            <input id="search" placeholder="Please enter your search term"/>
             <img class="zoom" src="./assets/zoom.svg" width="80px"/>
         </div>
     </div>
