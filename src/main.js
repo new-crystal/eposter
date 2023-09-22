@@ -23,6 +23,8 @@ const header = document.querySelector("#header")
 const headerTitle = document.querySelector(".page_title")
 const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
+const text_box = document.querySelectorAll(".text_box")
+const name_box = document.querySelectorAll(".name_box")
 let showList = []
 let nowActive;
 
@@ -343,51 +345,32 @@ window.onload = function loadWindow() {
     updateBoxStyles("first_box")
     showList = nameList;
 
-listItems.forEach((list)=>{
-    list.addEventListener("mouseover",(e)=>{
 
-        if(e.target.className === "list"){
-            e.target.style.color = "#0086FE";
-        }else if(e.target.className === "number"){
-            e.target.style.color = "#0086FE";
-            e.target.parentNode.parentNode.style.color = "#0086FE";
-        }else if(e.target.className === "title"){
-            e.target.style.color = "#0086FE";
-            e.target.nextElementSibling.style.color = "#0086FE";
-            e.target.parentNode.previousElementSibling.style.color = "#0086FE";
-        }else if(e.target.className === "name"){
-            e.target.style.color = "#0086FE";
-            e.target.previousElementSibling.style.color = "#0086FE";
-            e.target.parentNode.previousElementSibling.style.color = "#0086FE";
-        }else if(e.target.className === "wrap"){
-            e.target.style.color = "#0086FE";
-            e.target.parentNode.style.color = "#0086FE";
-        }
-    })
-    list.addEventListener("mouseout",(e)=>{
-        if(e.target.className === "list"){
-            e.target.style.color = "#414042";
-        }else if(e.target.className === "number"){
-            e.target.style.color = "#414042";
-            e.target.parentNode.parentNode.style.color = "#414042";
-        }else if(e.target.className === "title"){
-            e.target.style.color = "#414042";
-            e.target.nextElementSibling.style.color = "#414042";
-            e.target.parentNode.previousElementSibling.style.color = "#414042";
-        }else if(e.target.className === "name"){
-            e.target.style.color = "#414042";
-            e.target.previousElementSibling.style.color = "#414042";
-            e.target.parentNode.previousElementSibling.style.color = "#414042";
-        }else if(e.target.className === "wrap"){
-            e.target.style.color = "#414042";
-            e.target.parentNode.style.color = "#414042";
-        }
-        else{
-            e.target.parentNode.parentNode.style.color = "#414042";
-        }
-    })
-})
-};
+    /**mouse hover event! */
+    listItems.forEach((listItem) => {
+        listItem.addEventListener('mouseover', () => {
+            // 글자색 및 배경색 변경
+            listItem.style.color = '#0086FE';
+            // name_box 내부 요소의 색상 변경
+            const nameBoxItems = listItem.querySelectorAll('.name_box p');
+            nameBoxItems.forEach((item) => {
+                item.style.color = '#0086FE';
+            });
+        });
+    
+        listItem.addEventListener('mouseout', () => {
+            // 글자색 및 배경색 복원
+            listItem.style.color = '#414042';
+            // name_box 내부 요소의 색상 복원
+            const nameBoxItems = listItem.querySelectorAll('.name_box p');
+            nameBoxItems.forEach((item) => {
+                item.style.color = '#414042';
+            });
+        });
+    });
+
+}
+
 
 /**클릭 시 상세페이지로 이동 */
 
