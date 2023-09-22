@@ -27,13 +27,13 @@ const imgList = []
 
 /**리스트 버튼 -> index 페이지로 이동 */
 goListBtn.addEventListener("click",()=>{
-    const menu = window.location.search.split("&")[0].split("=")[1]
+    const menu = new URLSearchParams(window.location.search).get("menu")
     window.location.href = `list.html?menu=${menu}`
 })
 
 /**푸터 이동 버튼 눌렀을 경우*/
 function getNumber(){
-    const last = nameList.length + 1
+    const last = nameList.length
 
     if(currentNumber === 1){
         numberText.innerText = `PO-0${currentNumber}`;
@@ -195,12 +195,12 @@ function debounce(func, delay) {
 }
 
 preButton.addEventListener("click", ()=>{
-    const menu = window.location.search.split("&")[0].split("=")[1]
+    const menu =  new URLSearchParams(window.location.search).get("menu")
     window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 - 1}`
 })
 
 nextButton.addEventListener("click", ()=>{
-    const menu = window.location.search.split("&")[0].split("=")[1]
+    const menu = new URLSearchParams(window.location.search).get("menu")
     window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 + 1}`
 })
 

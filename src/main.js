@@ -24,6 +24,7 @@ const headerTitle = document.querySelector(".page_title")
 const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 let showList = []
+let nowActive;
 
 const boxInfo = [
     { id:0, element: first_box, start: 0, end: 14, boxId: "first_box" },
@@ -57,7 +58,12 @@ goHomeBtn.addEventListener("click",()=>{
 
 /**list page header */
 function getHeaderTitle(){
- const title = window.location.search.split("=")[1]
+let title = window.location.search.split("=")[1]
+
+ if(title.includes("(")){
+    title = title.split("(")[0] +` (`+ title.split("(")[1];
+}
+
  headerTitle.innerText = title
 }
 
@@ -72,8 +78,18 @@ function pushTitle(){
         const titleList = document.createElement("a")
         titleList.className = "list";
         titleList.id = name.id
-        titleList.innerHTML = `<div class="wrap"><span class="number">PO-${name.id}</span><div class="text_box
-        "><p class="title">${name.title}</p> <div class="name_box"><p class="name">${name.name}</p><p class="name">${name.affiliation}</p><p class="name">${name.nation}</p></div></div></div>`;
+        titleList.innerHTML = `
+        <div class="wrap" onclick="goDetailPage('${name.id}')">
+            <span class="number">PO-${name.id}</span>
+            <div class="text_box">
+                <p class="title">${name.title}</p>
+                <div class="name_box">
+                    <p class="name">${name.name}</p>
+                    <p class="name">${name.affiliation}</p>
+                    <p class="name">${name.nation}</p>
+                </div>
+            </div>
+        </div>`;
         listContainer.appendChild(titleList)
     })
 }
@@ -231,6 +247,7 @@ let menuNumber;
 function updateBoxStyles(activeBox) {
     footerList.forEach((footer)=>{
         if(footer.id === activeBox){
+            nowActive = footer.dataset.id;
             footer.classList.add("list_active")
         }else{
             footer.classList.remove("list_active")
@@ -248,6 +265,32 @@ function addEventListeners(list) {
         element.addEventListener("click", () => {
             sliceListCallback(start, end);
             updateBoxStyles(boxId);
+
+            /**footer pagination 10이상일 경우 추가 */
+            footerList.forEach((footer)=>{
+                if(listNumber > 10 && nowActive === "6"){
+                    if(footer.dataset.id === 1){
+                        footer.style.display = "none";
+                    }else if(footer.dataset.id === 11){
+                        footer.style.display = "";
+                    }
+                }
+                if(listNumber > 10 && nowActive === "7"){
+                    if(footer.dataset.id === 2){
+                        footer.style.display = "none";
+                    }else if(footer.dataset.id === 12){
+                        footer.style.display = "";
+                    }
+                }
+                if(listNumber > 10 && nowActive === "8"){
+                    if(footer.dataset.id === 3){
+                        footer.style.display = "none";
+                    }else if(footer.dataset.id === 13){
+                        footer.style.display = "";
+                    }
+                }
+            })
+           
         });
     }
 
@@ -347,19 +390,11 @@ listItems.forEach((list)=>{
 };
 
 /**클릭 시 상세페이지로 이동 */
-listContainer.addEventListener("click",(e)=>{
-    const number = e.target.parentNode.id;
-    const innerNum = e.target.id;
-    const menu = window.location.search.split("?")[1]
 
-    if(number !== "listContainer" && innerNum === "" && number !== ""){
-         window.location.href = `detail.html?${menu}&number=PO-${number}`
-    }else if(number === "listContainer" && innerNum !== ""){
-        window.location.href = `detail.html?${menu}&number=PO-${innerNum}`
-    }else if(!number){
-        window.location.href = `detail.html?${menu}&number=PO-01`
-    }
-})
+function goDetailPage(number){
+    const menu = new URLSearchParams(window.location.search).get("menu");
+    window.location.href = `detail.html?menu=${menu}&number=PO-${number}`
+}
 
 /**배경색 주기
  * 짝수 -> "#EAEDF3"
@@ -386,12 +421,22 @@ function showListNum(list){
    }else{
     listNumber = Math.floor(listNum) + 1
    }
+
+
    footerList.forEach((footer)=>{
-       if(footer.dataset.id <= listNumber){
-        footer.style.display = "";
-       }else{
-        footer.style.display = "none"
-       }
+    if(listNum < 10){
+        if(footer.dataset.id <= listNumber){
+         footer.style.display = "";
+        }
+        else{
+         footer.style.display = "none"
+        }
+    }
+    else if(listNum > 10){
+        if(footer.dataset.id > 10){
+            footer.style.display = "none";
+        }
+    }
    })
 }
 
@@ -485,3 +530,4 @@ function lastPageMove(){
 document.addEventListener("selectstart", function (event) {
     event.preventDefault(); // 선택을 방지합니다.
 });
+
