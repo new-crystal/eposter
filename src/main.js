@@ -1,4 +1,10 @@
-const nameList = JSON.parse(JSON.stringify(data));
+"use strict"
+
+const clinicalList = JSON.parse(JSON.stringify(clinical));
+const basicList = JSON.parse(JSON.stringify(basic));
+const thyroidList = JSON.parse(JSON.stringify(thyroid));
+const boneList = JSON.parse(JSON.stringify(bone));
+const pituitaryList = JSON.parse(JSON.stringify(pituitary));
 
 const listContainer = document.querySelector("#listContainer")
 const search = document.querySelector("#search")
@@ -25,6 +31,10 @@ const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 const text_box = document.querySelectorAll(".text_box")
 const name_box = document.querySelectorAll(".name_box")
+
+//mainList
+let nameList;
+
 //보여주는 리스트
 let showList = []
 
@@ -60,6 +70,25 @@ go_last_box.addEventListener("click", ()=> {lastPageMove()})
 goHomeBtn.addEventListener("click",()=>{
     location.href= "index.html"
 })
+
+/**main list select */
+function getList(){
+    let title = new URLSearchParams(window.location.search).get("menu");
+const titleList = [
+    {title:"Diabetes/Obesity/Lipid(clinical)", list:clinicalList},
+    {title:"Diabetes/Obesity/Lipid(basic)", list:basicList},
+    {title:"Thyroid", list:thyroidList},
+    {title:"Bone/Muscle", list:boneList},
+    {title:"Pituitary/Adrenal/Gonad", list:pituitaryList},
+]
+
+titleList.map((titleObj)=>{
+    if(titleObj.title === title){
+        nameList = titleObj.list;
+    }
+})
+}
+
 
 /**list page header */
 function getHeaderTitle(){
@@ -368,11 +397,12 @@ function searching(searchList) {
  * 4. hover event
  */
 window.onload = function loadWindow() {
+    getList()
+    getHeaderTitle()
     pushTitle();
     addEventListeners(nameList);
     sliceList(nameList)(0, 14);
     const listItems = document.querySelectorAll(".list");
-    getHeaderTitle()
     backgroundColor(listItems)
     showListNum(nameList)
     updateBoxStyles("first_box")

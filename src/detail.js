@@ -1,6 +1,10 @@
 "use strict"
 
-const nameList = JSON.parse(JSON.stringify(data));
+const clinicalList = JSON.parse(JSON.stringify(clinical));
+const basicList = JSON.parse(JSON.stringify(basic));
+const thyroidList = JSON.parse(JSON.stringify(thyroid));
+const boneList = JSON.parse(JSON.stringify(bone));
+const pituitaryList = JSON.parse(JSON.stringify(pituitary));
 
 const numberText = document.querySelector("#number");
 const imgBox = document.querySelector("#image");
@@ -20,10 +24,29 @@ header.addEventListener("click",()=>{
     window.location.reload()
 })
 
+let nameList;
 let currentNumber =  0;
 let zoom = false;
 let now = 0;
 const imgList = []
+
+/**main list select */
+function getList(){
+    let title = new URLSearchParams(window.location.search).get("menu");
+const titleList = [
+    {title:"Diabetes/Obesity/Lipid(clinical)", list:clinicalList},
+    {title:"Diabetes/Obesity/Lipid(basic)", list:basicList},
+    {title:"Thyroid", list:thyroidList},
+    {title:"Bone/Muscle", list:boneList},
+    {title:"Pituitary/Adrenal/Gonad", list:pituitaryList},
+]
+
+titleList.map((titleObj)=>{
+    if(titleObj.title === title){
+        nameList = titleObj.list;
+    }
+})
+}
 
 /**리스트 버튼 -> index 페이지로 이동 */
 goListBtn.addEventListener("click",()=>{
@@ -270,6 +293,7 @@ imgBox.addEventListener("mousemove", function (event) {
 
 
 window.onload = () =>{
+    getList()
     currentNumber = ( window.location.search.split("=")[2].split("-")[1] )* 1
     getNumber()
     getImage()
