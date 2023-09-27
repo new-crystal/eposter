@@ -100,11 +100,11 @@ function pushTitle(){
 
 /** 쪼개진 리스트 보여주기 */
 function divideList(list) {
-    
-    //  console.log(list)
+    const set = new Set(list)
+    const uniqueList = [...set]
  
     const blockList = [];
-    list.map((li) => {
+    uniqueList.map((li) => {
         if (li.id === undefined) {
             return li.style.display = "";
         } else if (li.id !== undefined) {
@@ -118,7 +118,7 @@ function divideList(list) {
         a.style.display = blockList.includes(titleSplit) ? "" : "none";
     })
 
-    if(list.length === 14){
+    if(uniqueList.length === 14){
         if (restElement) {
             const rests = document.querySelectorAll(".restElement");
             rests.forEach((rest) => {
@@ -129,7 +129,7 @@ function divideList(list) {
             });
         }
     } 
-    if(list.length === 0){
+    if(uniqueList.length === 0){
         if (restElement) {
             const rests = document.querySelectorAll(".restElement");
             rests.forEach((rest) => {
@@ -156,29 +156,27 @@ function divideList(list) {
         }
     }
 
-    if (list.length < 14 ) {
-        restLength = 14 - list.length;
+    if (uniqueList.length < 14 ) {
+        restLength = 14 - uniqueList.length;
         if (restElement) {
             const rests = document.querySelectorAll(".restElement");
             rests.forEach((rest) => {
-                // rest.style.display = "none";
                 if (rest.parentNode === listContainer) {
-                        listContainer.removeChild(rest);      
+                     listContainer.removeChild(rest);      
                 }
             });
             for (let i = 0; i < restLength; i++) {
                 restElement = document.createElement("a");
                 restElement.style.display = "block";
                 restElement.style.width = "980px";
-                // restElement.style.height = "88px";
                 restElement.style.margin = "0"
                 restElement.className = "restElement"
-                if ((list.length + i) % 2 === 0) {
+                if ((uniqueList.length + i) % 2 === 0) {
                     restElement.style.backgroundColor = "#F2F5F8";
                 } else {
                     restElement.style.backgroundColor = "#fff";
                 }
-                listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
+                listContainer.appendChild(restElement); 
             }
         }else{
             for (let i = 0; i < restLength; i++) {
@@ -188,12 +186,12 @@ function divideList(list) {
                 // restElement.style.height = "88px";
                 restElement.style.margin = "0"
                 restElement.className = "restElement"
-                if ((list.length + i) % 2 === 0) {
+                if ((uniqueList.length + i) % 2 === 0) {
                     restElement.style.backgroundColor = "#F2F5F8";
                 } else {
                     restElement.style.backgroundColor = "#fff";
                 }
-                listContainer.appendChild(restElement); // 리스트 컨테이너에 a 태그 추가
+                listContainer.appendChild(restElement);
             }
         }
     }
@@ -227,14 +225,28 @@ search.addEventListener("input",(e)=>{
                 }
     })
 
-    // console.log(searchList)
-    if(inputText === ""){
+    if(inputText.length < 2 && inputText !== ""){
         addEventListeners(nameList); 
         sliceList(nameList)(0, 14);
-    }else{
+    }
+    else if(inputText === ""){
+        addEventListeners(nameList); 
+        sliceList(nameList)(0, 14);
+        showListNum(searchList);
+        updateBoxStyles("first_box")
+        const listItems = document.querySelectorAll(".list");
+        backgroundColor(listItems)
+        showListNumberAll()  
+        blueArrowButton()  
+    }
+    else{
         searching(searchList)
-        showListNum(searchList)      
-}})
+        showListNum(searchList) 
+        updateBoxStyles("first_box")
+        showListNumberAll()  
+        blueArrowButton() 
+    }
+})
 
 
 /**리스트 쪼개기 */
@@ -270,6 +282,7 @@ function addEventListeners(list) {
             sliceListCallback(start, end);
             updateBoxStyles(boxId);
             showListNumberAll()
+            blueArrowButton()
         });
     }
 
@@ -335,9 +348,14 @@ function searching(searchList) {
         });
     });
     showList = resultList;
+    const listItemsDupArray = Array.from(resultList);
+    const set = new Set(listItemsDupArray)
+    const listItemsArray = [...set]
 
-    backgroundColor(resultList)
-    addEventListeners(resultList);
+    listItemsArray.sort((a, b) => a.id - b.id);
+    
+    backgroundColor(listItemsArray)
+    addEventListeners(listItemsArray);
 }
 
 
@@ -357,7 +375,7 @@ window.onload = function loadWindow() {
     showListNum(nameList)
     updateBoxStyles("first_box")
     showList = nameList;
-
+    blueArrowButton()
 
     /**mouse hover event! */
     listItems.forEach((listItem) => {
@@ -397,7 +415,14 @@ function goDetailPage(number){
  * 홀수 -> "#FFFFFF"
  */
 function backgroundColor(listItems){
-    listItems.forEach((item, index) => {
+
+    const listItemsDupArray = Array.from(listItems);
+    const set = new Set(listItemsDupArray)
+    const listItemsArray = [...set]
+
+    listItemsArray.sort((a, b) => a.id - b.id);
+
+    listItemsArray.forEach((item, index) => {
         if (index % 2 === 0) {
           item.style.backgroundColor = "#F2F5F8"; 
         } else {
@@ -420,7 +445,7 @@ function showListNum(list){
 
    footerList.forEach((footer)=>{
     if(listNumber < 10){
-        if(footer.dataset.id <= listNumber){
+        if(Number(footer.dataset.id) <= Number(listNumber)){
          footer.style.display = "";
         }
         else{
@@ -428,8 +453,11 @@ function showListNum(list){
         }
     }
     else if(listNumber > 10){
-        if(footer.dataset.id > 10){
+        if(Number(footer.dataset.id) > 10){
             footer.style.display = "none";
+        }
+        else if(Number(footer.dataset.id) <= 10){
+            footer.style.display = "";
         }
     }
    })
@@ -443,6 +471,7 @@ function preBtnMove(){
         footer.classList.remove("list_active")
         nowActive = footer.previousElementSibling.dataset.id;
         showListNumberAll()
+        blueArrowButton()
         boxInfo.map((box)=>{
            if( box.boxId === footer.id ){
             const preId = box.id - 1;
@@ -467,6 +496,7 @@ function nextBtnMove() {
         nextFooter.classList.add("list_active");
         nowActive = nextFooter.dataset.id
         showListNumberAll()
+        blueArrowButton()
         const activeBoxInfo = boxInfo.find((box) => box.boxId === activeFooter.id);
   
         if (activeBoxInfo) {
@@ -485,6 +515,7 @@ function nextBtnMove() {
         first_box.classList.add("list_active")
         nowActive = "1"
         showListNumberAll()
+        blueArrowButton()
         if(footer.id !== "first_box"){
             footer.classList.remove("list_active")
             sliceList(showList)(0, 14)
@@ -500,12 +531,48 @@ function lastPageMove(){
             footer.classList.add("list_active")
             nowActive = footer.dataset.id;
             showListNumberAll()
+            blueArrowButton()
             sliceList(showList)(boxInfo[listNumber - 1].start, boxInfo[listNumber - 1].end);
         }else{
             footer.classList.remove("list_active")
         }
     })
 }
+
+/** 화살표 버튼 파란색으로 변경 */
+function blueArrowButton(){
+    if(listNumber !== 1){
+        if(Number(nowActive) !== 1){
+            pre_box.style.color = "blue";
+            go_first_box.style.color = "blue"
+        }
+        if(Number(nowActive) === 1){
+            pre_box.style.color = "#6A6A6A";
+            go_first_box.style.color = "#6A6A6A";
+            next_box.style.color = "blue";
+            go_last_box.style.color = "blue"
+        }
+    
+        if(Number(nowActive) !== listNumber){
+            next_box.style.color = "blue";
+            go_last_box.style.color = "blue"
+        }
+        if(Number(nowActive) === listNumber){
+            pre_box.style.color = "blue";
+            go_first_box.style.color = "blue"
+            next_box.style.color = "#6A6A6A";
+            go_last_box.style.color = "#6A6A6A"
+        }
+    }
+    else if(listNumber === 1){
+        pre_box.style.color = "#6A6A6A";
+        go_first_box.style.color = "#6A6A6A";
+        next_box.style.color = "#6A6A6A";
+        go_last_box.style.color = "#6A6A6A"
+    } 
+   
+}
+
 
     /**우클릭 방지 */
     document.addEventListener("contextmenu", function(event) {
