@@ -25,7 +25,10 @@ const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 const text_box = document.querySelectorAll(".text_box")
 const name_box = document.querySelectorAll(".name_box")
+//보여주는 리스트
 let showList = []
+
+//현재 페이지네이션 넘버
 let nowActive;
 
 const boxInfo = [
@@ -44,7 +47,7 @@ const boxInfo = [
     { id:12,  element: thirteen_box, start: 168, end: 182, boxId: "thirteen_box" },
 ];
 
-
+/**나머지 요소와 나머지 요소의 길이 */
 let restElement;
 let restLength;
 
@@ -217,7 +220,7 @@ search.addEventListener("input",(e)=>{
 
     const searchList = [];
     list.filter((li)=>{
-                const l = li[0].concat(li[1]).concat(li[2]).concat(li[3])
+                const l = li[0].concat(li[1]).concat(li[2]).concat(li[3]).concat(li[4]).concat(li[5])
                 if(l.includes("\n\n") && l.toLowerCase().includes(inputText)){
                     searchList.push(l.replace(/\n\n/g, " ").toLowerCase())   
                 }else if(!l.includes("\n\n") &&l.toLowerCase().includes(inputText)){
@@ -251,13 +254,12 @@ search.addEventListener("input",(e)=>{
 
 /**리스트 쪼개기 */
 function sliceList(list) {
-
     return (startIndex, endIndex) => {
         const sliced = list.slice(startIndex, endIndex);
         divideList(sliced);
     };
 }
-let menuNumber;
+
 
 /**탭 스타일 바꾸기 */
 function updateBoxStyles(activeBox) {
@@ -432,6 +434,7 @@ function backgroundColor(listItems){
 }
 
 let listNumber = 0;
+
 /**하단 숫자 리스트 보여주는 함수 */
 function showListNum(list){
    const listNum = list.length / 14;
@@ -574,14 +577,14 @@ function blueArrowButton(){
 }
 
 
-    /**우클릭 방지 */
-    document.addEventListener("contextmenu", function(event) {
+ /**우클릭 방지 */
+ document.addEventListener("contextmenu", function(event) {
         event.preventDefault();
     }, false);
 
-          /**확대 축소 방지 */
-          document.body.addEventListener('touchstart', function(e) {
-            if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+ /**확대 축소 방지 */
+ document.body.addEventListener('touchstart', function(e) {
+     if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
               e.preventDefault();
               e.stopPropagation();
               e.stopImmediatePropagation();
@@ -589,7 +592,7 @@ function blueArrowButton(){
           }, {passive: false});
 
 
-           // 텍스트를 길게 터치할 때 복사 이벤트를 막습니다.
+// 텍스트를 길게 터치할 때 복사 이벤트를 막습니다.
  document.addEventListener("contextmenu", function (event) {
     event.preventDefault(); // 기본 동작을 막습니다.
 });
