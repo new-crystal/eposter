@@ -39,7 +39,7 @@ function getNumber(){
         nextNumber.innerText = `PO-0${currentNumber + 1}`;
         preImg.style.display = "none"
     }
-    else if(1 < currentNumber && currentNumber < 10){
+    else if(1 < currentNumber && currentNumber < 10 && currentNumber !== 9){
         numberText.innerText = `PO-0${currentNumber}`;
         preNumber.innerText = `PO-0${currentNumber - 1}`;
         nextNumber.innerText = `PO-0${currentNumber + 1}`;
@@ -49,19 +49,35 @@ function getNumber(){
         numberText.innerText = `PO-${currentNumber}`;
         preNumber.innerText = `PO-${currentNumber - 1}`;
         nextImg.style.display = "none"
-    }else{
+    }
+    else if(currentNumber === 9){
+        numberText.innerText = `PO-0${currentNumber}`;
+        preNumber.innerText = `PO-0${currentNumber - 1}`;
+        nextNumber.innerText = `PO-${currentNumber + 1}`;
+        preImg.style.display = ""
+        nextImg.style.display = ""
+    }
+    else if(currentNumber === 10){
+        numberText.innerText = `PO-${currentNumber}`;
+        preNumber.innerText = `PO-0${currentNumber - 1}`;
+        nextNumber.innerText = `PO-${currentNumber + 1}`;
+        preImg.style.display = ""
+        nextImg.style.display = ""
+    }
+    else if(currentNumber > 10){
         numberText.innerText = `PO-${currentNumber}`;
         preNumber.innerText = `PO-${currentNumber - 1}`;
         nextNumber.innerText = `PO-${currentNumber + 1}`;
         preImg.style.display = ""
         nextImg.style.display = ""
     }
+
 }
 
 /**전체 리스트에서 이미지 가져오기 */
 function getImage(){
     nameList.map((name, i)=>{
-        if(i < 10){
+        if(i < 9){
             if(query === `0${i+1}`){
                 setImage(name)
             }
@@ -195,12 +211,20 @@ function debounce(func, delay) {
 
 preButton.addEventListener("click", ()=>{
     const menu =  new URLSearchParams(window.location.search).get("menu")
-    window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 - 1}`
+    if(currentNumber <= 10){
+        window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 - 1}`
+    }else{
+        window.location.href= `detail.html?menu=${menu}&number=PO-${currentNumber/1 - 1}`
+    }
 })
 
 nextButton.addEventListener("click", ()=>{
     const menu = new URLSearchParams(window.location.search).get("menu")
-    window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 + 1}`
+    if(currentNumber < 9){
+        window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 + 1}`
+    }else{
+        window.location.href= `detail.html?menu=${menu}&number=PO-${currentNumber/1 + 1}`
+    }
 })
 
 /**확대버튼 클릭이벤트 */
