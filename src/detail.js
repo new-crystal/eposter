@@ -33,7 +33,7 @@ goListBtn.addEventListener("click",()=>{
 
 /**푸터 이동 버튼 눌렀을 경우*/
 function getNumber(){
-    const last = nameList.length
+    const last = nameList.length;
 
     if(currentNumber === 1){
         numberText.innerText = `PO-0${currentNumber}`;

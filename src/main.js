@@ -48,8 +48,8 @@ const boxInfo = [
 let restElement;
 let restLength;
 
-pre_box.addEventListener("click",()=>{preBtnMove()})
-next_box.addEventListener("click", ()=>{nextBtnMove()})
+pre_box.addEventListener("click",()=>{ preBtnMove()})
+next_box.addEventListener("click", ()=>{ nextBtnMove()})
 go_first_box.addEventListener("click", ()=>{firstPageMove()})
 go_last_box.addEventListener("click", ()=> {lastPageMove()})
 
@@ -60,7 +60,7 @@ goHomeBtn.addEventListener("click",()=>{
 
 /**list page header */
 function getHeaderTitle(){
-let title = window.location.search.split("=")[1]
+let title = new URLSearchParams(window.location.search).get("menu");
 
  if(title.includes("(")){
     title = title.split("(")[0] +` (`+ title.split("(")[1];
@@ -82,7 +82,9 @@ function pushTitle(){
         titleList.id = name.id
         titleList.innerHTML = `
         <div class="wrap" onclick="goDetailPage('${name.id}')">
+            <div class="number_box">
             <span class="number">PO-${name.id}</span>
+            </div>
             <div class="text_box">
                 <p class="title">${name.title}</p>
                 <div class="name_box">
@@ -267,39 +269,50 @@ function addEventListeners(list) {
         element.addEventListener("click", () => {
             sliceListCallback(start, end);
             updateBoxStyles(boxId);
-
-            /**footer pagination 10이상일 경우 추가 */
-            footerList.forEach((footer)=>{
-                if(listNumber > 10 && nowActive === "6"){
-                    if(footer.dataset.id === 1){
-                        footer.style.display = "none";
-                    }else if(footer.dataset.id === 11){
-                        footer.style.display = "";
-                    }
-                }
-                if(listNumber > 10 && nowActive === "7"){
-                    if(footer.dataset.id === 2){
-                        footer.style.display = "none";
-                    }else if(footer.dataset.id === 12){
-                        footer.style.display = "";
-                    }
-                }
-                if(listNumber > 10 && nowActive === "8"){
-                    if(footer.dataset.id === 3){
-                        footer.style.display = "none";
-                    }else if(footer.dataset.id === 13){
-                        footer.style.display = "";
-                    }
-                }
-            })
-           
+            showListNumberAll()
         });
     }
-
 
     boxInfo.forEach(({ element, start, end, boxId }) => {
         addClickListener(element, start, end, boxId);
     });
+}
+
+ /**footer pagination 10이상일 경우 추가 */
+ function showListNumberAll(){
+    footerList.forEach((footer)=>{
+        const activeNumber = Number(nowActive);
+        const footerNumber = Number(footer.dataset.id);
+        if(listNumber > 10 && activeNumber === 6){
+            if(footerNumber === 1){
+                footer.style.display = "none";
+            }else if(footerNumber === 11){
+                footer.style.display = "";
+            }
+        }
+        if(listNumber > 10 && activeNumber === 7){
+            if(footerNumber <= 2){
+                footer.style.display = "none";
+            }else if(footerNumber === 11 || footerNumber === 12){
+                footer.style.display = "";
+            }
+        }
+        if(listNumber > 10 && activeNumber >= 8){
+            if(footerNumber <= 3){
+                footer.style.display = "none";
+            }else if(footerNumber >= 11){
+                footer.style.display = "";
+            }
+        }
+       
+        if(listNumber > 10 && activeNumber < 6){
+            if(footerNumber <= 3){
+                footer.style.display = "";
+            }else if(footerNumber >= 11){
+                footer.style.display = "none";
+            }
+        }
+    }) 
 }
 
 
@@ -405,9 +418,8 @@ function showListNum(list){
     listNumber = Math.floor(listNum) + 1
    }
 
-
    footerList.forEach((footer)=>{
-    if(listNum < 10){
+    if(listNumber < 10){
         if(footer.dataset.id <= listNumber){
          footer.style.display = "";
         }
@@ -415,7 +427,7 @@ function showListNum(list){
          footer.style.display = "none"
         }
     }
-    else if(listNum > 10){
+    else if(listNumber > 10){
         if(footer.dataset.id > 10){
             footer.style.display = "none";
         }
@@ -429,7 +441,8 @@ function preBtnMove(){
     if(footer.classList.value.includes("list_active") && footer.id !== "first_box"){
         footer.previousElementSibling.classList.add("list_active")
         footer.classList.remove("list_active")
-
+        nowActive = footer.previousElementSibling.dataset.id;
+        showListNumberAll()
         boxInfo.map((box)=>{
            if( box.boxId === footer.id ){
             const preId = box.id - 1;
@@ -452,7 +465,8 @@ function nextBtnMove() {
       if (nextFooter && nextFooter.dataset.id <= listNumber) {
         activeFooter.classList.remove("list_active");
         nextFooter.classList.add("list_active");
-
+        nowActive = nextFooter.dataset.id
+        showListNumberAll()
         const activeBoxInfo = boxInfo.find((box) => box.boxId === activeFooter.id);
   
         if (activeBoxInfo) {
@@ -469,6 +483,8 @@ function nextBtnMove() {
   function firstPageMove(){
     footerList.forEach((footer)=>{
         first_box.classList.add("list_active")
+        nowActive = "1"
+        showListNumberAll()
         if(footer.id !== "first_box"){
             footer.classList.remove("list_active")
             sliceList(showList)(0, 14)
@@ -482,6 +498,8 @@ function lastPageMove(){
     footerList.forEach((footer)=>{
         if(footer.dataset.id/1 === listNumber){
             footer.classList.add("list_active")
+            nowActive = footer.dataset.id;
+            showListNumberAll()
             sliceList(showList)(boxInfo[listNumber - 1].start, boxInfo[listNumber - 1].end);
         }else{
             footer.classList.remove("list_active")
