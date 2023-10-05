@@ -19,10 +19,15 @@ const preImg = document.querySelector(".prev")
 const posterImage = document.querySelector(".slide-animation")
 const zoomBtn = document.querySelector(".zoom_button")
 const header = document.querySelector("#header")
+const background_load = document.querySelector(".background_load")
 
 header.addEventListener("click",()=>{
     window.location.reload()
 })
+
+posterImage.onload = ()=>{
+    background_load.style.display = "none"
+}
 
 let nameList;
 let currentNumber =  0;
@@ -181,6 +186,7 @@ function onPrevBtnClick(image) {
     if(now > 0){
         now = now - 1;
         zoom = false;
+        posterImage.style.display = "";
         image.setAttribute("src", Object.values(imgList[now])[0]); 
         setImgBtn(image);
     }
@@ -194,6 +200,7 @@ function onNextBtnClick(image) {
         now = imgList.length - 1
     }
         zoom = false;
+        posterImage.style.display = "";
         image.setAttribute("src", Object.values(imgList[now])[0]);
         setImgBtn(image);
   }
