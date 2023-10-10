@@ -33,6 +33,9 @@ let nameList;
 let currentNumber =  0;
 let zoom = false;
 let now = 0;
+let current = "PO"
+let POList = [];
+let PEList = [];
 const imgList = []
 
 /**main list select */
@@ -51,6 +54,24 @@ titleList.map((titleObj)=>{
         nameList = titleObj.list;
     }
 })
+
+}
+
+function dividePO(){
+    nameList.map((list)=>{
+        if(list.id.split("-")[0] === "PO"){
+            POList.push(list)
+        }
+        else if(list.id.split("-")[0] === "PE"){
+            PEList.push(list)
+        }
+    })
+    if(current === "PO"){
+        nameList = POList;
+    }
+    else if(current === "PE"){
+        nameList = PEList
+    }
 }
 
 /**리스트 버튼 -> index 페이지로 이동 */
@@ -61,59 +82,72 @@ goListBtn.addEventListener("click",()=>{
 
 /**푸터 이동 버튼 눌렀을 경우*/
 function getNumber(){
-    const last = nameList.length;
-    if(currentNumber === 1){
-        numberText.innerText = `PO-0${currentNumber}`;
-        nextNumber.innerText = `PO-0${currentNumber + 1}`;
-        preImg.style.display = "none"
-    }
-    else if(1 < currentNumber && currentNumber < 10 && currentNumber !== 9){
-        numberText.innerText = `PO-0${currentNumber}`;
-        preNumber.innerText = `PO-0${currentNumber - 1}`;
-        nextNumber.innerText = `PO-0${currentNumber + 1}`;
-        preImg.style.display = ""
-        nextImg.style.display = ""
-    }else if(currentNumber === last){
-        numberText.innerText = `PO-${currentNumber}`;
-        preNumber.innerText = `PO-${currentNumber - 1}`;
-        nextImg.style.display = "none"
-    }
-    else if(currentNumber === 9){
-        numberText.innerText = `PO-0${currentNumber}`;
-        preNumber.innerText = `PO-0${currentNumber - 1}`;
-        nextNumber.innerText = `PO-${currentNumber + 1}`;
-        preImg.style.display = ""
-        nextImg.style.display = ""
-    }
-    else if(currentNumber === 10){
-        numberText.innerText = `PO-${currentNumber}`;
-        preNumber.innerText = `PO-0${currentNumber - 1}`;
-        nextNumber.innerText = `PO-${currentNumber + 1}`;
-        preImg.style.display = ""
-        nextImg.style.display = ""
-    }
-    else if(currentNumber > 10){
-        numberText.innerText = `PO-${currentNumber}`;
-        preNumber.innerText = `PO-${currentNumber - 1}`;
-        nextNumber.innerText = `PO-${currentNumber + 1}`;
-        preImg.style.display = ""
-        nextImg.style.display = ""
-    }
 
+    const last = nameList.length
+    const numberCurrent = Number(currentNumber)
+
+    const formatNumber = (num) => {
+        let prefix;
+        
+        if(Number(num) !== 0){
+            if( Number(num) < 10) 
+                {prefix = "00"}
+            else if(Number(num) >= 10 && Number(num) < 100)
+                {prefix = "0"}
+            else if (Number(num) >= 100)
+                {prefix = ""}
+            return `${current}-${prefix}${num}`;
+        }else if (Number(num) === 0){
+            return "";
+        }
+    };
+
+    if (numberCurrent !== last) {
+        const prevNum = numberCurrent - 1;
+        const nextNum = numberCurrent + 1;
+        const preImgDisplay = prevNum > 0 ? "" : "none";
+        const nextImgDisplay = nextNum <= last ? "" : "none";
+
+        numberText.innerText = formatNumber(numberCurrent);
+        preNumber.innerText = formatNumber(prevNum);
+        nextNumber.innerText = formatNumber(nextNum);
+
+        preImg.style.display = preImgDisplay;
+        nextImg.style.display = nextImgDisplay;
+    } 
+    else if (numberCurrent === last) {
+        const prevNum = numberCurrent - 1;
+        const preImgDisplay = prevNum > 0 ? "" : "none";
+
+        numberText.innerText = formatNumber(numberCurrent);
+        preNumber.innerText = formatNumber(prevNum);
+
+        preImg.style.display = preImgDisplay;
+        nextImg.style.display = "none";
+    }
 }
+
+
 
 /**전체 리스트에서 이미지 가져오기 */
 function getImage(){
     nameList.map((name, i)=>{
+  
         if(i < 9){
+            if(query === `00${i+1}`){
+                setImage(name)
+        }
+        }
+        else if(i >= 9 && i < 99){
             if(query === `0${i+1}`){
                 setImage(name)
-            }
+        }
         }else{
             if(query === `${i+1}`){
                 setImage(name)
-            }
         }
+        }
+           
     })
 }
 
@@ -123,15 +157,22 @@ function setImage(name) {
     while (imgBox.firstChild) {
       imgBox.removeChild(imgBox.firstChild);
     }
+    background_load.style.display = ""
 
     if (name.img.length === 1) {
-    posterImage.setAttribute("src", name.img[0].url1);
-    imgBox.appendChild(posterImage);
+        posterImage.setAttribute("src", name.img[0].url1);
+        imgBox.appendChild(posterImage);
     } else {
       name.img.forEach((img) => {
         imgList.push(img);
       });
       posterImage.setAttribute("src", Object.values(imgList[now])[0]);
+
+            
+      posterImage.onload = ()=>{
+        background_load.style.display = "none"
+    }
+   
       imgBox.appendChild(posterImage);
       setImgBtn(posterImage);
     }
@@ -239,22 +280,20 @@ function debounce(func, delay) {
     debounceTimeout = setTimeout(func, delay);
 }
 
+//footer pre btn event
 preButton.addEventListener("click", ()=>{
-    const menu =  new URLSearchParams(window.location.search).get("menu")
-    if(currentNumber <= 10){
-        window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 - 1}`
-    }else{
-        window.location.href= `detail.html?menu=${menu}&number=PO-${currentNumber/1 - 1}`
-    }
+    const menu =  new URLSearchParams(window.location.search).get("menu");
+    const preText = preNumber.innerText;
+
+    window.location.href= `detail.html?menu=${menu}&number=${preText}`
 })
 
+//footer next btn event
 nextButton.addEventListener("click", ()=>{
-    const menu = new URLSearchParams(window.location.search).get("menu")
-    if(currentNumber < 9){
-        window.location.href= `detail.html?menu=${menu}&number=PO-0${currentNumber/1 + 1}`
-    }else{
-        window.location.href= `detail.html?menu=${menu}&number=PO-${currentNumber/1 + 1}`
-    }
+    const menu = new URLSearchParams(window.location.search).get("menu");
+    const nextText = nextNumber.innerText;
+
+    window.location.href= `detail.html?menu=${menu}&number=${nextText}`
 })
 
 /**확대버튼 클릭이벤트 */
@@ -301,7 +340,9 @@ imgBox.addEventListener("mousemove", function (event) {
 
 window.onload = () =>{
     getList()
-    currentNumber = ( window.location.search.split("=")[2].split("-")[1] )* 1
+    currentNumber = window.location.search.split("=")[2].split("-")[1]
+    current = window.location.search.split("=")[2].split("-")[0]
+    dividePO()
     getNumber()
     getImage()
 }
