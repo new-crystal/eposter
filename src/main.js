@@ -115,7 +115,7 @@ function pushTitle(){
         titleList.innerHTML = `
         <div class="wrap" onclick="goDetailPage('${name.id}')">
             <div class="number_box">
-            <span class="number">PO-${name.id}</span>
+            <span class="number">${name.id}</span>
             </div>
             <div class="text_box">
                 <p class="title">${name.title}</p>
@@ -140,13 +140,13 @@ function divideList(list) {
         if (li.id === undefined) {
             return li.style.display = "";
         } else if (li.id !== undefined) {
-            return blockList.push(`PO-${li.id}`)
+            return blockList.push(li.id)
         }
     })
 
     const allList = document.querySelectorAll(".list")
     allList.forEach((a) => {
-        const titleSplit = `PO-${a.id}`
+        const titleSplit = a.id
         a.style.display = blockList.includes(titleSplit) ? "" : "none";
     })
 
@@ -439,7 +439,7 @@ window.onload = function loadWindow() {
 
 function goDetailPage(number){
     const menu = new URLSearchParams(window.location.search).get("menu");
-    window.location.href = `detail.html?menu=${menu}&number=PO-${number}`
+    window.location.href = `detail.html?menu=${menu}&number=${number}`
 }
 
 /**배경색 주기
