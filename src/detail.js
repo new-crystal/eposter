@@ -7,6 +7,8 @@ const boneList = JSON.parse(JSON.stringify(bone));
 const pituitaryList = JSON.parse(JSON.stringify(pituitary));
 
 const numberText = document.querySelector("#number");
+const detailNumber = document.querySelector(".detail_number");
+const detailTitle = document.querySelector(".detail_title");
 const imgBox = document.querySelector("#image");
 const query =  new URLSearchParams(window.location.search).get("number").split("-")[1]
 const goListBtn = document.querySelector(".view_list")
@@ -36,7 +38,10 @@ let now = 0;
 let current = "PO"
 let POList = [];
 let PEList = [];
-const imgList = []
+let PPList = [];
+const imgList = [];
+const index = new URLSearchParams(window.location.search).get("index")
+const numIndex = Number(index)
 
 /**main list select */
 function getList(){
@@ -57,23 +62,6 @@ titleList.map((titleObj)=>{
 
 }
 
-function dividePO(){
-    nameList.map((list)=>{
-        if(list.id.split("-")[0] === "PO"){
-            POList.push(list)
-        }
-        else if(list.id.split("-")[0] === "PE"){
-            PEList.push(list)
-        }
-    })
-    if(current === "PO"){
-        nameList = POList;
-    }
-    else if(current === "PE"){
-        nameList = PEList
-    }
-}
-
 /**리스트 버튼 -> index 페이지로 이동 */
 goListBtn.addEventListener("click",()=>{
     const menu = new URLSearchParams(window.location.search).get("menu")
@@ -84,43 +72,43 @@ goListBtn.addEventListener("click",()=>{
 function getNumber(){
 
     const last = nameList.length
-    const numberCurrent = Number(currentNumber)
+    const number = new URLSearchParams(window.location.search).get("number")
 
-    const formatNumber = (num) => {
-        let prefix;
-        
-        if(Number(num) !== 0){
-            if( Number(num) < 10) 
-                {prefix = "00"}
-            else if(Number(num) >= 10 && Number(num) < 100)
-                {prefix = "0"}
-            else if (Number(num) >= 100)
-                {prefix = ""}
-            return `${current}-${prefix}${num}`;
-        }else if (Number(num) === 0){
+    const formatPreNumber = () => {
+        if (numIndex !== 0) {
+            return nameList[numIndex - 1].id;
+        } else {
+            return "";
+        }
+    };
+    
+    const formatNextNumber = () => {
+        if (numIndex + 1 < last) {
+            return nameList[numIndex + 1].id;
+        } else {
             return "";
         }
     };
 
-    if (numberCurrent !== last) {
-        const prevNum = numberCurrent - 1;
-        const nextNum = numberCurrent + 1;
-        const preImgDisplay = prevNum > 0 ? "" : "none";
-        const nextImgDisplay = nextNum <= last ? "" : "none";
+    if (numIndex + 1 !== last) {
 
-        numberText.innerText = formatNumber(numberCurrent);
-        preNumber.innerText = formatNumber(prevNum);
-        nextNumber.innerText = formatNumber(nextNum);
+        const preImgDisplay = numIndex > 0 ? "" : "none";
+        const nextImgDisplay = numIndex <= last ? "" : "none";
+
+        detailNumber.innerText = number;
+        detailTitle.innerText =  new URLSearchParams(window.location.search).get("menu");
+        preNumber.innerText = formatPreNumber();
+        nextNumber.innerText = formatNextNumber();
 
         preImg.style.display = preImgDisplay;
         nextImg.style.display = nextImgDisplay;
     } 
-    else if (numberCurrent === last) {
-        const prevNum = numberCurrent - 1;
-        const preImgDisplay = prevNum > 0 ? "" : "none";
+    else if (numIndex + 1 === last) {
+        const preImgDisplay = numIndex > 0 ? "" : "none";
 
-        numberText.innerText = formatNumber(numberCurrent);
-        preNumber.innerText = formatNumber(prevNum);
+        detailNumber.innerText = number;
+        detailTitle.innerText =  new URLSearchParams(window.location.search).get("menu");
+        preNumber.innerText = formatPreNumber();
 
         preImg.style.display = preImgDisplay;
         nextImg.style.display = "none";
@@ -131,24 +119,13 @@ function getNumber(){
 
 /**전체 리스트에서 이미지 가져오기 */
 function getImage(){
-    nameList.map((name, i)=>{
   
-        if(i < 9){
-            if(query === `00${i+1}`){
-                setImage(name)
+    nameList.map((name, i)=>{
+        if(i === numIndex){
+            setImage(name)
         }
-        }
-        else if(i >= 9 && i < 99){
-            if(query === `0${i+1}`){
-                setImage(name)
-        }
-        }else{
-            if(query === `${i+1}`){
-                setImage(name)
-        }
-        }
-           
     })
+   
 }
 
 /**이미지의 src에 img 경로 넣어주기 */
@@ -284,28 +261,20 @@ function debounce(func, delay) {
 preButton.addEventListener("click", ()=>{
     const menu =  new URLSearchParams(window.location.search).get("menu");
     const preText = preNumber.innerText;
+ 
+     window.location.href = `detail.html?menu=${menu}&number=${preText}&index=${numIndex - 1}`
 
-    window.location.href= `detail.html?menu=${menu}&number=${preText}`
 })
 
 //footer next btn event
 nextButton.addEventListener("click", ()=>{
     const menu = new URLSearchParams(window.location.search).get("menu");
     const nextText = nextNumber.innerText;
+   
+    window.location.href = `detail.html?menu=${menu}&number=${nextText}&index=${numIndex + 1}`
 
-    window.location.href= `detail.html?menu=${menu}&number=${nextText}`
 })
 
-/**확대버튼 클릭이벤트 */
-zoomBtn.addEventListener("click",()=>{
-    zoom = !zoom;
-    if(zoom === false){
-        zoomBtn.innerText = "+"
-        posterImage.style.transform = "scale(1)"
-    }else{
-        zoomBtn.innerText = "-"
-    }
-})
 
 imgBox.addEventListener("mouseover",()=>{
     if(zoom){
@@ -340,9 +309,8 @@ imgBox.addEventListener("mousemove", function (event) {
 
 window.onload = () =>{
     getList()
-    currentNumber = window.location.search.split("=")[2].split("-")[1]
+    currentNumber = new URLSearchParams(window.location.search).get("number");
     current = window.location.search.split("=")[2].split("-")[0]
-    dividePO()
     getNumber()
     getImage()
 }

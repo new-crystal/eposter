@@ -25,12 +25,17 @@ const go_first_box = document.querySelector("#go_first_box")
 const pre_box = document.querySelector("#pre_box")
 const next_box = document.querySelector("#next_box")
 const go_last_box = document.querySelector("#go_last_box")
+const blue_go_first_box = document.querySelector("#blue_go_first_box")
+const blue_pre_box = document.querySelector("#blue_pre_box")
+const blue_next_box = document.querySelector("#blue_next_box")
+const blue_go_last_box = document.querySelector("#blue_go_last_box")
 const header = document.querySelector("#header")
 const headerTitle = document.querySelector(".page_title")
 const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 const text_box = document.querySelectorAll(".text_box")
 const name_box = document.querySelectorAll(".name_box")
+const number_box = document.querySelectorAll(".number_box")
 
 //mainList
 let nameList;
@@ -108,21 +113,21 @@ header.addEventListener("click",()=>{
 
 /**list에서 a태그로 집어넣기 */
 function pushTitle(){
-    nameList.map((name)=>{
+    nameList.map((name, i)=>{
         const titleList = document.createElement("a")
         titleList.className = "list";
         titleList.id = name.id
+        titleList.dataset.id = i;
         titleList.innerHTML = `
-        <div class="wrap" onclick="goDetailPage('${name.id}')">
+        <div class="wrap" onclick="goDetailPage('${name.id}','${i}')">
             <div class="number_box">
             <span class="number">${name.id}</span>
             </div>
             <div class="text_box">
                 <p class="title">${name.title}</p>
                 <div class="name_box">
-                    <p class="name">${name.name}</p>
-                    <p class="name">${name.affiliation}</p>
-                    <p class="name">${name.nation}</p>
+                    <p class="name">${name.name}, ${name.affiliation}</p>
+                    <p class="name nation">${name.nation}</p>
                 </div>
             </div>
         </div>`;
@@ -267,7 +272,7 @@ search.addEventListener("input",(e)=>{
         showListNum(searchList);
         updateBoxStyles("first_box")
         const listItems = document.querySelectorAll(".list");
-        backgroundColor(listItems)
+        changeBackgroundColor(listItems)
         showListNumberAll()  
         blueArrowButton()  
     }
@@ -383,9 +388,8 @@ function searching(searchList) {
     const set = new Set(listItemsDupArray)
     const listItemsArray = [...set]
 
-    listItemsArray.sort((a, b) => a.id - b.id);
-    
-    backgroundColor(listItemsArray)
+    listItemsArray.sort((a, b) => a.dataset.id - b.dataset.id);
+    changeBackgroundColor(listItemsArray)
     addEventListeners(listItemsArray);
 }
 
@@ -403,7 +407,7 @@ window.onload = function loadWindow() {
     addEventListeners(nameList);
     sliceList(nameList)(0, 14);
     const listItems = document.querySelectorAll(".list");
-    backgroundColor(listItems)
+    changeBackgroundColor(listItems)
     showListNum(nameList)
     updateBoxStyles("first_box")
     showList = nameList;
@@ -413,7 +417,10 @@ window.onload = function loadWindow() {
     listItems.forEach((listItem) => {
         listItem.addEventListener('mouseover', () => {
             // 글자색 및 배경색 변경
-            listItem.style.color = '#0086FE';
+            const wrapItems = listItem.querySelectorAll(".wrap")
+            wrapItems.forEach((item)=>{
+                item.style.color = '#0086FE';
+            })
             // name_box 내부 요소의 색상 변경
             const nameBoxItems = listItem.querySelectorAll('.name_box p');
             nameBoxItems.forEach((item) => {
@@ -423,11 +430,18 @@ window.onload = function loadWindow() {
     
         listItem.addEventListener('mouseout', () => {
             // 글자색 및 배경색 복원
-            listItem.style.color = '#414042';
+            const wrapItems = listItem.querySelectorAll(".wrap")
+            wrapItems.forEach((item)=>{
+                item.style.color = '#262629';
+            })
             // name_box 내부 요소의 색상 복원
             const nameBoxItems = listItem.querySelectorAll('.name_box p');
             nameBoxItems.forEach((item) => {
-                item.style.color = '#414042';
+                if(item.classList.value.includes("nation")){
+                    item.style.color = "#8E8E9B";
+                }else{
+                    item.style.color = '#262629';
+                }
             });
         });
     });
@@ -437,16 +451,17 @@ window.onload = function loadWindow() {
 
 /**클릭 시 상세페이지로 이동 */
 
-function goDetailPage(number){
+function goDetailPage(number, index){
     const menu = new URLSearchParams(window.location.search).get("menu");
-    window.location.href = `detail.html?menu=${menu}&number=${number}`
+ 
+     window.location.href = `detail.html?menu=${menu}&number=${number}&index=${index}`
 }
 
 /**배경색 주기
  * 짝수 -> "#EAEDF3"
  * 홀수 -> "#FFFFFF"
  */
-function backgroundColor(listItems){
+function changeBackgroundColor(listItems){
 
     const listItemsDupArray = Array.from(listItems);
     const set = new Set(listItemsDupArray)
@@ -456,9 +471,11 @@ function backgroundColor(listItems){
 
     listItemsArray.forEach((item, index) => {
         if (index % 2 === 0) {
-          item.style.backgroundColor = "#F2F5F8"; 
+            item.style.backgroundColor = "#F2F5F8";
+            item.childNodes[1].childNodes[1].style.backgroundColor = "#DBE8F6"
         } else {
-          item.style.backgroundColor = "#fff";
+          item.style.backgroundColor = "#FFF"; 
+          item.childNodes[1].childNodes[1].style.backgroundColor = "#E8F2FE"
         }
       });
 }
@@ -576,32 +593,52 @@ function lastPageMove(){
 function blueArrowButton(){
     if(listNumber !== 1){
         if(Number(nowActive) !== 1){
-            pre_box.style.color = "blue";
-            go_first_box.style.color = "blue"
+            blue_pre_box.style.display= ""
+            blue_go_first_box.style.display = ""
+            go_first_box.style.display = "none"
+            pre_box.style.display = "none"
         }
         if(Number(nowActive) === 1){
-            pre_box.style.color = "#6A6A6A";
-            go_first_box.style.color = "#6A6A6A";
-            next_box.style.color = "blue";
-            go_last_box.style.color = "blue"
+            pre_box.style.display = "";
+            blue_pre_box.style.display = "none"
+            go_first_box.style.display = ""
+            blue_go_first_box.style.display = "none"
+
+            next_box.style.display = "none"
+            blue_next_box.style.display = "";
+            go_last_box.style.display = "none";
+            blue_go_last_box.style.display = ""
         }
     
         if(Number(nowActive) !== listNumber){
-            next_box.style.color = "blue";
-            go_last_box.style.color = "blue"
+            next_box.style.display = "none"
+            blue_next_box.style.display = "";
+            go_last_box.style.display = "none";
+            blue_go_last_box.style.display = ""
+
         }
-        if(Number(nowActive) === listNumber){
-            pre_box.style.color = "blue";
-            go_first_box.style.color = "blue"
-            next_box.style.color = "#6A6A6A";
-            go_last_box.style.color = "#6A6A6A"
+        if(Number(nowActive) === listNumber){ 
+            pre_box.style.display = "none";
+            blue_pre_box.style.display = ""
+            go_first_box.style.display = "none"
+            blue_go_first_box.style.display = ""
+
+            next_box.style.display = ""
+            blue_next_box.style.display = "none";
+            go_last_box.style.display = "";
+            blue_go_last_box.style.display = "none"
         }
     }
     else if(listNumber === 1){
-        pre_box.style.color = "#6A6A6A";
-        go_first_box.style.color = "#6A6A6A";
-        next_box.style.color = "#6A6A6A";
-        go_last_box.style.color = "#6A6A6A"
+        pre_box.style.display = "";
+        go_first_box.style.display = "";
+        next_box.style.display = ""
+        go_last_box.style.display = ""
+
+        blue_pre_box.style.display = "";
+        blue_go_first_box.style.display = "";
+        blue_next_box.style.display = ""
+        blue_go_last_box.style.display = ""
     } 
    
 }
