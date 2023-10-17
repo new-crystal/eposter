@@ -17,21 +17,27 @@
 
 </head>
 
-<body style="width: 1080px;height: 1920px; background: #EAEDF3; overflow-x: hidden;" class="list_body">
+<body style="width: 1080px;height: 1920px; background-color: #EAEDF3; overflow-x: hidden;" class="list_body">
     <div style="overflow: hidden;position: relative;">
         <div id="header">
-            <img src="./assets/header.png" alt="header" style="width: 1125px;"/>
+            <img src="./assets/header.svg" alt="header" style="width: 1140px;"/>
         </div>
         <div id="page_1">
        
         <div class="title_container">
         <p class="page_title"></p>
         </div>
+
+        <!-- list 들어가는 공간 -->
         <div id="listContainer">
         </div>
+
+        <!-- 페이지네이션 숫자 -->
         <div class="btn_box">
-            <button id="go_first_box" class="btn cursor-pointer"><<</button>
-            <button id="pre_box" class="btn cursor-pointer"><</button>
+            <button id="go_first_box" class="btn cursor-pointer"><img src="./assets/gray_pre_2.png"/></button>
+            <button id="pre_box" class="btn cursor-pointer"><img src="./assets/gray_pre.png"/></button>
+            <button id="blue_go_first_box" class="btn cursor-pointer" style="display: none;"><img src="./assets/blue_pre_2.png"/></button>
+            <button id="blue_pre_box" class="btn cursor-pointer" style="display: none;"><img src="./assets/blue_pre.png"/></button>
             <button id="first_box" data-id="1" class="footer_list btn cursor-pointer">1</button>
             <button id="second_box" data-id="2" class="footer_list btn cursor-pointer">2</button>
             <button id="third_box"data-id="3" class="footer_list btn cursor-pointer">3</button>
@@ -45,11 +51,13 @@
             <button id="eleven_box"data-id="11" class="footer_list btn cursor-pointer">11</button>
             <button id="twelve_box"data-id="12" class="footer_list btn cursor-pointer">12</button>
             <button id="thirteen_box"data-id="13" class="footer_list btn cursor-pointer">13</button>
-            <button id="next_box" class="btn cursor-pointer">></button>
-            <button id="go_last_box" class="btn cursor-pointer">>></button>
-
-            <!-- <marquee> test 001 </marquee> -->
+            <button id="blue_next_box" class="btn cursor-pointer" style="display: none;"><img src="./assets/blue_next.png"/></button>
+            <button id="blue_go_last_box" class="btn cursor-pointer" style="display: none;"><img src="./assets/blue_next_2.png"/></button>
+            <button id="next_box" class="btn cursor-pointer"><img src="./assets/gray_next.png"/></button>
+            <button id="go_last_box" class="btn cursor-pointer"><img src="./assets/gray_next_2.png"/></button>
         </div>
+
+        <!-- 검색 박스 -->
         <div id="search_box">
             <img class="go_home_btn" src="./assets/home/btn_home.png" width="120px" height="120px"/>
             <input id="search" placeholder="Please enter your search term"/>

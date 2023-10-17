@@ -20,11 +20,18 @@
     <div id="header">
         <img src="./assets/header.png" alt="header" style="width: 1125px;"/>
     </div>
-   <button style="display: none;" class="zoom_button">+</button>
+
+    <!-- detail page blue title box-->
     <div class="detail_wrap_box">
-        <div id="number">      
+        <div id="number">
+            <p class="detail_number"></p>
+            <p class="detail_title"></p>      
         </div>
+
+      <!-- img box-->   
         <div id="img_wrap">
+
+             <!-- loading box-->  
             <div class="background_load">
                 <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
@@ -40,10 +47,14 @@
   </path>
 </svg>
             </div>
-            <div id="image" class="img-container" style="height: 1325px; width: 1080px;">
+            
+             <!-- img -->   
+            <div id="image" class="img-container" style="height: 1440px; width: 1080px;">
                 <img class="slide-animation image"/>   
         </div>
         </div>
+
+        <!-- footer -->   
         <div id="footer">
             <button class="preBtn"> <p id="preNumber" class="move_number"></p><img class="prev" src="./assets/prev.svg"></button>
             <button class="view_list"></button>
