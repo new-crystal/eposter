@@ -5,6 +5,11 @@ const basicList = JSON.parse(JSON.stringify(basic));
 const thyroidList = JSON.parse(JSON.stringify(thyroid));
 const boneList = JSON.parse(JSON.stringify(bone));
 const pituitaryList = JSON.parse(JSON.stringify(pituitary));
+const clinical_PE_List = JSON.parse(JSON.stringify(clinical_pe));
+const basic_PE_List = JSON.parse(JSON.stringify(basic_pe));
+const thyroid_PE_List = JSON.parse(JSON.stringify(thyroid_pe));
+const bone_PE_List = JSON.parse(JSON.stringify(bone_pe));
+const pituitary_PE_List = JSON.parse(JSON.stringify(pituitary_pe));
 
 const listContainer = document.querySelector("#listContainer")
 const search = document.querySelector("#search")
@@ -31,6 +36,7 @@ const blue_next_box = document.querySelector("#blue_next_box")
 const blue_go_last_box = document.querySelector("#blue_go_last_box")
 const header = document.querySelector("#header")
 const headerTitle = document.querySelector(".page_title")
+const headerSubTitle = document.querySelector(".page_sub")
 const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 const text_box = document.querySelectorAll(".text_box")
@@ -66,10 +72,10 @@ const boxInfo = [
 let restElement;
 let restLength;
 
-pre_box.addEventListener("click",()=>{ preBtnMove()})
-next_box.addEventListener("click", ()=>{ nextBtnMove()})
-go_first_box.addEventListener("click", ()=>{firstPageMove()})
-go_last_box.addEventListener("click", ()=> {lastPageMove()})
+blue_pre_box.addEventListener("click",()=>{ preBtnMove()})
+blue_next_box.addEventListener("click", ()=>{ nextBtnMove()})
+blue_go_first_box.addEventListener("click", ()=>{firstPageMove()})
+blue_go_last_box.addEventListener("click", ()=> {lastPageMove()})
 
 /**home button click event */
 goHomeBtn.addEventListener("click",()=>{
@@ -79,16 +85,22 @@ goHomeBtn.addEventListener("click",()=>{
 /**main list select */
 function getList(){
     let title = new URLSearchParams(window.location.search).get("menu");
+    let sub = new URLSearchParams(window.location.search).get("sub");
 const titleList = [
-    {title:"Diabetes/Obesity/Lipid(clinical)", list:clinicalList},
-    {title:"Diabetes/Obesity/Lipid(basic)", list:basicList},
-    {title:"Thyroid", list:thyroidList},
-    {title:"Bone/Muscle", list:boneList},
-    {title:"Pituitary/Adrenal/Gonad", list:pituitaryList},
+    {title:"Diabetes/Obesity/Lipid(clinical)",sub:"PosterOral", list:clinicalList},
+    {title:"Diabetes/Obesity/Lipid(clinical)",sub:"PosterExhibition", list:clinical_PE_List},
+    {title:"Diabetes/Obesity/Lipid(basic)",sub:"PosterOral", list:basicList},
+    {title:"Diabetes/Obesity/Lipid(basic)",sub:"PosterExhibition", list:basic_PE_List},
+    {title:"Thyroid",sub:"PosterOral", list:thyroidList},
+    {title:"Thyroid",sub:"PosterExhibition", list:thyroid_PE_List},
+    {title:"Bone/Muscle",sub:"PosterOral", list:boneList},
+    {title:"Bone/Muscle",sub:"PosterExhibition", list:bone_PE_List},
+    {title:"Pituitary/Adrenal/Gonad",sub:"PosterOral", list:pituitaryList},
+    {title:"Pituitary/Adrenal/Gonad",sub:"PosterExhibition", list:pituitary_PE_List},
 ]
 
 titleList.map((titleObj)=>{
-    if(titleObj.title === title){
+    if(titleObj.title === title && titleObj.sub === sub){
         nameList = titleObj.list;
     }
 })
@@ -97,13 +109,20 @@ titleList.map((titleObj)=>{
 
 /**list page header */
 function getHeaderTitle(){
-let title = new URLSearchParams(window.location.search).get("menu");
+    let title = new URLSearchParams(window.location.search).get("menu");
+    let subTitle = new URLSearchParams(window.location.search).get("sub");
 
- if(title.includes("(")){
+   if(title.includes("(")){
     title = title.split("(")[0] +` (`+ title.split("(")[1];
-}
+    }
+    if(subTitle === "PosterOral"){
+        subTitle = "Poster Oral"
+    }else if(subTitle === "PosterExhibition"){
+        subTitle = "Poster Exhibition"
+    }
 
  headerTitle.innerText = title
+ headerSubTitle.innerText = subTitle
 }
 
 /**헤더 새로고침 버튼 */
@@ -126,7 +145,7 @@ function pushTitle(){
             <div class="text_box">
                 <p class="title">${name.title}</p>
                 <div class="name_box">
-                    <p class="name">${name.name}, ${name.affiliation}</p>
+                    <p class="name">${name.name}</p>
                     <p class="name nation">${name.nation}</p>
                 </div>
             </div>
@@ -254,10 +273,8 @@ search.addEventListener("input",(e)=>{
 
     const searchList = [];
     list.filter((li)=>{
-                const l = li[0].concat(li[1]).concat(li[2]).concat(li[3]).concat(li[4]).concat(li[5])
-                if(l.includes("\n\n") && l.toLowerCase().includes(inputText)){
-                    searchList.push(l.replace(/\n\n/g, " ").toLowerCase())   
-                }else if(!l.includes("\n\n") &&l.toLowerCase().includes(inputText)){
+                const l = li[0].concat("/").concat(li[1]).concat("/").concat(li[2]).concat("/").concat(li[3])
+                if(l.toLowerCase().includes(inputText)){
                     searchList.push(l.toLowerCase())  
                 }
     })
@@ -339,20 +356,20 @@ function addEventListeners(list) {
                 footer.style.display = "";
             }
         }
-        if(listNumber > 10 && activeNumber === 7){
-            if(footerNumber <= 2){
+        if(listNumber > 10 && activeNumber >= 7){
+            if(footerNumber <= 1){
                 footer.style.display = "none";
-            }else if(footerNumber === 11 || footerNumber === 12){
+            }else if(footerNumber === 11 ){
                 footer.style.display = "";
             }
         }
-        if(listNumber > 10 && activeNumber >= 8){
-            if(footerNumber <= 3){
-                footer.style.display = "none";
-            }else if(footerNumber >= 11){
-                footer.style.display = "";
-            }
-        }
+        // if(listNumber > 10 && activeNumber >= 8){
+        //     if(footerNumber <= 3){
+        //         footer.style.display = "none";
+        //     }else if(footerNumber >= 11){
+        //         footer.style.display = "";
+        //     }
+        // }
        
         if(listNumber > 10 && activeNumber < 6){
             if(footerNumber <= 3){
@@ -372,17 +389,18 @@ function addEventListeners(list) {
 function searching(searchList) {
 
     const list = document.querySelectorAll(".list");
-
+    
     let resultList = [];
+    const searchIdList = searchList.map((search) => search.split("/")[0]);
 
-    searchList.map((search) => {
-        list.forEach((li) => {
-            const sliceSearch = search.slice(0,2)
-            if (li.innerText.includes(sliceSearch)) {
-                resultList.push(li);
-            }
+    list.forEach((li) => {
+        const lowID = li.id.toLocaleLowerCase()
+        if(searchIdList.includes(lowID)){
+            resultList.push(li);      
+        }
         });
-    });
+   
+
     showList = resultList;
     const listItemsDupArray = Array.from(resultList);
     const set = new Set(listItemsDupArray)
@@ -489,9 +507,11 @@ function showListNum(list){
 
    if(restNum === 0){
     listNumber = listNum
-   }else{
+   }
+   else{
     listNumber = Math.floor(listNum) + 1
    }
+   
 
    footerList.forEach((footer)=>{
     if(listNumber < 10){
@@ -515,8 +535,11 @@ function showListNum(list){
 
 /**이전으로 버튼 */
 function preBtnMove(){
+    
   footerList.forEach((footer)=>{
+
     if(footer.classList.value.includes("list_active") && footer.id !== "first_box"){
+   
         footer.previousElementSibling.classList.add("list_active")
         footer.classList.remove("list_active")
         nowActive = footer.previousElementSibling.dataset.id;
@@ -591,6 +614,7 @@ function lastPageMove(){
 
 /** 화살표 버튼 파란색으로 변경 */
 function blueArrowButton(){
+    console.log(listNumber)
     if(listNumber !== 1){
         if(Number(nowActive) !== 1){
             blue_pre_box.style.display= ""
@@ -635,10 +659,10 @@ function blueArrowButton(){
         next_box.style.display = ""
         go_last_box.style.display = ""
 
-        blue_pre_box.style.display = "";
-        blue_go_first_box.style.display = "";
-        blue_next_box.style.display = ""
-        blue_go_last_box.style.display = ""
+        blue_pre_box.style.display = "none";
+        blue_go_first_box.style.display = "none";
+        blue_next_box.style.display = "none"
+        blue_go_last_box.style.display = "none"
     } 
    
 }

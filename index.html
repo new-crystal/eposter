@@ -6,25 +6,113 @@
     <title>Home</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body style="width: 1080px; height: 1920px; overflow: hidden;">
+<body class="index_body" style="width: 1080px; height: 1920px; overflow: hidden;">
     <div class="home_background">
         <!-- <img class="home_header" src="./assets/home/header.png"/> -->
         <div class="menu_wrap">
             <div class="menu_box">Diabetes/Obesity/Lipid (clinical)</div>
+            <div class="sub_menu_container" style="height: 0;" id="clinical">
+                <div class="sub_menu_box">Poster Oral</div>
+                <div class="sub_menu_box">Poster Exhibition</div>
+            </div>
+
             <div class="menu_box">Diabetes/Obesity/Lipid (basic)</div>
+            <div class="sub_menu_container" style="height: 0;" id="basic">
+                <div class="sub_menu_box">Poster Oral</div>
+                <div class="sub_menu_box">Poster Exhibition</div>
+            </div>
+
             <div class="menu_box">Thyroid</div>
+            <div class="sub_menu_container" style="height: 0;" id="thyroid">
+                <div class="sub_menu_box">Poster Oral</div>
+                <div class="sub_menu_box">Poster Exhibition</div>
+            </div>
+
             <div class="menu_box">Bone/Muscle</div>
+            <div class="sub_menu_container" style="height: 0;" id="bone">
+                <div class="sub_menu_box">Poster Oral</div>
+                <div class="sub_menu_box">Poster Exhibition</div>
+            </div>
+
             <div class="menu_box">Pituitary/Adrenal/Gonad</div>
+            <div class="sub_menu_container" style="height: 0;" id="pituitary">
+                <div class="sub_menu_box">Poster Oral</div>
+                <div class="sub_menu_box">Poster Exhibition</div>
+            </div>
+
         </div>
     </div>
 </body>
 <script>
-    const menuBox = document.querySelectorAll(".menu_box")
-    menuBox.forEach((menu)=>{
-        menu.addEventListener("click",(e)=>{
-            window.location.href = `list.html?menu=${e.target.innerText.replace(" ","")}`
-        })
+    const menuBox = document.querySelectorAll(".menu_box");
+    const menu_wrap = document.querySelector(".menu_wrap")
+    const subMenuContainer = document.querySelectorAll(".sub_menu_container");
+    const index_body = document.querySelector(".index_body")
+    const sub_menu_box = document.querySelectorAll(".sub_menu_box")
+
+// slideToggle 함수 정의
+function slideToggle(element, duration) {
+    element.style.transition = `height ${duration}s ease`;
+    element.style.overflow = 'hidden';
+   
+   
+    if (element.style.height === '0px' || element.style.height === '') {
+
+        subMenuContainer.forEach((subContainer) => {
+            subContainer.style.position = "absolute";
+            subContainer.style.height = '0px';
+            subContainer.style.boxShadow = "none";
+            menu_wrap.style.height = "900px"
+        });
+
+        element.style.position = "relative";
+        element.style.backgroundColor = "#FFF";
+        element.style.boxShadow = "0px 5px 12px #454C6E4D";
+        menu_wrap.style.height = "1048px";
+        element.style.height = "374px";
+    } else {
+        element.style.position = "absolute";
+        element.style.boxShadow = "none";
+        menu_wrap.style.height = "900px"
+        element.style.height = '0px';
+    }
+}
+
+// triggerList를 클릭할 때 slideToggle 적용
+menuBox.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation()
+        slideToggle(e.target.nextElementSibling, 0.3); 
+    });
+});
+
+index_body.addEventListener("click", (e)=>{
+    subMenuContainer.forEach((subContainer) => {
+            subContainer.style.position = "absolute";
+            subContainer.style.height = '0px';
+            subContainer.style.boxShadow = "none";
+            menu_wrap.style.height = "900px"
+        });
+})
+
+sub_menu_box.forEach((sub)=>{
+    sub.addEventListener("click", (e)=>{
+        e.stopPropagation()
+        const menu = e.target.parentNode.previousElementSibling.innerText.replace(" ","");
+        const sub = e.target.innerText.replace(" ","");
+        window.location.href = `list.html?menu=${menu}&sub=${sub}`
     })
+})
+
+window.onload = ()=>{
+    subMenuContainer.forEach((subContainer) => {
+            subContainer.style.position = "absolute";
+            subContainer.style.height = '0px';
+            subContainer.style.boxShadow = "none";
+            menu_wrap.style.height = "900px"
+        });
+}
+
      /**우클릭 방지 */
      document.addEventListener("contextmenu", function(event) {
         event.preventDefault();

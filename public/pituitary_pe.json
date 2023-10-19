@@ -1,0 +1,142 @@
+pituitary_pe =[
+    {
+        "id":"PE5-01",
+        "title":"AN UNUSUAL PRESENTATION OF LOW BACK PAIN: A RARE CASE OF METASTATIC PARAGANGLIOMA ON A 37 YEAR OLD FILIPINO MALE - A CASE REPORT",
+        "name":"Kurt Bryan Tolentino (St. Luke's Medical Center - Global City)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE5-02",
+        "title":"DEXAMETHASONE SUPPRESSION FOR 18F-FDG PET/CT TO LOCALIZE ACTH-SECRETING PITUITARY TUMORS",
+        "name":"Kyungwon Kim (Yonsei University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-03",
+        "title":"CLINICAL AND GENETIC ANALYSIS OF 16 PATIENTS WITH NR5A1 GENE VARIANTS LEADING TO GONADAL DYSGENESIS",
+        "name":"Qingxu Liu (Shanghai Jiao Tong University)",
+        "nation":"China",
+        "img":[]
+    },
+    {
+        "id":"PE5-04",
+        "title":"NEUROENDOCRINE CARCINOMA OF CERVIX, A RARE CASE REPORT",
+        "name":"Amar Ranjan (AIIMS, NEW DELHI)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE5-05",
+        "title":"SEIZURE AS INITIAL PRESENTATION OF AUTOIMMUNE POLYGLANDULAR SYNDROME TYPE 2: A CASE REPORT",
+        "name":"Maimona Sakili (Zamboanga City Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE5-06",
+        "title":"DEVELOPMENT OF LONG-ACTING FSH TREATMENT FOR FEMALE INFERTILITY USING SAFA TECHNOLOGY",
+        "name":"Daham Kim (Yonsei University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-07",
+        "title":"CARDIOVASCULAR RISK AND MORTALITY IN PATIENTS WITH AVP DEFICIENCY: A NATIONWIDE COHORT STUDY",
+        "name":"Seung Shin Park (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-08",
+        "title":"DIFFERENCES IN PLASMA METANEPHRINES LEVELS BETWEEN BLOOD COLLECTED BY VENIPUNCTURE AND AN INDWELLING INTRAVENOUS CANNULA",
+        "name":"Natnicha Houngngam (King Chulalongkorn Memorial Hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE5-09",
+        "title":"UTILIZATION OF SERUM ANTI-M?LLERIAN HORMONE TEST AND THE PREVALENCE OF DIMINISHED OVARIAN RESERVE IN KOREAN WOMEN OF REPRODUCTIVE AGE",
+        "name":"Rihwa Choi (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-10",
+        "title":"A CASE OF LATE-ONSET CONGENITAL ADRENAL HYPERPLASIA COMBINED WITH CATECHOLAMINE SECRETING MYELOLIPOMA",
+        "name":"Kyunghun Sung (The Catholic University of Korea)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-11",
+        "title":"FACTORS INFLUENCING BASELINE BLOOD CORTISOL VARIATIONS AMONG HOSPITALIZED PATIENTS IN A MEDICINE DEPARTMENT",
+        "name":"Rahul Kumar (NGB)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE5-12",
+        "title":"SUBUNIT-SPECIFIC DEVELOPMENTAL ROLES OF PI3K IN STEROIDOGENIC FACTOR 1-EXPRESSING CELLS",
+        "name":"Sang Hee Lyoo (Yonsei University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-13",
+        "title":"ASSOCIATION OF SENESCENCE-ASSOCIATED SECRETORY PHENOTYPE PROTEINS WITH OVARIAN RESERVE AMONG MIDDLE-AGED/OLDER WOMEN",
+        "name":"Ji-Won Shin (Korea University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-14",
+        "title":"ANALYSIS OF THE PREVALENCE AND INCIDENCE OF PRIMARY ADRENAL INSUFFICIENCY IN THE WORLD",
+        "name":"Nurana Nuralieva (Endocrinology Research Centre)",
+        "nation":"Russian Federation",
+        "img":[]
+    },
+    {
+        "id":"PE5-15",
+        "title":"CASE REPORT: THE ARMC5 MUTATION IN FAMILIAL PRIMARY BILATERAL MACRONODULAR ADRENAL HYPERPLASIA USING TARGETED EXOME SEQUENCING IN KOREA",
+        "name":"Minchul Song (Chungnam National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE5-16",
+        "title":"LONG-TERM RESULTS OF SURGICAL TREATMENT INACTIVE PITUITARY ADENOMAS",
+        "name":"Dilafruz Hamrayeva (Republican Specialized Scientific and Practical Medical Center of Cndocrinology Named after Academician yu.kh. Turakulova)",
+        "nation":"Uzbekistan",
+        "img":[]
+    },
+    {
+        "id":"PE5-17",
+        "title":"METABOLIC IMPAIRMENTS IN PATIENTS WITH ADRENAL INCIDENTALOMAS",
+        "name":"Gulrukh Alimoukhamedova (Academician Yo. Kh. Turakulov Center for the Scientific and Clinical Study of Endocrinology, Uzbekistan Public Healthcare Ministry, Tashkent)",
+        "nation":"Uzbekistan",
+        "img":[]
+    },
+    {
+        "id":"PE5-18",
+        "title":"EGG DROP: A CASE OF SEX CORD STROMAL TUMOR",
+        "name":"Ian Kharl Crudo (Rizal Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE5-19",
+        "title":"ELLAGIC ACID ATTENUATES A METOCLOPROAMIDE-INDUCED HYPERPROLACTINEMIA IN AN ANIMAL MODEL: AN IMPORTANT NUTRITIONAL TREATMENT",
+        "name":"Niti Singh (Marlabs Innovations Pvt Ltds I)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE5-20",
+        "title":"FEMINIZING ADRENOCORTICAL CARCINOMA WITH SUBCLINICAL CUSHING’S SYNDROME IN A YOUNG ADULT MALE",
+        "name":"Edrome Hernandez (Philippine General Hospital)",
+        "nation":"Philippines",
+        "img":[]
+    }
+]
