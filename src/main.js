@@ -5,6 +5,11 @@ const basicList = JSON.parse(JSON.stringify(basic));
 const thyroidList = JSON.parse(JSON.stringify(thyroid));
 const boneList = JSON.parse(JSON.stringify(bone));
 const pituitaryList = JSON.parse(JSON.stringify(pituitary));
+const clinical_PE_List = JSON.parse(JSON.stringify(clinical_pe));
+const basic_PE_List = JSON.parse(JSON.stringify(basic_pe));
+const thyroid_PE_List = JSON.parse(JSON.stringify(thyroid_pe));
+const bone_PE_List = JSON.parse(JSON.stringify(bone_pe));
+const pituitary_PE_List = JSON.parse(JSON.stringify(pituitary_pe));
 
 const listContainer = document.querySelector("#listContainer")
 const search = document.querySelector("#search")
@@ -31,6 +36,7 @@ const blue_next_box = document.querySelector("#blue_next_box")
 const blue_go_last_box = document.querySelector("#blue_go_last_box")
 const header = document.querySelector("#header")
 const headerTitle = document.querySelector(".page_title")
+const headerSubTitle = document.querySelector(".page_sub")
 const goHomeBtn = document.querySelector(".go_home_btn")
 const footerList = document.querySelectorAll(".footer_list")
 const text_box = document.querySelectorAll(".text_box")
@@ -79,16 +85,22 @@ goHomeBtn.addEventListener("click",()=>{
 /**main list select */
 function getList(){
     let title = new URLSearchParams(window.location.search).get("menu");
+    let sub = new URLSearchParams(window.location.search).get("sub");
 const titleList = [
-    {title:"Diabetes/Obesity/Lipid(clinical)", list:clinicalList},
-    {title:"Diabetes/Obesity/Lipid(basic)", list:basicList},
-    {title:"Thyroid", list:thyroidList},
-    {title:"Bone/Muscle", list:boneList},
-    {title:"Pituitary/Adrenal/Gonad", list:pituitaryList},
+    {title:"Diabetes/Obesity/Lipid(clinical)",sub:"PosterOral", list:clinicalList},
+    {title:"Diabetes/Obesity/Lipid(clinical)",sub:"PosterExhibition", list:clinical_PE_List},
+    {title:"Diabetes/Obesity/Lipid(basic)",sub:"PosterOral", list:basicList},
+    {title:"Diabetes/Obesity/Lipid(basic)",sub:"PosterExhibition", list:basic_PE_List},
+    {title:"Thyroid",sub:"PosterOral", list:thyroidList},
+    {title:"Thyroid",sub:"PosterExhibition", list:thyroid_PE_List},
+    {title:"Bone/Muscle",sub:"PosterOral", list:boneList},
+    {title:"Bone/Muscle",sub:"PosterExhibition", list:bone_PE_List},
+    {title:"Pituitary/Adrenal/Gonad",sub:"PosterOral", list:pituitaryList},
+    {title:"Pituitary/Adrenal/Gonad",sub:"PosterExhibition", list:pituitary_PE_List},
 ]
 
 titleList.map((titleObj)=>{
-    if(titleObj.title === title){
+    if(titleObj.title === title && titleObj.sub === sub){
         nameList = titleObj.list;
     }
 })
@@ -97,13 +109,20 @@ titleList.map((titleObj)=>{
 
 /**list page header */
 function getHeaderTitle(){
-let title = new URLSearchParams(window.location.search).get("menu");
+    let title = new URLSearchParams(window.location.search).get("menu");
+    let subTitle = new URLSearchParams(window.location.search).get("sub");
 
- if(title.includes("(")){
+   if(title.includes("(")){
     title = title.split("(")[0] +` (`+ title.split("(")[1];
-}
+    }
+    if(subTitle === "PosterOral"){
+        subTitle = "Poster Oral"
+    }else if(subTitle === "PosterExhibition"){
+        subTitle = "Poster Exhibition"
+    }
 
  headerTitle.innerText = title
+ headerSubTitle.innerText = subTitle
 }
 
 /**헤더 새로고침 버튼 */
@@ -338,9 +357,9 @@ function addEventListeners(list) {
             }
         }
         if(listNumber > 10 && activeNumber >= 7){
-            if(footerNumber <= 2){
+            if(footerNumber <= 1){
                 footer.style.display = "none";
-            }else if(footerNumber === 11 || footerNumber === 12){
+            }else if(footerNumber === 11 ){
                 footer.style.display = "";
             }
         }
@@ -595,6 +614,7 @@ function lastPageMove(){
 
 /** 화살표 버튼 파란색으로 변경 */
 function blueArrowButton(){
+    console.log(listNumber)
     if(listNumber !== 1){
         if(Number(nowActive) !== 1){
             blue_pre_box.style.display= ""
@@ -639,10 +659,10 @@ function blueArrowButton(){
         next_box.style.display = ""
         go_last_box.style.display = ""
 
-        blue_pre_box.style.display = "";
-        blue_go_first_box.style.display = "";
-        blue_next_box.style.display = ""
-        blue_go_last_box.style.display = ""
+        blue_pre_box.style.display = "none";
+        blue_go_first_box.style.display = "none";
+        blue_next_box.style.display = "none"
+        blue_go_last_box.style.display = "none"
     } 
    
 }

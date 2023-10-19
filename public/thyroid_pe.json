@@ -1,0 +1,227 @@
+thyroid_pe = [
+
+    {
+        "id":"PE3-01",
+        "title":"RADIOFREQUENCY VERSUS ETHANOL ABLATION FOR SINGLE-SESSION TREATMENT OF BENIGN CYSTIC THYROID NODULES: A SHORT-TERM RETROSPECTIVE STUDY",
+        "name":"Bang Nguyen Van (Family Hospital)",
+        "nation":"Vietnam",
+        "img":[]
+    },
+    {
+        "id":"PE3-02",
+        "title":"SUBACUTE THYROIDITIS FOLLOWING OMICRON WAVE OF COVID-19 INFECTION IN THAI PATIENTS: A CASE SERIES FROM A PRIVATE ENDOCRINE CENTER IN BANGKOK",
+        "name":"Yotsapon Thewjitcharoen (Theptarin Hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE3-03",
+        "title":"A RARE CASE OF APATHETIC HYPERTHYROIDISM AS A CAUSE OF CARDIOEMBOLIC STROKE IN A 51 YEAR OLD FILIPINO MALE",
+        "name":"Adel Taradji (Zamboanga City Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE3-04",
+        "title":"RAPID RESPONSE TEAM ACTIVATION IN THYROID CANCER PATIENTS IN INDONESIA'S TOP REFERRAL HOSPITAL",
+        "name":"Getty Innash Nandika (RSUPN Dr Cipto Mangunkusumo)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE3-05",
+        "title":"MATURE CYSTIC TERATOMA WITH PAPILLARY THYROID CARCINOMA IN A PATIENT WITH THYROID NODULES",
+        "name":"Patricia Marie Lusica (Philippine General Hospital)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE3-06",
+        "title":"COMPARISON OF MOYAMOYA PATIENTS WITH AND WITHOUT AUTOIMMUNE THYROID DISEASES",
+        "name":"Kuan-Yu Lin (National Taiwan University Hospital Yunlin Branch)",
+        "nation":"Taiwan",
+        "img":[]
+    },
+    {
+        "id":"PE3-07",
+        "title":"GUT MICROBIOME IN THE GRAVES’ DISEASE: COMPARISON BEFORE AND AFTER ANTI-THYROID DRUG TREATMENT",
+        "name":"Chaiho Jeong (The Catholic University of Korea)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-08",
+        "title":"A CASE OF METHIMAZOLE-INDUCED INSULIN AUTOIMMUNE SYNDROME IN GRAVES’ DISEASE TO BE TREATED WITH PROPYLTHIOURACIL AFTERWARDS: CASE REPORT IN KOREAN PATIENT AND LITERATURE REVIEW",
+        "name":"Sun Hee Kim (Presbyterian Medical Center)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-09",
+        "title":"MORPHOMETRIC ANALYSIS OF LATERAL CERVICAL LYMPH NODE METASTASIS IN PAPILLARY THYROID CARCINOMA USING DIGITAL PATHOLOGY",
+        "name":"Chae A Kim (University of Ulsan)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-10",
+        "title":"CLINICAL MANIFESTATIONS OF MALIGNANT STRUMA OVARII IN A TERTIARY HOSPITAL IN KOREA",
+        "name":"Hyun Jin Ryu (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-11",
+        "title":"INCIDENTAL FINDING OF MALIGNANT STRUMA OVARII ON A POSTTHERAPY WHOLE BODY SCAN IN A PATIENT WITH PAPILLARY THYROID CARCINOMA",
+        "name":"Ji Hyun Bae (Pusan National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-12",
+        "title":"A RARE CASE OF METHIMAZOLE-INDUCED AGRANULOCYTOSIS IN A PATIENT WITH GRAVE'S DISEASE IN THYROID STORM - A CASE REPORT",
+        "name":"Kurt Tolentino (St. Luke's Medical Center - Global City)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE3-13",
+        "title":"THE PREVALENCE OF THYROID NODULES AND THE MEAN THYROID VOLUME IN WOMEN OVER 40 YEARS OLD",
+        "name":"Amgalanbayar Tumendelger (Erdenet Medical)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE3-14",
+        "title":"EFFECT OF 12 WEEK AEROBIC AND RESISTANCE EXERCISE ON THYROID FUNCTIONS AND CARDIO METABOLIC PROFILE IN OBESE WOMEN WITH SUBCLINICAL HYPOTHYROIDISM.",
+        "name":"Amrit Kaur (Dr Vasantrao pawar medical college and research Center)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE3-15",
+        "title":"PERICARDIAL EFFUSION AS AN INITIAL MANIFESTATION OF SYSTEMIC SCLEROSIS IN A PATIENT WITH STABLE HASHIMOTO'S THYROIDITIS",
+        "name":"Noryn Tweela Lozano-Lim (De La Salle University Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE3-16",
+        "title":"NOVEL PREDICTION MARKER OF CIRCULATING NEUTROPHIL ELASTASE FOR RECURRENT THYROID CANCER",
+        "name":"Mi Ran Yu (University of Ulsan)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-17",
+        "title":"THYROID STORM INDUCED BY NIVOLUMAB AND IPILIMUMAB COMBINATION IMMUNOTHERAPY IN A PATIENT WITH RENAL CELL CARCINOMA AND MULTIPLE LUNG METASTASIS.",
+        "name":"Il Rae Park (Yeungnam University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-18",
+        "title":"UNDIAGNOSED GRAVES' DISEASE IN A PATIENT WITH ISOLATED CORTICAL VENOUS THROMBOSIS: A CASE REPORT",
+        "name":"In Sun Goak (Jeonbuk National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-19",
+        "title":"EVALUATION OF HYPOTHYROID STABILISATION AMONG PATIENTS WITH DIFFERENT DOSES OF LEVOTHYROXINE: A RETROSPECTIVE OBSERVATIONAL REVIEW STUDY",
+        "name":"Basil Choong Lin Lee (Hospital Kuala Kubu Bharu, Universiti Kebangsaan Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE3-20",
+        "title":"INITIAL CLINICAL OUTCOMES OF PAPILLARY THYROID CANCER WITH TERT PROMOTER MUTATION FROM REAL WORLD DATA",
+        "name":"Ji Hyun Yoo (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-21",
+        "title":"THE DEVELOPMENT OF MACHINE LEARNING TO DIFFERENTIATE THYROTOXICOSIS BY DOPPLER ULTRASONOGRAPHY IMAGES",
+        "name":"Han-Sang Baek (The Catholic University of Korea)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-22",
+        "title":"ROLE OF MEASURING THYROGLOBULIN FOR PREDICTION OF THYROID CANCER IN THYROID NODULE: SYSTEMIC REVIEW AND META-ANALYSIS",
+        "name":"Kwanhoon Jo (The Catholic University of Korea)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-23",
+        "title":"NEWLY DIAGNOSED GRAVES' DISEASE PRESENTING WITH HYPERCALCEMIA-INDUCED ACUTE PANCREATITIS: A RARE CASE REPORT",
+        "name":"Bothamai Dechates (Chulabhorn Hospital, Chulabhorn Royal Academy)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE3-24",
+        "title":"RELATIONSHIP BETWEEN THYROID HORMONES LEVELS AND DEPRESSION SEVERITY",
+        "name":"Medina Bello (Obafemi Awolowo University Teaching Hospitals Complex, Ile-Ife (OAUTHC))",
+        "nation":"Nigeria",
+        "img":[]
+    },
+    {
+        "id":"PE3-25",
+        "title":"A CASE REPORT ON DIFFUSE B-CELL LYMPHOMA OF THE THYROID",
+        "name":"Jazwyn Butuyan (Rizal Medical Center Hospital)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE3-26",
+        "title":"FACTORS THAT INFLUENCE IODIZED SALT CONSUMPTION AMONG MOTHERS",
+        "name":"Desiree R Daniega (Far Eastern University- Nicanor Reyes Memorial Foundation)",
+        "nation":"Philippines",
+        "img":[]
+    }, 
+    {
+        "id":"PE3-27",
+        "title":"RISK OF SUBSEQUENT PRIMARY CANCERS IN THYROID CANCER SURVIVORS ACCORDING TO THE DOSE OF LEVOTHYROXINE: A NATIONWIDE COHORT STUDY",
+        "name":"Young Shin Song (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE3-28",
+        "title":"IMATINIB INDUCED THYROID DYSFUNCTION IN BCR:ABL1 POSITIVE CHRONIC MYELOID LEUKAEMIA PATIENTS",
+        "name":"Muritala Asafa (Obafemi Awolowo University Ile-Ife Nigeria)",
+        "nation":"Nigeria",
+        "img":[]
+    },
+    {
+        "id":"PE3-29",
+        "title":"THE LONG-TERM IMPACT OF PERSISTENT HYPOPARATHYROIDISM AFTER TOTAL THYROIDECTOMY ON THE DEVELOPMENT OF CHRONIC KIDNEY DISEASE",
+        "name":"Yan Luk (Queen Mary Hospital)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE3-30",
+        "title":"ROLE OF COVID-19 IN INCREASING MORBIDITY OF SUBACUTE THYROIDITIS",
+        "name":"Marina Yukina (Endocrinology Research Centre)",
+        "nation":"Russian Federation",
+        "img":[]
+    },
+    {
+        "id":"PE3-31",
+        "title":"COMPARING THE TREATMENT EFFICACY OF SINGLE-SESSION VERSUS TWO-SESSION RADIOFREQUENCY ABLATION FOR LARGE BENIGN THYROID NODULES",
+        "name":"Man Him Matrix Fung (University of Hong Kong)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE3-32",
+        "title":"3D PRINTED TEMPLATE-GUIDED 125I SEED BRACHYTHERAPY: A SALVAGE APPROACH FOR LOCO-REGIONAL REFRACTORY RECURRENCE OF PAPILLARY THYROID CANCER",
+        "name":"Zhen Gao (Hebei General Hospital)",
+        "nation":"China",
+        "img":[]
+    }
+]
