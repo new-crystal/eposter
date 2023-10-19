@@ -1,426 +1,478 @@
 basic = [
     {
-        "id": "PP-01",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
+        "id":"PP2-1",
+        "title":"DOPAMINE D2 RECEPTORS IN THE CENTRAL AMYGDALA REGULATE COMPULSIVE EATING BEHAVIOR",
+        "name":"Bokyeong Kim (Korea University)",
+        "nation":"Korea",
         "img":[
             {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
-    ]
-    },
-    {   "id": "PP-02",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
+                "url1":"./assets/bone/1.png"
+                },
+                {
+                "url2":"./assets/bone/2.png"
+                },
+                {
+                "url3":"./assets/bone/3.png"
+                },
+                {
+                "url4":"./assets/bone/4.png"
+                },
+        ]},
+
     {
-        "id": "PP-03",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
-    },
-    {
-        "id": "PP-04",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
-    },
-    {
-        "id": "PP-05",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PP-06",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PP-07",
-        "title":"Sympathetic nervous system modulation: role of melanocortin-4 receptor and GFRAL",
-        "name":"Sang-Hyeon Ju",
-        "affiliation":"Chungnam National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PP-08",
-        "title":"TSH suppression after lobectomy in low-to-intermediate risk thyroid cancer: MASTER study",
-        "name":"Yoo Hyung Kim",
-        "affiliation":"Seoul National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-01",
-        "title":"Statin for the CV prevention in DM patients focusing on 3 points: guidelines, evidences, differences",
-        "name":"Shinae Kang",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-02",
-        "title":"Thiazolidinedione and SGLT2 inhibitor: a rational combination based on type 2 diabetes pathophysiology",
-        "name":"Sang-Yong Kim",
-        "affiliation":"Chosun University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-03",
-        "title":"Overcoming barriers in diabetes therapy: immune evasion and mass production of stem cell-derived islets",
-        "name":"Eiji Yoshihara",
-        "affiliation":"University of California, Los Angeles",
-        "nation":"USA",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-04",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-05",
-        "title":"Gender-specific risk factors and preventive strategies for sarcopenia development in older Korean adults: insights from the Korean frailty and aging cohort study",
-        "name":"Hun Jee Choe",
-        "affiliation":"Hallym University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-06",
-        "title":"Active surveillance for adult patients with low-risk papillary thyroid microcarcinoma: evidence, consensus and future questions",
-        "name":"Iwao Sugitani",
-        "affiliation":"Nippon Medical School",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    }, {
-        "id": "PE-07",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
+        "id":"PP2-2",
+        "title":"THE EFFECT OF EDUCATIONAL INTERVENTION BASED ON HEALTH BELIEF MODEL ON SELF-PERCEPTION, SELF-CARE BEHAVIORS AND HBA1C LEVELS AMONG UNCONTROLLED TYPE 2 DIABETES AT PRIMARY CARE IN THAILAND",
+        "name":"Uraiwan Pantong (University of Valencia)",
+        "nation":"Spain",
         "img":[
             {
-            "url1":"./assets/bone/15_1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
-    ]
-    },
-    {   "id": "PE-08",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+                "url1":"./assets/bone/5.png"
+            }
+        ]
     },
     {
-        "id": "PE-09",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
+        "id":"PP2-3",
+        "title":"HYPOTHALAMIC FGF1 REGULATES SYSTEMIC GLUCOSE AND ENERGY HOMEOSTASIS",
+        "name":"Hyemi Shin (Korea Advanced Institute of Science and Technology)",
+        "nation":"Korea",
+        "img":[]
     },
     {
-        "id": "PE-10",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
+        "id":"PP2-4",
+        "title":"METABOLIC REWIRING IN DIABETES: REPROGRAMMING GLUT4 EXPRESSION VIA AMINO ACID STARVATION",
+        "name":"Aradhana Mariam Philips (University of Hyderabad)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PP2-5",
+        "title":"RNA BINDING PROTEIN HUR IS ESSENTIAL FOR ADAPTIVE THERMOGENESIS",
+        "name":"Kun-Young Park (KAIST)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PP2-6",
+        "title":"COMPARISON OF DIETARY INTAKE OF LEAN AND OVERWEIGHT/ OBESE POSTPARTUM MOTHERS WITH PRETERM INFANTS",
+        "name":"Noor Fairuzi Suhana Yahya (Universiti Teknologi MARA)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PP2-7",
+        "title":"COMPARISON OF OBESITY AND AGING SIGNATURES IN MURINE ADIPOSE TISSUE AT SINGLE-CELL RESOLUTION",
+        "name":"Min Hong Lee (KAIST)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PP2-8",
+        "title":"THE EFFECTS OF POLYPHENOLS FROM PARKIA SPECIOSA EXTRACT ON ANTHROPOMETRICAL PARAMETERS IN HIGH FAT DIET INDUCED OBESITY IN RATS",
+        "name":"Nur Dayana Hassan Cheong (Universiti Teknologi MARA (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-01",
+        "title":"YOGURT UNLEASHED: UNRAVELING THE POWER OF ELATERIOSPERMUM TAPOS IN COUNTERING MATERNAL OBESITY CAUSED BY HIGH-FAT DIETS",
+        "name":"Ruth Naomi Manuel (Universiti Putra Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-02","title":"IN VIVO MAPPING OF SUBCELLULAR PROTEOMES IN MICE",
+        "name":"Kwang-Eun Kim (Seoul National University, KAIST)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-03",
+        "title":"ENDOGENOUS HYDROGEN PEROXIDE ASSISTED PROXIMITY LABELING",
+        "name":"Kwang-Eun Kim (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-04",
+        "title":"THE SMALL, DENSE LOW-DENSITY LIPOPROTEIN CONCENTRATION AND LOW-DENSITY LIPOPROTEIN OXIDATION IN ELDERLY WITH DIABETES AND NON-DIABETES.",
+        "name":"Raveenan Mingpakanee (Chulalongkorn University)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-05",
+        "title":"SYSTEMS GENETICS ANALYSIS TO IDENTIFY CANDIDATE GENES FOR FAT DISTRIBUTION IN BXD MICE",
+        "name":"Na-Yeong Kim (Gwangju Institute of Science and Technology)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-06",
+        "title":"PREVALENCE AND FACTORS ASSOCIATED WITH INTRA-INDIVIDUAL DOUBLE BURDEN OF MALNUTRITION AMONG FILIPINO WOMEN OF REPRODUCTIVE AGE",
+        "name":"Maria Stephanie Parani (Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE2-07",
+        "title":"DYSLIPIDEMIA, LDL-C GOAL ACHIEVEMENT, AND GLYCEMIC CONTROL AMONG THAI TYPE 2 DIABETES PATIENTS WITH, AND WITHOUT CHRONIC KIDNEY DISEASE",
+        "name":"Nutjaree Jeenduang (Walailak University)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-08",
+        "title":"CHOLESTEROL-LOWERING EFFECT OF PROTEIN HYDROLYSATES FROM LEMONGRASS (CYMBOPOGON CITRATUS STAPF.)",
+        "name":"Mizpah Villalobos (Central Philippine University, University of Santo Tomas)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE2-09",
+        "title":"ANTIDIABETIC EFFECT OF NEW ALL-NATURAL SUBSTANCE ON PANCREATIC BETA CELLS",
+        "name":"Daesik Harm (BaeRyeo Innovation Co., Ltd)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-10",
+        "title":"PREVALENCE OF IMPAIRED FASTING GLUCOSE AND DIABETES AMONG MINING WORKERS BY AGE GROUP AND GENDER",
+        "name":"Dolzodmaa Batbayar (Erdenet Medical Hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE2-11",
+        "title":"THE EFFECTS OF TOCOTRIENOL-RICH FRACTION (TRF) AND VITAMIN C SUPPLEMENTATION ON PLASMA 8-ISOPROSTANE IN DOWN SYNDROME",
+        "name":"Maziana Mahamood (Universiti Teknologi MARA (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-12",
+        "title":"EFFECT OF TRF INTERVENTION ON MODERN LIFESTYLE AND THEIR ASSOCIATION WITH METABOLIC DISORDERS",
+        "name":"Nazmin Fatima (King George's Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-13",
+        "title":"ALOE VERA ETHANOLIC EXTRACT IMPROVES TRIGLYCERIDE, SGPT, AND LIVER HISTOPATHOLOGY PROFILE STATUS IN WISTAR RATS WITH METABOLIC SYNDROME",
+        "name":"Namira Putri Imani (Universitas Sebelas Maret)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-14",
+        "title":"ANTI-HYPERLIPIDEMIC EFFECT OF SCHIZOPHYLLUM COMMUNE EXTRACT IN RATS FED A HIGH-FAT DIET",
+        "name":"Pongsak Cherngkhuntod (Suranaree University of Technology)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-15",
+        "title":"EFFECTS OF SABA BANANA [MUSA ‘SABA’ (MUSA ACUMINATA X MUSA BALBISIANA)] PEEL PECTIN SUPPLEMENTATION ON FEEDING AND ADIPOSITY PARAMETERS OF HIGH-FAT DIET-INDUCED OBESE MALE ICR MICE",
+        "name":"Ethel Onas (Centro Escolar University)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE2-16",
+        "title":"IN VIVO EFFECTS OF PHILIPPINE BIGNAY BERRIES [ANTIDESMA BUNIUS (L.) SPRENG.] ON BIOMARKERS OF OBESITY AND ASSOCIATED METABOLIC DISORDERS",
+        "name":"Liezl Atienza (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE2-17",
+        "title":"RELATIONSHIP OF BODY MASS INDEX, PHYSICAL ACTIVITY AND STRESS SCORES OF UNIVERSITY OF THE PHILIPPINES LOS BANOS COLLEGE STUDENTS",
+        "name":"Liezl Atienza (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE2-18",
+        "title":"DIFFERENCES OF GIP RECEPTOR EXPRESSION ACCORDING TO THE FEEDING STATUS IN THE MOUSE BRAIN",
+        "name":"Do Kyeong Song (Ewha Womans University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-19",
+        "title":"OBESITY IN FEMALE YOUNG ADULTS IS LINKED TO REDUCED METHYLATION OF IL-6.",
+        "name":"Wan Fatein Nabeila Wan Omar (International Islamic University Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-20",
+        "title":"DECIPHERING THE ROLE OF MICRORNA IN DIABETIC WOUND HEALING.",
+        "name":"Anveshika Manoj (King Georges Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-21",
+        "title":"INHIBITION OF GIPR EXPRESSION ENHANCED SULFONYLUREA-INDUCED INSULIN SECRETION, AND IT WAS ASSOCIATED WITH CHANGES IN ATP CONTENTS",
+        "name":"Hyun Ah Kim (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-22",
+        "title":"HYDROGEN SULFIDE (H2S) - THERAPEUTIC RELEVANCE IN DIABETES AND OBESITY",
+        "name":"Constantin Munteanu (University of Medicine and Pharmacy Grigore T. Popa, Iasi)",
+        "nation":"Romania",
+        "img":[]
+    },
+    {
+        "id":"PE2-23",
+        "title":"TOPICAL PHALERIA MACROCARPA’S MESOCARP EXTRACT IMPROVED SKIN WOUND HEALING IN TYPE 2 DIABETIC RATS",
+        "name":"Evy Sulistyoningrum (Islamic University Of Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-24",
+        "title":"CURCUMIN AND OMEGA-3 COMBINATION EFFECT ON HEART NUCLEAR FACTOR ERYTHROID 2-RELATED FACTOR 2 (NRF2) EXPRESSION LEVEL IN HYPERLIPIDEMIC RATS",
+        "name":"Asri Hendrawati (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-25",
+        "title":"CLERODENDRUM INFORTUNATUM LEAF EXTRACT SUPPRESSES OBESITY AND ADIPOSE TISSUE INFLAMMATION IN HIGH-SUGAR DIET-INDUCED OBESE MICE","name":"Mohammad Salim Hossain (Noakhali Science and Technology University)",
+        "nation":"Bangladesh",
+        "img":[]
+    },
+    {
+        "id":"PE2-26",
+        "title":"BIOLOGICAL EFFECT OF PLANTAMAJOSIDE IN SEPSIS-REGULATED ORGAN DYSFUNCTION, CHRONIC HEART FAILURE (CHF) AND HYPOXIA-REOXYGENATION (H/R) INJURY WITH THEIR MOLECULAR MECHANISM",
+        "name":"Dinesh Patel (Sam Higginbottom University of Agriculture, Technology and Sciences)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-27",
+        "title":"EFFECTS OF DEHYDROEPIANDROSTERONE ADMINISTRATION ON METABOLIC HOMEOSTASIS AND ANTIOXIDANT STATUS AFTER SLEEVE GASTRECTOMY IN MALE RATS",
+        "name":"Ankush Kumar (Shankuntla Hospital and Research Center)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-28",
+        "title":"HYPOLIPIDEMIC POTENTIAL OF OCOSAHEXAENOIC ACID IN HIGH FAT-DIET/ALLOXAN-INDUCED DIABETES IN LIVER OF MALE RATS","name":"Archit Goel (B V Deemed University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-29",
+        "title":"EFFECTIVENESS OF INTERMITTENT FASTING IN REDUCING PANCREATIC ISLETS CELLS SIZE AND QUANTITY IN BALB-C MICE",
+        "name":"Iin Wulandari (Islamic University of Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-30",
+        "title":"ASSOCIATION OF MUCIN-1 WITH DIABETIC NEUROPATHY IN TYPE 2 DIABETES",
+        "name":"Hye Min Shim (Keimyung University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-31",
+        "title":"ROLE OF PROTEIN Z IN TYPE 2 DIABETES",
+        "name":"Hae-Jung Kim (Keimyung University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-32",
+        "title":"PETAI (PARKIA SPECIOSA) FRUIT EXTRACT MEDIATES HYPOLIPIDEMIC ACTION IN SPRAGUE DAWLEY RATS FED WITH HIGH-FAT DIET",
+        "name":"Emida Binti Mohamed (University Technology MARA (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-33",
+        "title":"SAG ASSISTED THERAPY FOR AN OPTIMAL INSULIN SECRETION DURING VISCERAL LEISHMANIASIS INFECTION",
+        "name":"Sukrat Sinha (Nehru Gram Bharati University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-34",
+        "title":"THE PROTECTIVE EFFECT OF STEVIOSIDE ON TNF-Α-INDUCED INSULIN RESISTANCE IN 3T3-L1 ADIPOCYTES: A METABOLOMICS APPROACH",
+        "name":"Norhisham Haron (Universiti Teknologi MARA Selangor (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-35",
+        "title":"ANTIOXIDANT ACTIVITY AND ANTI-ADIPOGENIC EFFECT OF PARKIA SPECIOSA POD EXTRACT ON 3T3-L1 ADIPOCYTES",
+        "name":"Anas Abdullah (Universiti Teknologi MARA (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE2-36",
+        "title":"INHIBITION OF DGAT2 DECREASES HIGH GLUCOSE-INDUCED TRIACYLGLYCEROL ACCUMULATION IN SKELETAL MUSCLE",
+        "name":"Jiyun Yeo (Daegu University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-37",
+        "title":"CONVENTIONAL AND ELECTRONIC CIGARETTES AGGRAVATE INFLAMATION IN RATS INDUCED HIGH-FAT DIET",
+        "name":"Ahmad Alvin Noor Muchtar (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-38",
+        "title":"REGULATION OF PANCREATIC INTERLEUKIN-6 AND TNF-Α EXPRESSIONS IN THE DIET-INDUCED OBESE MICE THROUGH SHORT CHAIN FATTY ACIDS SUPPLEMENTATION",
+        "name":"Ann Elaine Wagan (Kyoto University)",
         "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
+        "img":[]
     },
     {
-        "id": "PE-11",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE2-39",
+        "title":"NORTH KOREAN REFUGEES GETS MORE METABOLIC SYNDROME AND OBESITY AFTER RESETTLEMENT IN SOUTH KOREA THAN SOUTH KOREANS",
+        "name":"Jinhyung Jung (Korea University)",
+        "nation":"Korea",
+        "img":[]
     },
     {
-        "id": "PE-12",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE2-40",
+        "title":"PRIMARY CILIA DYSFUNCTION IN BROWN ADIPOSE TISSUE RESULTS IN FATAL FAILURE OF THERMOGENESIS IN NEONATAL MICE",
+        "name":"Junguee Lee (Konyang University)",
+        "nation":"Korea",
+        "img":[]
     },
     {
-        "id": "PE-13",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE2-41",
+        "title":"ASSOCIATION OF GENETIC VARIANTS OF ABCC8 GENE WITH TYPE 2 DIABETES MELLITUS IN THE MONGOLIAN POPULATION",
+        "name":"Nyamjav Byambasuren (Mongolian National University of Medical Sciences)",
+        "nation":"Mongolia",
+        "img":[]
     },
     {
-        "id": "PE-14",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[
-            {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
+        "id":"PE2-42",
+        "title":"DICHLOROACETATE IMPAIRS ACTIVATION OF HEPATIC STELLATE CELLS THROUGH REDUCING AUTOPHAGY",
+        "name":"Ha Thi Nga (Chungnam National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-43",
+        "title":"ASTROCYTIC FOXO1 IN THE HYPOTHALAMUS REGULATES METABOLIC HOMEOSTASIS",
+        "name":"Dong Joo Yang (Yonsei University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-44",
+        "title":"ATF5 REGULATES BROWN ADIPOSE TISSUE THERMOGENESIS AND DIFFERENTIATION DURING COLD EXPOSURE",
+        "name":"Hyo Ju Jang (Chungnam National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-45",
+        "title":"DIFFERENTIAL DISTRIBUTION OF GLP-1R, GIPR, AND GFRAL IN THE AREA POSTREMA (AP) OF NON-HUMAN PRIMATES: A COMPARATIVE STUDY WITH RODENT MODELS",
+        "name":"Jung Tae Kim (Korea Advanced Institute of Science and Technology)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-46",
+        "title":"HYPOTHALAMIC ASTROCYTE NAD+ SALVAGE PATHWAY MEDIATES THE COUPLING OF DIETARY FAT OVERCONSUMPTION WITH OBESITY",
+        "name":"Jae Woo Park (University of Ulsan)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-47",
+        "title":"DIFFERENTIAL RESPONSES TO FATTY ACID ACCORDING TO SUBTYPES OF BREAST CANCER CELLS",
+        "name":"Ha Ram Oh (Jeonbuk National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-48",
+        "title":"ESTABLISHING A NON-CIRRHOTIC NAFLD-HCC MOUSE MODEL : INSIGHTS INTO PATHOPHYSIOLOGY AND THERAPEUTIC POTENTIAL",
+        "name":"Chen Shen (Jeonbuk National University )",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE2-49",
+        "title":"HESPERIDIN MITIGATES STREPTOZOTOCIN-INDUCED DIABETIC NEPHROPATHY IN RATS VIA THE LOWERING OF RENAL INFLAMMATION, APOPTOSIS AND OXIDATIVE STRESS",
+        "name":"Deepika Singh (SHUATS)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-50",
+        "title":"PROTECTIVE EFFECT OF GREEN TEA CATECHINEPIGALLOCATECHIN-3-GALLATE IN TYPE-II DIABETES MODEL",
+        "name":"Dr. Babita Singh (King George's Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-51",
+        "title":"NEPHROPROTECTIVE EFFECT OF THALIPORPHINE AGAINST STREPTOZOTOCIN INDUCED DIABETES MELLITUS VIA ALTERATION OF GUT MICROBIOTA",
+        "name":"D Chauhan (Rajkamal Science Management College)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-52",
+        "title":"BIOLOGICAL IMPORTANCE OF ANTHOCYANIN IN CARDIOVASCULAR DISEASE (CVD): THERAPEUTIC ROLE IN DIABETIC CARDIOMYOPATHY WITH THEIR MOLECULAR MECHANISM",
+        "name":"Dinesh K Patel (Sam Higginbottom University of Agriculture, Technology and Sciences)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-53",
+        "title":"NYMPHAEA RUBRA IMPEDES PROTEIN GLYCATION AND EXERTS ANTIDIABETIC EFFECTS IN HFD/STZ INDUCED DIABETIC RATS",
+        "name":"Nayab Ishrat (KGMU)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE2-54",
+        "title":"THE CARE MODEL FOR DIABETIC FOOT PATIENTS ACCORDING TO THE QUALITY STANDARDS OF NURSING SERVICES IN HOSPITALS TOWARDS EXCELLENCE",
+        "name":"Ladda Anosri (Kalasin hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-55",
+        "title":"THE DEVELOPMENT OF AN ORAL HEALTH CARE MODEL FOR ELDERLY PATIENTS WITH DIABETES MELLITUS IN ONE SUBDISTRICT OF THAILAND.",
+        "name":"Pannarai Tuppanantakul (Phrom Khiri Hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-56",
+        "title":"ASSOCIATED FACTORS OF TYPE 2 DIABETES MELLITUS IN INDONESIAN ADOLESCENTS",
+        "name":"Ramlah Ramlah (Universitas Sulawesi Barat)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE2-57",
+        "title":"GUIDELINE DEVELOPMENT FOR SUSPECTED DIABETES WITH HYPERTENSION PATIENTS RECEIVING SERVICES IN OUTPATIENT DEPARTMENTS.",
+        "name":"Bemjamas Nakkarach (Department of Disease Control)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE2-58",
+        "title":"EFFECT OF AJWA DATES (PHOENIX DACTYLIFERA L.) ON LIPID LEVELS IN HYPERLIPIDEMIC PATIENTS: A SYSTEMATIC REVIEW",
+        "name":"Intan Tsaqiila (Islamic University of Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+        }
     ]
-    },
-    {   "id": "PE-15",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-16",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            }, 
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
-    },
-    {
-        "id": "PE-17",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
-    },
-    {
-        "id": "PE-005",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-006",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-007",
-        "title":"Sympathetic nervous system modulation: role of melanocortin-4 receptor and GFRAL",
-        "name":"Sang-Hyeon Ju",
-        "affiliation":"Chungnam National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-008",
-        "title":"TSH suppression after lobectomy in low-to-intermediate risk thyroid cancer: MASTER study",
-        "name":"Yoo Hyung Kim",
-        "affiliation":"Seoul National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-009",
-        "title":"Statin for the CV prevention in DM patients focusing on 3 points: guidelines, evidences, differences",
-        "name":"Shinae Kang",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PE-010",
-        "title":"Thiazolidinedione and SGLT2 inhibitor: a rational combination based on type 2 diabetes pathophysiology",
-        "name":"Sang-Yong Kim",
-        "affiliation":"Chosun University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    
-]

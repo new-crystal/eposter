@@ -1,427 +1,1136 @@
-clinical = [
+clinical =[
     {
-        "id": "PO-001",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
+        "id":"PP1-1",
+        "title":"INVESTIGATING DNA METHYLATION OF METABOLIC AND INFLAMMATORY GENES WITH THERAPEUTIC POTENTIAL FOR OBESITY: A COHORT STUDY IN SOUTH AFRICAN WOMEN",
+        "name":"Ayesha Shaik (Stellenbosch University, Biomedical Research and Innovation Platform)",
+        "nation":"South Africa",
         "img":[
             {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
-    ]
-    },
-    {   "id": "PO-002",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+                "url1":"./assets/bone/1.png"
+                },
+                {
+                "url2":"./assets/bone/2.png"
+                },
+                {
+                "url3":"./assets/bone/3.png"
+                },
+                {
+                "url4":"./assets/bone/4.png"
+                },
+        ]
     },
     {
-        "id": "PO-003",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
-    },
-    {
-        "id": "PO-004",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
-    },
-    {
-        "id": "PO-005",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-006",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-007",
-        "title":"Sympathetic nervous system modulation: role of melanocortin-4 receptor and GFRAL",
-        "name":"Sang-Hyeon Ju",
-        "affiliation":"Chungnam National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-008",
-        "title":"TSH suppression after lobectomy in low-to-intermediate risk thyroid cancer: MASTER study",
-        "name":"Yoo Hyung Kim",
-        "affiliation":"Seoul National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-009",
-        "title":"Statin for the CV prevention in DM patients focusing on 3 points: guidelines, evidences, differences",
-        "name":"Shinae Kang",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-010",
-        "title":"Thiazolidinedione and SGLT2 inhibitor: a rational combination based on type 2 diabetes pathophysiology",
-        "name":"Sang-Yong Kim",
-        "affiliation":"Chosun University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-011",
-        "title":"Overcoming barriers in diabetes therapy: immune evasion and mass production of stem cell-derived islets",
-        "name":"Eiji Yoshihara",
-        "affiliation":"University of California, Los Angeles",
-        "nation":"USA",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-012",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-013",
-        "title":"Gender-specific risk factors and preventive strategies for sarcopenia development in older Korean adults: insights from the Korean frailty and aging cohort study",
-        "name":"Hun Jee Choe",
-        "affiliation":"Hallym University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    },
-    {
-        "id": "PO-014",
-        "title":"Active surveillance for adult patients with low-risk papillary thyroid microcarcinoma: evidence, consensus and future questions",
-        "name":"Iwao Sugitani",
-        "affiliation":"Nippon Medical School",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
-    }, {
-        "id": "PO-015",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
+        "id":"PP1-2",
+        "title":"INSULIN RESISTANCE LINKED TO INCREASED RISK OF END-STAGE RENAL DISEASE IN NON-DIABETIC AND DIABETIC INDIVIDUALS: FINDINGS FROM A LARGE-SCALE STUDY",
+        "name":"Javad Alizargar (National Taipei University of Nursing and Health Sciences)",
+        "nation":"Taiwan",
         "img":[
             {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
-    ]
-    },
-    {   "id": "PO-016",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+                "url1":"./assets/bone/5.png"
+            }
+        ]
     },
     {
-        "id": "PO-017",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
+        "id":"PP1-3",
+        "title":"ASSOCIATION BETWEEN WEIGHT CHANGE AND INCIDENCE OF DYSLIPIDEMIA IN YOUNG ADULTS: A RETROSPECTIVE COHORT STUDY OF KOREAN MALE SOLDIERS",
+        "name":"Wonsuk Choi (Chonnam National University)",
+        "nation":"Korea",
+        "img":[]
     },
     {
-        "id": "PO-018",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
+        "id":"PP1-4",
+        "title":"STUDY OF GASTRIC BYPASS VERSUS GASTRIC RESTRICTIVE SURGERY IN OBESE PATIENTS WITH NON-ALCOHOLIC FATTY LIVER DISEASE",
+        "name":"Pardeep Kumar (F H Medical College & Hospital)",
+        "nation":"India",
+        "img":[]
     },
     {
-        "id": "PO-019",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PP1-5",
+        "title":"LEVERAGING DEEP LEARNING FOR PREOPERATIVE PREDICTION OF SERIOUS COMPLICATIONS IN BARIATRIC SURGERY",
+        "name":"Rifaldy Fajar (Karlstad University)",
+        "nation":"Sweden",
+        "img":[]
     },
     {
-        "id": "PO-020",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PP1-6",
+        "title":"ELECTROCARDIOGRAM-BASED BODY COMPOSITION PREDICTION USING DEEP LEARNING",
+        "name":"Sang Wouk Cho (Yonsei University)",
+        "nation":"Korea",
+        "img":[]
     },
     {
-        "id": "PO-021",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PP1-7",
+        "title":"EFFECTIVENESS OF SHARE CARE DISEASE MANAGEMENT ON GLYCATED HEMOGLOBIN, LIPID PROFILE, BLOOD PRESSURE, AND WEIGHT CONTROL IN PATIENTS WITH TYPE 2 DIABETES: A SINGLE-CENTER LONGITUDINAL COHORT STUDY.",
+        "name":"Yu-Shan Hsieh (National Taipei University of Nursing and Health Sciences)",
+        "nation":"Taiwan",
+        "img":[]
     },
     {
-        "id": "PE-001",
-        "title":"Insulin resistance linked to increased risk of End-Stage Renal Disease in non-diabetic and diabetic individuals: findings from a large-scale study",
-        "name":"Javad Alizargar",
-        "affiliation":"School of Nursing, National Taipei University of Nursing and Health Sciences",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[
-            {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },
-    ]
-    },
-    {   "id": "PE-002",
-    "title":"Immune and genetic biomarkers for predicting response in thyroid cancer patients",
-    "name":"Melissa G. Lechner",
-    "affiliation":"University of California Los Angeles",
-    "nation":"USA",
-    "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PP1-8",
+        "title":"A RETROSPECTIVE STUDY OF THE RELATIONSHIP OF GLYCOSYLATED HEMOGLOBIN (HBA1C) AND CLINICAL OUTCOMES OF PATIENTS WITH HEART FAILURE IN A TERTIARY HOSPITAL",
+        "name":"Arobe Goling Ii (Amai Pakpak Medical Center)",
+        "nation":"Philippines",
+        "img":[]
     },
     {
-        "id": "PE-003",
-        "title":"The role of histological type, proliferation and invasion in pituitary tumor classification and prognostication",
-        "name":"Nèle Lenders",
-        "affiliation":"Garvan Institute of Medical Research",
-        "nation":"Australia",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            },]
+        "id":"PE1-001",
+        "title":"BEHAVIORAL MODIFICATION PROGRAM FOR WORKING-AGE INDIVIDUALS WITH METABOLIC SYNDROME IN A THAI SUBDISTRICT: DEVELOPMENT AND IMPLEMENTATION",
+        "name":"Kessarawan Pradubpoth (Promkiri Hospital)",
+        "nation":"Thailand",
+        "img":[]
     },
     {
-        "id": "PE-004",
-        "title":"Development of the most accurate glucagon sandwich ELISA and its usefulness for clinical examination",
-        "name":"Tadahiro Kitamura",
-        "affiliation":"Gunma University",
-        "nation":"Japan",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/1.png"
-            },
-            {
-            "url2":"./assets/bone/2.png"
-            },
-            {
-            "url3":"./assets/bone/3.png"
-            },
-            {
-            "url4":"./assets/bone/4.png"
-            }, ]
+        "id":"PE1-002",
+        "title":"ANXIETY, DIABETES-RELATED DISTRESS AND THEIR ASSOCIATED FACTORS AMONG PATIENTS WITH TYPE 2 DIABETES DURING THE COVID-19 PANDEMIC",
+        "name":"Bang Nguyen Van (Family Hospital)",
+        "nation":"Vietnam",
+        "img":[]
     },
     {
-        "id": "PE-005",
-        "title":"Human thyroid organoids derived from pluripotent stem cells to rescue hypothyroidism",
-        "name":"JSabine Costagliola",
-        "affiliation":"Université libre de Bruxelles",
-        "nation":"Belgium",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-003",
+        "title":"HYPEROSMOLAR HYPERGLYCEMIC SYNDROME IN A CRITICALLY ILL SARS-COV-19 PATIENT SUCCESSFULLY TREATED CONCURRENTLY WITH CORTICOSTEROID ADMINISTRATION- A CASE REPORT",
+        "name":"Kurt Bryan Tolentino (St. Luke's Medical Center - Global City)",
+        "nation":"Philippines",
+        "img":[]
     },
     {
-        "id": "PE-006",
-        "title":"Multi-omics profiling to predict responsiveness of adjuvant therapy in acromegalic patients",
-        "name":"Cheol Ryong Ku",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-004",
+        "title":"DIRECT MEDICAL COSTS OF TREATING DIABETIC FOOT ULCERS AMONG ADULT FILIPINOS IN THE PHILIPPINE GENERAL HOSPITAL",
+        "name":"Patricia Marie Lusica (Philippine General Hospital)",
+        "nation":"Philippines",
+        "img":[]
     },
     {
-        "id": "PE-007",
-        "title":"Sympathetic nervous system modulation: role of melanocortin-4 receptor and GFRAL",
-        "name":"Sang-Hyeon Ju",
-        "affiliation":"Chungnam National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-005",
+        "title":"ASSOCIATION OF FOOD INTAKE WITH METABOLIC SYNDROME AMONG FILIPINO ADULTS IN THE 8TH PHILIPPINE NATIONAL NUTRITION AND HEALTH SURVEY (NNHES)",
+        "name":"Patricia Marie Lusica (Philippine General Hospital)",
+        "nation":"Philippines",
+        "img":[]
     },
     {
-        "id": "PE-008",
-        "title":"TSH suppression after lobectomy in low-to-intermediate risk thyroid cancer: MASTER study",
-        "name":"Yoo Hyung Kim",
-        "affiliation":"Seoul National University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-006",
+        "title":"ASSOCIATION OF METABOLIC SYNDROME AND TYPE 2 DIABETES MELLITUS AMONG FILIPINO ADULTS",
+        "name":"Cherry Ann Durante (Emilio Aguinaldo College, University of Perpetual Help - Dr Jose G Tamayo Medical University, National Research Council of the Philippines, DOST)",
+        "nation":"Philippines",
+        "img":[]
+    }, 
+    {
+        "id":"PE1-007",
+        "title":"INACTIVATED SARS-COV2 ASSOCIATED GUILLAIN-BARRE SYNDROME AND PRE-EXISTING TYPE 2 DIABETES MELLITUS WITH NEUROPATHY",
+        "name":"Marie Rosealie Tanguilan (St. Paul Hospital of Tuguegarao, Inc.)",
+        "nation":"Philippines",
+        "img":[]
     },
     {
-        "id": "PE-009",
-        "title":"Statin for the CV prevention in DM patients focusing on 3 points: guidelines, evidences, differences",
-        "name":"Shinae Kang",
-        "affiliation":"Yonsei University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-008",
+        "title":"EXPLORING METABOLIC PATHWAYS AND DIFFERENTIAL EXPRESSION OF METABOLITES IN OBESE INDIVIDUALS UNDERGOING WEIGHT MANAGEMENT PROGRAM",
+        "name":"Norazmir Md Nor (Universiti Teknologi MARA)",
+        "nation":"Malaysia",
+        "img":[]
     },
     {
-        "id": "PE-010",
-        "title":"Thiazolidinedione and SGLT2 inhibitor: a rational combination based on type 2 diabetes pathophysiology",
-        "name":"Sang-Yong Kim",
-        "affiliation":"Chosun University",
-        "nation":"Republic of Korea",
-        "body":"Implementing an alert mechanism to notify users when there are no recipients available for SMS communication. This feature enhances user experience by providing clear information and maintaining effective communication practices. By triggering a targeted alert, the system ensures that administrators are aware of the absence of recipients before attempting to send SMS messages. This approach promotes efficient usage of resources and prevents unnecessary attempts to communicate, ultimately contributing to streamlined processes and improved user engagement. As a result, users are promptly informed, minimizing confusion and promoting seamless communication interactions within the platform.",
-        "img":[  {
-            "url1":"./assets/bone/5.png"
-            }]
+        "id":"PE1-009",
+        "title":"APPLICATION OF BEHAVIORAL ECONOMICS IN PREVENTING OBESITY",
+        "name":"Nina Marie Caballero (University of the Philippines- Manila)",
+        "nation":"Philippines",
+        "img":[]
     },
-    
+    {
+        "id":"PE1-010",
+        "title":"NOVEL IL-6 RECEPTOR INHIBITORS (ROXBURGHINE B AND CINCHONAIN ID) AS NEW POTENTIAL THERAPY FOR METABOLIC SYNDROME",
+        "name":"Azka Mufliha (Sebelas Maret University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-011",
+        "title":"THE PREVALENCE AND RISK FACTORS OF MALNUTRITION AND AT RISK FOR MALNUTRITION AMONG ELDERLY FILIPINOS WITH DIABETES MELLITUS AND ITS ASSOCIATION WITH GLYCEMIC CONTROL AND INSULIN RESISTANCE",
+        "name":"Yves Jean Liong (Chinese General Hospital and Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-012",
+        "title":"NEW DPP-IV INHIBITORS (PULMATIN, WITHANOLIDE-D, AND ROXBURGHINE-B) FROM INDONESIAN HERBAL PLANT PHYTOCHEMICALS FOR TYPE 2 DIABETES THERAPY",
+        "name":"Arifa Sherina Noor Sarsanti (Sebelas Maret University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-013",
+        "title":"KNOWLEDGE, ATTITUDE AND PRACTICE, AND ASSOCIATED FACTORS TOWARDS DIABETES MELLITUS AMONG ADULTS IN RURAL MALAYSIA","name":"Norsham Juliana (Universiti Sains Islam Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-014",
+        "title":"SERUM ADIPOKINES AND GENE POLYMORPHISM ASSOCIATION IN COPD AND COPD WITH T2DM",
+        "name":"Dr Seema Singh (King georges medical university)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-015",
+        "title":"NON-KETOTIC HYPERGLYCAEMIA WITH HEMICHOREA: A CASE REPORT AND BRIEF REVIEW OF THE LITERATURE",
+        "name":"Sahar Azmani (Universiti Sains Islam Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-016",
+        "title":"SECONDARY DIABETES MELLITUS FOLLOWING CHOP THERAPY",
+        "name":"Harshita Dubey (All India institute of Medical Sciences(AIIMS))",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-017",
+        "title":"EXERCISE LEVEL, INTRINSIC MOTIVATION, PHYSICAL FITNESS, AND THEIR ASSOCIATION WITH OBESITY AND MENTAL WELL-BEING AMONG MALAYSIAN URBAN YOUNG ADULTS",
+        "name":"Yee-How Say (Sunway University)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-018",
+        "title":"GESTATIONAL WEIGHT GAIN IN MONGOLIAN WOMEN",
+        "name":"Nomin-Erdene Minjuurdorj (Mongolian National University)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-019",
+        "title":"FACTORS RELATED TO SEVERITY OF DIABETIC RETINOPATHY IN TYPE 2 DIABETES PATIENTS DURING THE CORONAVIRUS DISEASE (COVID-19) PANDEMIC IN WANGWISET HOSPITAL, TRANG PROVINCE, THAILAND.",
+        "name":"Kasetsak Luanseng (Ministry of Public Health)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-020",
+        "title":"ENHANCING TYPE 2 DIABETES DIAGNOSIS PRECISION THROUGH LEARNING VECTOR QUANTIZATION: A COMPREHENSIVE ANALYSIS AND OPTIMAL MODEL SELECTION","name":"Rifaldy Fajar (Karlstad University)",
+        "nation":"Sweden",
+        "img":[]
+    },
+    {
+        "id":"PE1-021",
+        "title":"UNCOVERING HIDDEN PATTERNS: DEEP REINFORCEMENT LEARNING FOR PERSONALIZED OBESITY INTERVENTION STRATEGIES","name":"Sahnaz Vivinda Putri (International University Semen Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-022",
+        "title":"HIGHER BODY MASS INDEX ASSOCIATED WITH POOR ACCEPTANCE OF CONTINUOUS POSITIVE AIRWAY PRESSURE THERAPY IN PATIENTS WITH NEWLY DIAGNOSED OBSTRUCTIVE SLEEP APNEA.",
+        "name":"Rui Ya Soh (Sengkang General Hospital)",
+        "nation":"Singapore",
+        "img":[]
+    },
+    {
+        "id":"PE1-023",
+        "title":"EFFECT OF NUTRITION EDUCATION AND COMMUNITY-BASED DIETARY SUPPLEMENTATION ON THE KNOWLEDGE, ATTITUDE, AND PRACTICES OF MOTHERS AND NUTRITIONAL STATUS OF THEIR CHILDREN 36-59 MONTHS OLD: THE CASE OF CAINTA, RIZAL, PHILIPPINES",
+        "name":"Ann Cayetano (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-024",
+        "title":"IS SERUM NEUROFILAMENT LIGHT CHAIN ASSOCIATED WITH METABOLIC SYNDROME AND ITS COMPONENTS? THE UNITED STATES NATIONAL HEALTH AND NUTRITION EXAMINATION SURVEY 2013-2014",
+        "name":"Juanying Zhen (The University of Hong Kong)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE1-025",
+        "title":"THE RELATIONSHIPS BETWEEN ACTIVITIES SUPPORTING HEALTH PRODUCT LITERACY AND FOOD CONSUMPTION BEHAVIORS OF SCHOOL AGE CHILDREN WITH OVERWEIGHT AND OBESITY IN THAILAND",
+        "name":"Thidarat Apinya (ThaiFDA, Ministry of Public Health)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-026",
+        "title":"LOOKING INTO THE MACRO- AND MICRONUTRIENT INTAKE OF STUNTED FILIPINO SCHOOL-AGE CHILDREN: RESULTS FROM THE 2018-2019 EXPANDED NATIONAL NUTRITION SURVEY",
+        "name":"Frances Pola Arias (Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-027",
+        "title":"THE EFFECT OF ONLINE GAME-BASED EDUCATION ON DIABETIC PATIENTS AT THUNG SONG HOSPITAL",
+        "name":"Prissana Maneechay (Thung Song Hospital in Nakhon Si Thammarat)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-028",
+        "title":"THE EFFECTS OF DIETARY MANAGEMENT WITH PHYSICAL ACTIVITY PROGRAM AMONG BLOOD GLUCOSE LEVEL OF PRE-DIABETIC MELLITUS IN SOUTHERN THAILAND",
+        "name":"Kanjanaporn Krainara (Thung Yai Hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-029",
+        "title":"OVERWEIGHT, OBESITY AND DIETARY PRACTICES AMONG ADOLESCENTS AGED: A CROSS-SECTIONAL ONLINE SURVEY IN CENTRAL REGION OF MALAYSIA.",
+        "name":"Nur Shazwaniza Binti Yahya (University Teknologi MARA (UiTM), Sungai Buloh Health Clinic)",
+        "nation":"Malaysia",
+        "img":[]
+    },    
+    {
+        "id":"PE1-030",
+        "title":"WAIST-TO-HEIGHT RATIO AS AN INDEX OF CENTRAL ADIPOSITY AMONG FILIPINO ADULTS: ITS PREVALENCE AND ASSOCIATION WITH LIFESTYLE CHARACTERISTICS.",
+        "name":"Patricia Isabel G. Amita (Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-031",
+        "title":"PREVALENCE OF ESSENTIAL HYPERTENSION IN OUTPATIENTS WITH DIABETES MELLITUS IN A CENTRAL HOSPITAL OF MONGOLIA",
+        "name":"Davaajav Naranmandakh (Gurvan Gal General Hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-032",
+        "title":"ASSOCIATION OF SERUM VITAMIN E WITH DIABETES IN THE US NATIONAL HEALTH AND NUTRITION EXAMINATION SURVEY (NHANES) 2001-2006",
+        "name":"Xiaopeng Liang (The University of Hong Kong)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE1-033",
+        "title":"EXPLORING THE PROTECTIVE EFFECTS OF CUCURBITA FICIFOLIA IN HUMAN TYPE 2 DIABETES",
+        "name":"Dhananjay Yadav (Yeungnam University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-034",
+        "title":"THE LEGACY EFFECTS OF OBESITY: CURRENT ADIPONECTIN LEVELS AND MORTALITY RISK IN DIABETIC PATIENTS",
+        "name":"Min-Ji Kim (Kyungpook National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-035",
+        "title":"VITAMIN D AND T2DM",
+        "name":"Bolor Byambatsooj (Endomed hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-036",
+        "title":"KNOWLEDGE AND TECHNIQUES OF INSULIN INJECTION AMONG DIABETIC PATIENTS",
+        "name":"Battsetseg Bayarsaikhan (Second general hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-037",
+        "title":"EXPLORING THE PERSPECTIVES OF MUSLIM DIABETIC PATIENTS AT ZAMBOANGA CITY MEDICAL CENTER ON MANAGING DIABETES DURING RAMADAN: A FOCUS GROUP DISCUSSION STUDY ON KNOWLEDGE, ATTITUDES, AND PRACTICES",
+        "name":"Mohammad Elshad Sali (Zamboanga City Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-038",
+        "title":"GENDER-SPECIFIC ASSOCIATION BETWEEN DEPRESSIVE SYMPTOMS, ANTIDEPRESSANT USE AND METABOLIC SYNDROME COMPONENTS, NHANES 2005-2020","name":"Ziying Lin (The University of Hong Kong)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE1-039",
+        "title":"PRECLINICAL AND CLINICAL EFFICACY OF ORAL DIMETHYL FUMARATE FOR TREATMENT OF DIABETIC KIDNEY DISEASE; BASED ON A RANDOMIZED, DOUBLE-BLINDED, PLACEBO-CONTROLLED, PARALLEL PHASE 2A TRIAL",
+        "name":"So Hee Kwon (Kyungpook National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-040",
+        "title":"DIABETES MELLITUS, INFECTIONS AND ANTIBIOTIC USAGE",
+        "name":"Sanchir Batbayar (Endomed Hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-041",
+        "title":"EFFECT OF ALOE VERA ETHANOLIC EXTRACT ON MALONDIALDEHYDE LEVELS AND SUPEROXIDE DISMUTASE ACTIVITY OF THE TESTICAL TISSUE OF WISTAR RATS (RATTUS NORVEGICUS) INDUCED METABOLIC SYNDROME MODEL",
+        "name":"Nadia Kirana Sheba Pavita (Sebelas Maret University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-042",
+        "title":"EXPLORING EMERGING THREAT OF NON-COMMUNICABLE DISEASES (NCDS) WITH SPECIAL FOCUS ON DIABETES IN TRIBAL POPULATION IN DEVELOPING COUNTRY: A COMMUNITY BASED STUDY THROUGH HEALTH BELIEF MODEL",
+        "name":"Priti Solanky (GMERS Medical College)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-043",
+        "title":"EXPOSURE TO HIGH GAMMA-GLUTAMYL TRANSFERASE AND THE RISK OF DEMENTIA",
+        "name":"Juyoung Shin (The Catholic University of Korea)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-044",
+        "title":"EFFICACY OF VILDAGLIPTIN FOR THE TREATMENT OF NONALCOHOLIC FATTY LIVER DISEASE WITH NEWLY DIAGNOSED TYPE 2 DIABETIC PATIENTS IN DARKHAN PROVINCE",
+        "name":"Enkhchimeg Tserendorj (Darkhan general hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-045",
+        "title":"SHADES : A SURVEY OF SECONDARY HYPERTENSION IN INDIA AND ITS RELATION WITH ANTHROPOMETRIC, DEMOGRAPHIC, ENVIRONMENTAL AND SOCIOECONOMIC FACTORS",
+        "name":"Smriti Rastogi (KGMU)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-046",
+        "title":"EXAMINING THE IMPACT OF ARTIFICIAL LIGHT AT NIGHT (ALAN) ON SLEEP QUALITY AND DURATION IN PATIENTS WITH METABOLIC SYNDROME: A COMPARATIVE STUDY ON LIGHT POLLUTION AS A ZEITGEBER",
+        "name":"Smriti Rastogi (KGMU)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-047",
+        "title":"THE CORRELATION BETWEEN AMH AND HOMA-IR AMONG MONGOLIAN INFERTILITY WOMEN WITH PCOS",
+        "name":"Algirmaa Nisekhkhuu (National Center for Maternal and Child Health)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-048",
+        "title":"THE IMPACT OF MEAL TIMING ON SLEEP QUALITY, DURATION, AND HORMONAL PARAMETERS IN PATIENTS WITH TYPE 2 DIABETES MELLITUS",
+        "name":"Shiv Srivastav (KGMU)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-049",
+        "title":"QUANTITATIVE SENSORY TEST: NORMAL RANGE IN MONGOLIAN ADULTS AND APPLICATION TO DIABETIC POLYNEUROPATHY",
+        "name":"Bayarsaikhan Tsengel (General Hospital for State Special Servants)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-050",
+        "title":"EFFECTIVENESS OF WALKING VS STRUCTURED EXERCISE PROGRAM ON MATERNAL BLOOD PRESSURE ADAPTATION IN NORMOTENSIVE PREGNANT WOMEN.",
+        "name":"Rutika Thakur (Dr. Vsaantrao Pawar Medical college Hospital and Research centre)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-051",
+        "title":"EFFECT OF AEROBIC AND RESISTANCE EXERCISE PROGRAM ON CARDIO METABOLIC PROFILE AND BODY COMPOSITION IN OVERWEIGHT AND OBESE POSTMENOPAUSAL WOMEN",
+        "name":"Amrit Kaur (Dr Vasantrao pawar medical college and research Center)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-052",
+        "title":"ASSOCIATION OF BRACHIAL FLOW-MEDIATED DILATION WITH CAROTID INTIMA-MEDIA THICKNESS IN KOREAN PATIENTS WITH TYPE 2 DIABETES",
+        "name":"Jiwoo Lee (Hallym University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-053",
+        "title":"EXPLORING ROLE OF NEWER ANTI DIABETIC DRUG TERZEPATIDE IN MANAGEMENT OF OBESITY",
+        "name":"Dr Nilesh Chavda (GMERS Medical College)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-054",
+        "title":"DIABETES CARE CASCADE AND THEIR PREDICTORS IN YOUNG AND MIDDLE-AGED POPULATION IN INDIA: FINDINGS FROM THE NATIONAL FAMILY HEALTH SURVEY (2019-21)",
+        "name":"Saurav Basu (Public Health Foundation of India)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-055",
+        "title":"EFFICACY OF SGLT-2 INHIBITORS ON HEPATIC STEATOSIS AND FIBROSIS IN NON-ALCOHOLIC FATTY LIVER DISEASE: AN UPDATED SYSTEMATIC REVIEW AND META-ANALYSIS",
+        "name":"Albert Macaire Ong Lopez (St. Luke's Medical Center-Quezon City)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-056",
+        "title":"ASSOCIATION OF SERUM URIC ACID CONCENTRATION WITH DIABETIC RETINOPATHY IN ADULTS WITH TYPE 2 DIABETES MELLITUS",
+        "name":"Leo Jr Tiu (Makati Medical Eenter)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-057",
+        "title":"THE EFFICACY OF TELEMONITORING AND INTEGRATED PERSONALIZED DIABETES MANAGEMENT (IPDM) IN PEOPLE WITH INSULIN-TREATED TYPE 2 DIABETES MELLITUS: A PRELIMINARY ANALYSIS",
+        "name":"Primploy Greeviroj (Chulalongkorn University)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-058",
+        "title":"SERUM LEVEL AND EXPRESSION OF C-MET IN GESTATIONAL DIABETES MELLITUS (GDM)",
+        "name":"Hyun Jin Kim (Chungnam National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-059",
+        "title":"PREDICTION OF AMPUTATION WITH PRESEPSIN IN DIABETIC FOOT ULCER",
+        "name":"Eun Yeong Ha (Yeungnam University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-060",
+        "title":"FACTORS ASSOCIATED WITH HIGH FASTING BLOOD GLUCOSE AMONG FILIPINO ADULTS NOT DIAGNOSED WITH DIABETES",
+        "name":"Chona Patalen (Department of Science and Technology - Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-061",
+        "title":"ROLE OF WEARABLE TECHNOLOGY FOR ANALYZES AND MONITOR OF DIABETES DATA IN RELATION TO MANAGEMENT OF BARIATRIC SURGERY PATIENTS",
+        "name":"Vikas Sharma (IDAC Reserach center)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-062",
+        "title":"FOOD INSECURITY AND MODERATE TO HIGH LEVEL OF PERCEIVED STRESS AMONG SELECTED GRADUATE STUDENTS OF THE UNIVERSITY OF THE PHILIPPINES LOS BANOS AT THE ONSET OF COVID-19 PANDEMIC",
+        "name":"Rose Aviegael Dichosa (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-063",
+        "title":"THE EFFECT OF INCREASE IN PHYSICAL ACTIVITY AND EXERCISE AFTER METABOLIC BARIATRIC SURGERY ON LOSS OF FAT MASS",
+        "name":"Han Na Jang (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-064",
+        "title":"ASSOCIATION OF NUTRITIONAL STATUS USING SHORT NUTRITIONAL ASSESSMENT QUESTIONNAIRE (SNAQ) AND MALNUTRITION RISK USING MALNUTRITION SCREENING TOOL (MST) WITH IN-HOSPITAL MORTALITY AND INTENSIVE CARE UNIT ADMISSION AMONG NON-CRITICALLY-ILL PATIENTS: A SINGLE CENTER, PROSPECTIVE COHORT STUDY",
+        "name":"Karl Homer Nievera (Chinese General Hospital)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-065",
+        "title":"TRENDS OF INFANT OBESITY IN THE PHILIPPINES, 2008 TO 2015",
+        "name":"Maria Theresa Talavera (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-066",
+        "title":"LUNG FUNCTION COMPARISON AMONG HEALTHY YOUNG ADULTS WITH DIFFERENT BMI CATEGORIES: A CROSS-SECTIONAL STUDY",
+        "name":"Mutia Lailani (Universitas Andalas)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-067",
+        "title":"GLYCEMIC VARIABILITY AS A RISK FACTOR FOR IN-HOSPITAL MORTALITY AMONG CKD AND TYPE 2 DM PATIENTS ADMITTED FOR COVID-19: A RETROSPECTIVE COHORT STUDY",
+        "name":"Noreen Ada Mangugan (Department of Health)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-068",
+        "title":"DIABETIC RETINOPATHY: EVOLVING CONCEPTS OF CURRENT AND FUTURE PHARMACOLOGICAL TREATMENT",
+        "name":"Muhammad Zulfiqah Sadikan (Faculty of Medicine, Manipal University College Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-069",
+        "title":"INVESTIGATION OF REFERENCE INTERVALS FOR APOLIPOPROTEIN B IN KOREAN POPULATION",
+        "name":"Rihwa Choi (Green Cross Laboratories (GC Labs), Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-070",
+        "title":"LIPID PROFILE AND ASSOCIATED RISK FACTORS IN PATIENTS WITH CARDIOVASCULAR EVENTS",
+        "name":"Raju Kumar Dubey (Maharajgunj Medical Campus, Institute of Medicine, Tribhuvan University)",
+        "nation":"Nepal",
+        "img":[]
+    },
+    {
+        "id":"PE1-071",
+        "title":"PREVALENCE AND FACTORS ASSOCIATED WITH DIABETES RELATED EMOTIONAL DISTRESS (DRED) AMONG FILIPINO ADULT PATIENTS WITH TYPE 2 DIABETES MELLITUS USING A VALIDATED FILIPINO VERSION OF THE DIABETES DISTRESS SCALE (DDS)",
+        "name":"Carissa Rae Mirano (St. Luke’s Medical Center, QC)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-072",
+        "title":"MEAT CONSUMPTION AND ZINC STATUS AMONG FEMALE ADOLESCENTS ACROSS WEALTH QUINTILES: A POPULATION-BASED STUDY IN THE PHILIPPINES",
+        "name":"Rodesa Forcadilla (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-073",
+        "title":"EFFECTS OF FAMILY-BASED EDUCATION INTERVENTIONS ON GLYCEMIC CONTROL, SELF-MANAGEMENT, AND FAMILY SUPPORT IN PATIENTS WITH TYPE 2 DIABETES MELLITUS: A SYSTEMATIC REVIEW AND META-ANALYSIS",
+        "name":"I Gede Gita Sastrawan (UPTD Puskesmas I Pekutatan, Udayana University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-074",
+        "title":"CONTRIBUTION OF NEW ONSET DIABETES AFTER ORGAN TRANSPLANTATION ON THE INCIDENT CARDIOVASCULAR DISEASE AND MALIGNANCY IN KOREAN: A NATIONWIDE POPULATION-BASED STUDY",
+        "name":"Seung Shin Park (Seoul National University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-075",
+        "title":"CORRELATION BETWEEN WAIST TO HEIGHT RATIO (WHTR) AND TRIGLYCERIDE HIGH-DENSITY LIPOPROTEIN CHOLESTEROL RATIO IN INDONESIAN ADULTS",
+        "name":"Rizki Fajar Utami (Medical Faculty Islamic University of Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-076",
+        "title":"THE EFFECTS OF HEALTH BEHAVIOR MODIFICATION PROGRAM WITH SELF-MANAGEMENT CONCEPTS ON CHANGE THE LEVEL OF BLOOD SUGAR, BLOOD PRESSURE AND WAIST CIRCUMFERENCE OF DIABETES MELLITUS AND HYPERTENSION RISK GROUPS IN ONE SUBDISTRICT OF THAILAND.",
+        "name":"Mrs. Oraphan Khongsrichay (Provincial Public Health Office)",
+        "nation":"Thailand"
+        ,"img":[]
+    },
+    {
+        "id":"PE1-077",
+        "title":"EFFECTS OF HABBATUS SAUDA (NIGELLA SATIVA) PLUS HONEY SUPPLEMENTATION ON GLYCEMIC PARAMETERS AND BODY COMPOSITION OF HEALTHY ADULTS: A DOUBLE-BLIND, RANDOMISED CONTROLLED TRIAL.",
+        "name":"Syahrul Hamid (Universiti Teknologi MARA)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-078",
+        "title":"EVALUATING THE EFFICACY OF PORTIONED MEAL BOXES IN OPTIMIZING BLOOD GLUCOSE LEVELS IN TYPE 2 DIABETES: A RANDOMIZED TRIAL",
+        "name":"Chanachai Sae-Lee (Faculty of Medicine Siriraj Hospital, Mahidol University)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-079",
+        "title":"TO STUDY THE ROLE OF ARTIFICIAL INTELLIGENCE IN EARLY PREDICTION OF ACUTE KIDNEY INJURY IN PEDIATRIC PATIENTS: SYSTEMATIC REVIEW",
+        "name":"Dr Nilesh Chavda (GMERS Medical College Valsad)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-080",
+        "title":"RELATIONSHIP OF BODY MASS INDEX WITH INCOME LEVEL, DIETARY INTAKE, AND PHYSICAL ACTIVITY LEVEL OF LATE ADOLESCENT STUDENTS (AGES 18-24) OF SELECTED COLLEGE STUDENTS IN A PHILIPPINE UNIVERSITY DURING THE COVID-19 PANDEMIC",
+        "name":"Lance Gabriel Baligod (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-081",
+        "title":"THE ROAD LESS TAKEN: A SCOPING REVIEW OF THE UTILISATION OF HAND ASSESSMENTS IN INDIVIDUALS WITH DIABETES MELLITUS",
+        "name":"Noor Aziella Mohd Nayan (Universiti Teknologi MARA)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-082",
+        "title":"EFFECT OF CNIDOSCOLUS ACONITIFOLIUS LEAF EXTRACT ON LOW DENSITY LIPOPROTEIN LEVELS IN WISTAR RATS WITH METABOLIC SYNDROME MODEL",
+        "name":"Cindy Ayudia Pramaesti (Sebelas Maret University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-083",
+        "title":"USE OF SMOKELESS TOBACCO: DELETERIOUS EFFECT ON T2DM PATIENTS",
+        "name":"Anjali Singh (King George's Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-084",
+        "title":"RISK FOR CARDIOVASCULAR COMPLICATIONS AND MORTALITY ACCORDING TO MENOPAUSAL STATUS AND EXERCISE INTENSITY IN KOREAN WOMEN WITH TYPE 2 DIABETES MELLITUS: A NATIONWIDE COHORT STUDY",
+        "name":"Jihee Ko (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-085",
+        "title":"EMBRACING THE GOLDEN YEARS: EMPOWERING COMMUNITY-DWELLING OLDER PEOPLE WITH TYPE-II DIABETES THROUGH WECARE PROGRAM FOR HEALTHY AGEING",
+        "name":"Tengku Mohd Asri Tengku Makhtar (Universiti Sains Malaysia)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-086",
+        "title":"RESEARCH ON VITAMIN D DEFICIENCY DEPENDENT TYPE 2 DIABETES MELLITUS IN DARKHAN-UUL PROVINCE POPULATION IN MONGOLIA",
+        "name":"Orgil Sengeragchaa (Darkhan General Hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-087",
+        "title":"AN ANALYSIS OF THE AVAILABILITY AND NUTRITIONAL QUALITY OF FROZEN PROCESSED PLANT-BASED MEAT ALTERNATIVES IN THE HYPERMARKET AND SUPERMARKETS OF SANTA ROSA, LAGUNA, PHILIPPINES",
+        "name":"Keziah Cristeen Guevarra (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-088",
+        "title":"THE NATIONAL NCD SCREENING IN ULAANBAATAR, MONGOLIA: DIABETES AND OBESITY",
+        "name":"Khishignemekh Munkhbat (Ulaanbaatar Med Hospital)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-089",
+        "title":"DIABETIC RETINOPATHY SCREENING PROGRAM IN MONGOLIA",
+        "name":"Oyuntugs Byambasukh (Mongolian National University of Medical Sciences)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-090",
+        "title":"WEIGHT LOSS-INDUCED TYPE 2 DIABETES REMISSION IN NON-OBESE INDIAN POPULATION THROUGH A CUSTOMISED LIFESTYLE INTERVENTION PROGRAM",
+        "name":"Nidhi Kadam (Freedom from Diabetes Research Foundation)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-091",
+        "title":"COMORBIDITIES AND GLYCEMIC CONTROL CHALLENGES IN TYPE 2 DIABETES: A BASELINE PROFILE OF PATIENTS ATTENDING A DIABETES MANAGEMENT PROGRAM",
+        "name":"Nidhi Kadam (Freedom from Diabetes Research Foundation)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-092",
+        "title":"SUBGROUPS OF TYPE 2 DIABETES AND THEIR ASSOCIATION WITH WEIGHT LOSS INDUCED REMISSION THROUGH LIFESTYLE INTERVENTION IN INDIAN POPULATION",
+        "name":"Pramod Tripathi (Freedom from Diabetes Research Foundation)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-093",
+        "title":"IS RETURN TO A NORMAL GLYCEMIC PROFILE A POSSIBILITY IN PATIENTS WITH TYPE 2 DIABETES UNDERGOING REMISSION THROUGH A LIFESTYLE INTERVENTION PROGRAM?",
+        "name":"Pramod Tripathi (Freedom from Diabetes Research Foundation)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-094",
+        "title":"HYPERTENSION AND METABOLIC SYNDROME MANAGEMENT CASCADE IN AN URBAN SLUM-RESETTLEMENT COLONY SETTING IN DELHI, INDIA: A COMMUNITY-BASED CROSS-SECTIONAL SURVEY (2023)",
+        "name":"Saurav Basu (Public Health Foundation of India)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-095",
+        "title":"SHARED GENETIC ARCHITECTURE BETWEEN PERIODONTAL DISEASE AND TYPE 2 DIABETES: A LARGE SCALE GENOME-WIDE CROSS-TRAIT ANALYSIS",
+        "name":"Chun Hei Wu (The University of Hong Kong)",
+        "nation":"Hong Kong",
+        "img":[]
+    },
+    {
+        "id":"PE1-096",
+        "title":"PREVALENCE AND DETERMINANTS OF DEPRESSION AMONG TYPE 2 DIABETES MELLITUS PATIENTS WITH INSULIN THERAPY AT PRIMARY HEALTH CARE IN MALAYSIA: A CROSS SECTIONAL STUDY.",
+        "name":"Nur Shazwaniza Binti Yahya (Universiti Teknologi MARA (UiTM))",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-097",
+        "title":"COMPARISON OF DECREASED LIPID PROFILE SERUM WITHIN 6 MONTHS THERAPY OF METFORMIN AND METFORMIN + SULFONYLUREA IN TYPE 2 DIABETES MELLITUS",
+        "name":"Gilang Sukma Muhamad (Budhi Pratama Medical Clinic)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-098",
+        "title":"LEAN METABOLIC DYSFUNCTION ASSOCIATED STEATOTIC LIVER DISEASE AND CAROTID PLAQUE PROGRESSION RISK IN PATIENTS WITH TYPE 2 DIABETES MELLITUS",
+        "name":"Hye-Sun Park (Gangnam Severance Hospital)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-099",
+        "title":"RESVERATROL: A POTENT PHYTOCHEMICAL DRUG IN PREVENTION AND THERAPY OF DIABETES",
+        "name":"Shiv Kumar Yadav (Govt Lal Bahadur Shastri PG College)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-100",
+        "title":"PREDICTION OF THE RISK OF HEART DISEASE BASED ON MALNUTRITION STATUS IN KOREAN ADULTS: A PILOT STUDY COHORT FROM A NATIONAL PROSPECTIVE COHORT STUDY",
+        "name":"So Young Bu (Daegu University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-101",
+        "title":"DECREASED LIPID PROFILE AND THE RISK OF CENTRAL OBESITY WITHIN 6 MONTHS IN HYPERTENSION PATIENTS WITH AMLODIPINE THERAPY",
+        "name":"Indah Ariesta (Budhi Pratama Medical Clinic)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-102",
+        "title":"ESTIMATION OF CIRCULATORY LEVELS OF ADIPONECTIN, IGF1 AND IGF2 AS PROGNOSTIC MARKER IN PREDICTION OF DIABETES NEPHROPATHY",
+        "name":"Deeksha Chahar (King George's Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-103",
+        "title":"ASSOCIATION OF TYPE 2 DIABETIC MELLITUS AND THE RISK OF COLORECTAL CANCER AN UPDATED SYSTEMATIC REVIEW AND META-ANALYSIS",
+        "name":"Tohari Tohari (Medical Faculty of Univesitas Brawijayal)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-104",
+        "title":"A STUDY ON THE EFFECTS OF FREQUENT MILK TEA CONSUMPTION ON THE HEALTH AND NUTRITION OF YOUNG ADULTS IN STA. ANA, MANILA, PHILIPPINES",
+        "name":"Symour Josef Goyal (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-105",
+        "title":"SEX RELATIONSHIP WITH HYPERCHOLESTEROLEMIA INCIDENCE RATE IN PLEMBURAN INDONESIA POST OFFICE EMPLOYEES",
+        "name":"Zefira Matasyah (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-106",
+        "title":"RECENT DEMOGRAPHIC CHARACTERISTICS HEALTH CATEGORIZATION BY METABOLIC SYNDROME OF PLEMBURAN INDONESIA POST OFFICE EMPLOYEES: A GENDER-BASED STUDY",
+        "name":"Andini Nurul Suci (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-107",
+        "title":"DIETARY INTAKE, PHYSICAL ACTIVITY, AND PREVALENCE OF OBESITY AMONG SELECTED WORK-FROM-HOME MOTHERS IN LUZON, PHILIPPINES DURING THE COVID-19 PANDEMIC",
+        "name":"Deanne Dominique Guerrero (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-108",
+        "title":"THE RELATIONSHIP BETWEEN ALCOHOL ADDICTION AND INCREASED BODY MASS INDEX IN THE SPECIAL REGION OF YOGYAKARTA PROVINCE",
+        "name":"Desvialin Ulfa Talitha (Islamic University of Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-109",
+        "title":"1. DOES DIABETES MELLITUS AFFECT FUNCTIONAL URINARY BLADDER CAPACITY?- A PROSPECTIVE OBSERVATIONAL STUDY",
+        "name":"Devashish Kaushal (All India Institute of Medical Sciences Bhopal)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-110",
+        "title":"EFFECTS OF TIME-RESTRICTED EATING ON ENERGY BALANCE: A SYSTEMATIC REVIEW AND META-ANALYSIS",
+        "name":"Mazuin Kamarul Zaman (Universiti Teknologi MARA Cawangan Selangor)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-111",
+        "title":"EVALUATION OF ANEMIA IN TYPE 2 DIABETES MELLITUS AND ITS ASSOCIATION WITH METABOLIC INDICES.",
+        "name":"Gautam Kapoor (All India Institute of Medical Sciences)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-112",
+        "title":"ANAEMIA AND ITS ASSOCIATION WITH GLYCEMIA AND TRANSAMINITIS IN TYPE 2 DIABETES",
+        "name":"Gautam Kapoor (All India Institute of Medical Sciences)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-113",
+        "title":"CORRELATION BETWEEN DYSLIPIDEMIA AND THE SIGNIFICANCE OF CORONARY LESIONS IN THE MINANGKABAU ETHNIC GROUP WITH CORONARY HEART DISEASE",
+        "name":"Denada Florencia Leona (Medical Faculty of Andalas University)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-114",
+        "title":"SCREENING FOR SARCOPENIA IN OLDER TYPE 2 DIABETIC PATIENTS BY USING SARC-F AND SARC-CALF TOOLS",
+        "name":"Thi Thanh Huyen Vu (National Geriatric Hospital)",
+        "nation":"Vietnam",
+        "img":[]
+    },
+    {
+        "id":"PE1-115",
+        "title":"INSULIN PUMP THERAPY IN TYPE 2 DIABETES WITH EMPAGLIFLOZIN IMPROVED GLUCOSE CONTROL.",
+        "name":"Soobong Choi (Konkuk University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-116",
+        "title":"REAL-WORLD EVIDENCE OF HYBRID CLOSED-LOOP SYSTEM (MINIMED 770G) SWITCHING FROM PREDICTIVE-LOW-GLUCOSE-SUSPENSION INSULIN PUMP (MINIMED 640G) IN KOREA: A NATIONWIDE RETROSPECTIVE STUDY",
+        "name":"Sun Joon Moon (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-117",
+        "title":"DIABETES COMPLICATION AND MORTALITY STUDY",
+        "name":"Sainbileg Sonomtseren (Endomed Hospital, Mongolian National University of Medical Sciences)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-118",
+        "title":"COMPARISON OF GLYCEMIC RISK INDEX (GRI) WITH TIME IN RANGE FOR ASSESSING GLYCEMIC QUALITY",
+        "name":"Ji Yoon Kim (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-119",
+        "title":"ASSOCIATION OF ACADEMIC WORKLOAD AND MODIFIABLE CARDIOVASCULAR DISEASE RISK FACTORS AMONG COLLEGE STUDENTS IN A PHILIPPINE STATE UNIVERSITY",
+        "name":"Paul Alteo Bagabaldo (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-120",
+        "title":"INFLUENCES OF PERCEIVED IMPACTS OF CLIMATE CHANGE ON THE DIETARY DIVERSITY OF HOUSEHOLDS IN INFANTA, QUEZON, PHILIPPINES",
+        "name":"Mitzi Pujeda (University of the Philippines Los Banos)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-121",
+        "title":"GLUCAGON DEFICIENCY IN NONDIABETIC HYPOGLYCEMIA",
+        "name":"Nurana Nuralieva (Endocrinology Research Centre)",
+        "nation":"Russian Federation",
+        "img":[]
+    },
+    {
+        "id":"PE1-122",
+        "title":"EFFECTS OF PREDICTIVE-LOW-GLUCOSE-SUSPENSION (PLGS) INSULIN PUMP WITH STRUCTURED ALGORITHM FOR PREOPERATIVE GLYCEMIC CONTROL: A PROPENSITY SCORE MATCHING STUDY",
+        "name":"Sun Joon Moon (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-123",
+        "title":"ARTIFICIAL PANCREAS SYSTEM FOR PATIENTS WITH TYPE 2 DIABETES: A META-ANALYSIS",
+        "name":"Sun Joon Moon (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-124",
+        "title":"ASSOCIATION OF MICRONUTRIENT SUPPLEMENTATION WITH HEALTH AND NUTRITIONAL STATUS OF UNDER-FIVE CHILDREN",
+        "name":"Patricia Isabel Amita (Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-125",
+        "title":"IMPACT OF DIABETES ON COVID-19 SUSCEPTIBILITY: A NATIONWIDE PROPENSITY SCORE MATCHING STUDY",
+        "name":"Sun Joon Moon (Sungkyunkwan University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-126",
+        "title":"SUCCESSFUL PRE-DIALYSIS SIMULTANEOUS PANCREAS AND KIDNEY TRANSPLANTATION IN TYPE 1 DIABETES MELLITUS (CLINICAL CASE)",
+        "name":"Madina Yevloyeva (Endocrinology Research Centre)",
+        "nation":"Russian Federation",
+        "img":[]
+    },
+    {
+        "id":"PE1-127",
+        "title":"READINESS TO CHANGE CONSUMPTION OF FRUITS, VEGETABLES, SALT, SUGAR, AND OIL OF ADULT WOMEN WITH NON-COMMUNICABLE DISEASES",
+        "name":"Jazelle Anne Calayag (Department of Science and Technology-Food and Nutrition Research Institute)",
+        "nation":"Philippines",
+        "img":[]
+    },
+    {
+        "id":"PE1-128",
+        "title":"OLIFE® IMPACT ON PEOPLE WITH HYPERGLYCEMIA, EXPOSED TO INTENSE PHYSICAL EXERTION STRESS",
+        "name":"Ramona-Niculina Jurcau (Faculty of Medicine, Iuliu Hatieganu University of Medicine and Pharmacy)",
+        "nation":"Romania",
+        "img":[]
+    },
+    {
+        "id":"PE1-129",
+        "title":"UNRAVELING THE LINK BETWEEN BDNF, VITAMIN D, AND TYPE 2 DIABETES: IMPLICATIONS FOR TREATMENT",
+        "name":"Mohammad Alqudah (Arabian Gulf University)",
+        "nation":"Bahrain",
+        "img":[]
+    },
+    {
+        "id":"PE1-130",
+        "title":"METFORMIN FOR ADVANCED OR INOPERABLE NON-SMALL CELL LUNG CANCER IN PATIENTS WITH AND WITHOUT DIABETES: A META-ANALYTIC SYNTHESIS",
+        "name":"Md Azharuddin (Jamia Hamdard (Deemed to be University))",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-131",
+        "title":"A DESCRIPTIVE ANALYSIS: DIABETES AS A KEY FACTOR IN DIALYSIS CASES IN MONGOLIA",
+        "name":"Munkh-Od Battsogt (First Central Hospital of Mongolia)",
+        "nation":"Mongolia",
+        "img":[]
+    },
+    {
+        "id":"PE1-132",
+        "title":"A PROSPECTIVE STUDY TO EVALUATE EFFECTIVENESS OF WALKING IN WOMEN WITH GESTATIONAL DIABETES MELLITUS.",
+        "name":"Mubarak Ali Fayaz Ahmed (Guwahati Medical College)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-133",
+        "title":"THE STUDY OF THAI PEOPLE IN THE DIABETES MELLITUS AND OVERWEIGHT RISK GROUP AND THEIR HEALTH PRODUCT LITERACY",
+        "name":"Siriporn Pornpiroonrod (Ministry of Public Health)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-134",
+        "title":"THE CORRELATION BETWEEN CONSUMPTION OF SIMPLEX CARBOHYDRATES AND PREVALENCE OBSESITY AMONG STUDENTS AT ALI MAKSUM ISLAMIC BOARDING SCHOOL",
+        "name":"Muhammad Hably Hukma Aula (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-135",
+        "title":"THE RELATIONSHIP BETWEEN HYPERCHOLESTEROLEMIA AND OCCURRENCE OF TYPE 2 DIABETES MELLITUS IN INDONESIA POST OFFICE YOGYAKARTA EMPLOYEES",
+        "name":"Dede Syifa Izzatul Aulia (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-136",
+        "title":"THE RELATIONSHIP OF BODY MASS INDEX TO HYPERTENSIVE CONDITIONS IN PLEMBURAN POST OFFICE EMPLOYEES",
+        "name":"Rahmat Hidayat Nur Ilhami (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-137",
+        "title":"POTENTIAL OF RESISTANCE LEPTIN IN INCREASING BLOOD PRESSURE IN OBESITY WITH HYPERTENSION : A SYSTEMATIC LITERATURE REVIEW",
+        "name":"Nabila Amalia Raya (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-138",
+        "title":"EFFECTIVENESS OF PEPTIDE FORMULATION IN IMPROVING WOUND HEALING IN DIABETIC FOOT ULCER PATIENTS DUE TO BACTERIAL BIOFILM INFECTION: A SYSTEMATIC REVIEW",
+        "name":"Syafira Elfa Ramadhan (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-139",
+        "title":"EFFECT OF AJWA DATES (PHOENIX DACTYLIFERA L.) ON LIPID LEVELS IN HYPERLIPIDEMIC PATIENTS: A SYSTEMATIC REVIEW",
+        "name":"Hisyam Hartaman (Universitas Islam Indonesia)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-140",
+        "title":"THE RELATIONSHIP BETWEEN BLOOD SUGAR LEVELS AND BODY MASS INDEX IN PLEMBURAN INDONESIA POST OFFICE EMPLOYEES",
+        "name":"Yanasta Yudo Pratama (Universitas Islam Indonesia, Universitas 'Aisyiyah Yogyakarta, Nyawiji Kalurahan Condongcatur Primary Healtcare)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-141",
+        "title":"DETERMINANTS OF HAND FUNCTION IN PATIENTS WITH TYPE-2 DIABETES MELLITUS (T2DM)",
+        "name":"Ahmad Daud (Faculty of Health Sciences)",
+        "nation":"Malaysia",
+        "img":[]
+    },
+    {
+        "id":"PE1-142",
+        "title":"EFFECTS OF TRIGONELLA FOENUM GRAECUM SEED EXTRACT ON OXIDATIVE STRESS AND HEPATIC FUNCTION IN TYPE 2 DIABETIC PATIENTS",
+        "name":"Sumit Rajput (B V Deemed University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-143",
+        "title":"SELF-CARE EXPERIENCE OF ELDERLY DIABETES PATIENTS WITH UNCONTROLLED BLOOD SUGAR LEVELS TRANG HOSPITAL",
+        "name":"Wilawan Jingjit (Trang Hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-144",
+        "title":"EMERGING ROLE OF A1222G GENE POLYMORPHISM IN TYPE 2 DIABETES NORTH INDIAN YOUNG ADULTS.",
+        "name":"Hina Praveen (King George Medical University)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-145",
+        "title":"ADVANCING PRECISION IN OBESITY ESTIMATION: LEVERAGING MACHINE LEARNING ON ELECTRONIC HEALTH RECORDS",
+        "name":"Prihantini Prihantini (The University of Papua New Guinea)",
+        "nation":"Papua New Guinea",
+        "img":[]
+    },
+    {
+        "id":"PE1-146",
+        "title":"INSIGHT INTO THE ROLE OF MICRORNA AS AN EARLY PROGNOSTIC AND DIAGNOSTIC BIOMARKER FOR DIABETES",
+        "name":"Rohan Mandloi (IGNOU)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-147",
+        "title":"THE EFFECT OF MOTIVATION ENHANCEMENT PROGRAM ON BEHAVIOR CHANGE IN DRUG ADDICTS GROUP OF COMMUNITY NURSES IN MUEANG ROI ET DISTRICT ,ROI ET PROVINCE.",
+        "name":"Mrs. Sura Suphomin (Roi Et hospital)",
+        "nation":"Thailand",
+        "img":[]
+    },
+    {
+        "id":"PE1-148",
+        "title":"COMPARISON THE EFFECTIVENESS OF STATIN HIGH DOSE VERSUS STATIN COMBINEDEZETIMIBE ON THEMANAGEMENT OF DYSLIPIDEMIA OFPATIENTS WITH TYPE 2 DIABETIC MELLITUS : A SYSTEMATHIC REVIEW",
+        "name":"Radhia Ashabul Kahfi Bey (Rasidin Regional Public Hospital)",
+        "nation":"Indonesia",
+        "img":[]
+    },
+    {
+        "id":"PE1-149",
+        "title":"DETERMINATION OF CARDIOVASCULAR PROFILE, SLEEP AND PHYSICAL ACTIVITY USING DIGITAL TECHNOLOGY (SMARTWATCH) IN CHILDREN OF KANPUR DEHAT REGION: A NOVEL PLATFORM",
+        "name":"Manvendra Singh (HMFA-MIET)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-150",
+        "title":"EXPLORING THE THERAPEUTIC APPLICATIONS OF CURCUMIN IN DIABETES TREATMENT: A MOLECULAR DOCKING STUDY",
+        "name":"Nidhi Puranik (Yeungnam University)",
+        "nation":"Korea",
+        "img":[]
+    },
+    {
+        "id":"PE1-151",
+        "title":"PHYTOCHEMICALS-BASED DRUG DESIGNING FOR OBESITY: A MOLECULAR DOCKING STUDY",
+        "name":"Preeti Puranik (Shri Jain Diwakar Mahavidyalaya)",
+        "nation":"India",
+        "img":[]
+    },
+    {
+        "id":"PE1-152",
+        "title":"THE CHAMELEON EFFECT: A CASE OF ISOLATED PANCREATIC TUBERCULOSIS MIMICKING PANCREATIC CANCER IN YOUNG ADULT MALE WITH JAUNDICE AND HYPERGLYCEMIA",
+        "name":"Kristiann Lae Dano (Davao Regional Medical Center)",
+        "nation":"Philippines",
+        "img":[]
+    }
+
 ]

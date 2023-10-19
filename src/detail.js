@@ -139,7 +139,8 @@ function setImage(name) {
     if (name.img.length === 1) {
         posterImage.setAttribute("src", name.img[0].url1);
         imgBox.appendChild(posterImage);
-    } else {
+    } 
+    else if(name.img.length > 1) {
       name.img.forEach((img) => {
         imgList.push(img);
       });
@@ -148,10 +149,21 @@ function setImage(name) {
             
       posterImage.onload = ()=>{
         background_load.style.display = "none"
-    }
+      }
    
       imgBox.appendChild(posterImage);
       setImgBtn(posterImage);
+    }
+    else if(name.img.length === 0){
+        posterImage.setAttribute("src", `${name.id}.png`);
+
+            
+        posterImage.onload = ()=>{
+          background_load.style.display = "none"
+        }
+     
+        imgBox.appendChild(posterImage);
+        setImgBtn(posterImage);
     }
   }
   

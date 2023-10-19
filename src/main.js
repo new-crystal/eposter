@@ -66,10 +66,10 @@ const boxInfo = [
 let restElement;
 let restLength;
 
-pre_box.addEventListener("click",()=>{ preBtnMove()})
-next_box.addEventListener("click", ()=>{ nextBtnMove()})
-go_first_box.addEventListener("click", ()=>{firstPageMove()})
-go_last_box.addEventListener("click", ()=> {lastPageMove()})
+blue_pre_box.addEventListener("click",()=>{ preBtnMove()})
+blue_next_box.addEventListener("click", ()=>{ nextBtnMove()})
+blue_go_first_box.addEventListener("click", ()=>{firstPageMove()})
+blue_go_last_box.addEventListener("click", ()=> {lastPageMove()})
 
 /**home button click event */
 goHomeBtn.addEventListener("click",()=>{
@@ -126,7 +126,7 @@ function pushTitle(){
             <div class="text_box">
                 <p class="title">${name.title}</p>
                 <div class="name_box">
-                    <p class="name">${name.name}, ${name.affiliation}</p>
+                    <p class="name">${name.name}</p>
                     <p class="name nation">${name.nation}</p>
                 </div>
             </div>
@@ -254,10 +254,8 @@ search.addEventListener("input",(e)=>{
 
     const searchList = [];
     list.filter((li)=>{
-                const l = li[0].concat(li[1]).concat(li[2]).concat(li[3]).concat(li[4]).concat(li[5])
-                if(l.includes("\n\n") && l.toLowerCase().includes(inputText)){
-                    searchList.push(l.replace(/\n\n/g, " ").toLowerCase())   
-                }else if(!l.includes("\n\n") &&l.toLowerCase().includes(inputText)){
+                const l = li[0].concat("/").concat(li[1]).concat("/").concat(li[2]).concat("/").concat(li[3])
+                if(l.toLowerCase().includes(inputText)){
                     searchList.push(l.toLowerCase())  
                 }
     })
@@ -339,20 +337,20 @@ function addEventListeners(list) {
                 footer.style.display = "";
             }
         }
-        if(listNumber > 10 && activeNumber === 7){
+        if(listNumber > 10 && activeNumber >= 7){
             if(footerNumber <= 2){
                 footer.style.display = "none";
             }else if(footerNumber === 11 || footerNumber === 12){
                 footer.style.display = "";
             }
         }
-        if(listNumber > 10 && activeNumber >= 8){
-            if(footerNumber <= 3){
-                footer.style.display = "none";
-            }else if(footerNumber >= 11){
-                footer.style.display = "";
-            }
-        }
+        // if(listNumber > 10 && activeNumber >= 8){
+        //     if(footerNumber <= 3){
+        //         footer.style.display = "none";
+        //     }else if(footerNumber >= 11){
+        //         footer.style.display = "";
+        //     }
+        // }
        
         if(listNumber > 10 && activeNumber < 6){
             if(footerNumber <= 3){
@@ -372,17 +370,18 @@ function addEventListeners(list) {
 function searching(searchList) {
 
     const list = document.querySelectorAll(".list");
-
+    
     let resultList = [];
+    const searchIdList = searchList.map((search) => search.split("/")[0]);
 
-    searchList.map((search) => {
-        list.forEach((li) => {
-            const sliceSearch = search.slice(0,2)
-            if (li.innerText.includes(sliceSearch)) {
-                resultList.push(li);
-            }
+    list.forEach((li) => {
+        const lowID = li.id.toLocaleLowerCase()
+        if(searchIdList.includes(lowID)){
+            resultList.push(li);      
+        }
         });
-    });
+   
+
     showList = resultList;
     const listItemsDupArray = Array.from(resultList);
     const set = new Set(listItemsDupArray)
@@ -489,9 +488,11 @@ function showListNum(list){
 
    if(restNum === 0){
     listNumber = listNum
-   }else{
+   }
+   else{
     listNumber = Math.floor(listNum) + 1
    }
+   
 
    footerList.forEach((footer)=>{
     if(listNumber < 10){
@@ -515,8 +516,11 @@ function showListNum(list){
 
 /**이전으로 버튼 */
 function preBtnMove(){
+    
   footerList.forEach((footer)=>{
+
     if(footer.classList.value.includes("list_active") && footer.id !== "first_box"){
+   
         footer.previousElementSibling.classList.add("list_active")
         footer.classList.remove("list_active")
         nowActive = footer.previousElementSibling.dataset.id;
